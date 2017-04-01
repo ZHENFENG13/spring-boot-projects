@@ -5,7 +5,15 @@
 
     <groupId>com.my.blog.website</groupId>
     <artifactId>my-tale-blog</artifactId>
-    <version>0.0.1-SNAPSHOT</version>
+    <!-- now -->
+    <version>3.0.1-SNAPSHOT</version>
+    <!-- version的时间节点-->
+    <!-- tale -->
+    <!--<version>0.0.1-SNAPSHOT</version>-->
+    <!-- springboot -->
+    <!--<version>1.0.1-SNAPSHOT</version>-->
+    <!-- docker -->
+    <!--<version>2.0.1-SNAPSHOT</version>-->
     <packaging>jar</packaging>
 
     <name>my-tale-blog</name>
@@ -111,6 +119,18 @@
         </dependency>
     </dependencies>
 
+    <!-- 普通的maven打包方式 -->
+    <!--    <build>
+            <plugins>
+                <plugin>
+                    <groupId>org.springframework.boot</groupId>
+                    <artifactId>spring-boot-maven-plugin</artifactId>
+                </plugin>
+            </plugins>
+        </build>-->
+    <!-- 普通的maven打包方式 -->
+
+    <!-- 结合docker的maven打包方式,并上传提交创建的镜像 -->
     <build>
         <plugins>
             <plugin>
@@ -143,5 +163,6 @@
             </plugin>
         </plugins>
     </build>
+    <!-- 结合docker的maven打包方式,并上传提交创建的镜像 -->
 
 </project>
