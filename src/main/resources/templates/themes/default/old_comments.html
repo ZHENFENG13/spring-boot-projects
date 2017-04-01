@@ -1,0 +1,132 @@
+#if(null != article)
+<div id="${article.cid ?! 0}" class="comment-container">
+    <div id="comments" class="clearfix">
+        #if(article.allowComment)
+        <span class="response">#if(null!=login_user) Hi，<a href="${login_user.homeUrl}" data-no-instant>${login_user.username}</a>
+            如果你想 <a href="/logout" title="注销" data-no-instant>注销</a> ? #end</span>
+
+        <form method="post" id="comment-form" class="comment-form" role="form" onsubmit="return comment_reply();">
+            <input type="hidden" name="coid"/>
+            <input type="hidden" name="cid" value="${article.cid}"/>
+            <input type="hidden" name="_csrf_token" value="">
+            <input type="text" name="author" maxlength="12" id="author" class="form-control input-control clearfix"
+                   placeholder="姓名 (*)" value="${login_user.username ?! ''}" required/>
+            <input type="email" name="mail" id="mail" class="form-control input-control clearfix" placeholder="邮箱 (*)"
+                   value="${login_user.email ?! ''}" required/>
+            <input type="url" name="url" id="url" class="form-control input-control clearfix" placeholder="网址 (http://)"
+                   value="${login_user.homeUrl ?! ''}"/>
+            <textarea name="text" id="textarea" class="form-control" placeholder="基佬，留下你的评论." required></textarea>
+            <button type="submit" class="submit" id="misubmit">提交</button>
+        </form>
+
+        #else
+        <span class="response">评论已关闭.</span>
+        #end
+
+        #if(!is_empty(comments))
+        <ol class="comment-list">
+            #for(comment : comments.list)
+            <li id="li-comment-${comment.coid}" class="comment-body comment-parent comment-odd">
+                <div id="comment-${comment.coid}">
+                    <div class="comment-view" onclick="">
+                        <div class="comment-header">
+                            <img class="avatar" src="${gravatar(comment.mail)}?s=80&r=G&d=" title="${comment.author}"
+                                 width="80" height="80">
+                            <span class="comment-author">
+                                <a href="${comment.url}" target="_blank" rel="external nofollow">${comment.author}</a>
+                            </span>
+                        </div>
+                        <div class="comment-content">
+                            <span class="comment-author-at"></span>
+                            <p>${comment.content}</p>
+                        </div>
+                        <div class="comment-meta">
+                            <time class="comment-time">${fmtdate(comment.created)}</time>
+                            <span class="comment-reply">
+                                <a rel="nofollow" onclick="reply_user('${comment.coid}');">回复</a>
+                            </span>
+                        </div>
+                    </div>
+                </div>
+                #if(comment.levels > 0)
+                <div class="comment-children">
+                    <ol class="comment-list">
+                        #for(child : comment.children)
+                        <li id="li-comment-${child.coid}"
+                            class="comment-body comment-child comment-level-odd comment-odd">
+                            <div id="comment-${child.coid}">
+                                <div class="comment-view">
+                                    <div class="comment-header">
+                                        <img class="avatar" src="${gravatar(child.mail)}?s=80&r=G&d=" title="${child.author}" width="80" height="80">
+                                        <span class="comment-author comment-by-author">
+                                            <a href="${child.url}" target="_blank" rel="external nofollow">${child.author}</a>
+                                        </span>
+                                    </div>
+                                    <div class="comment-content">
+                                        <span class="comment-author-at">
+                                            ${comment_at(child.parent)}
+                                        </span>
+                                        <p>${child.content}</p>
+                                    </div>
+                                    <div class="comment-meta">
+                                        <time class="comment-time">${fmtdate(child.created)}</time>
+                                        <span class="comment-reply">
+                                            <a rel="nofollow" onclick="reply_user('${child.coid}');">回复</a>
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        #end
+                    </ol>
+                </div>
+                #end
+            </li>
+            #end
+        </ol>
+        <div class="lists-navigator clearfix">
+            <ol class="page-navigator">
+                #if(comments.hasPrevPage)
+                <li class="prev"><a href="?cp=${comments.prevPage}#comments">←</a></li>
+                #end
+                #for(navIndex : comments.navPageNums)
+                <li #if(comments.pageNum== navIndex) class="current" #end><a href="?cp=${navIndex}#comments">${navIndex}</a></li>
+                #end
+                #if(comments.hasNextPage)
+                <li class="next"><a href="?cp=${comments.nextPage}#comments">→</a></li>
+                #end
+            </ol>
+
+        </div>
+        #end
+    </div>
+</div>
+#end
+#include('/comm/tale_comment.html')
+<script type="text/javascript">
+    function reply_user(coid) {
+        $('#comment-form input[name=coid]').val(coid);
+        $("html,body").animate({scrollTop: $('div.comment-container').offset().top}, 500);
+        $('#comment-form #textarea').focus();
+    }
+    function comment_reply() {
+        $.ajax({
+            type: 'post',
+            url: '/comment',
+            data: $('#comment-form').serialize(),
+            async: false,
+            dataType: 'json',
+            success: function (result) {
+                $('#comment-form input[name=coid]').val('');
+                if (result && result.success) {
+                    window.location.reload();
+                } else {
+                    if (result.msg) {
+                        swal("提示消息", result.msg, 'error');
+                    }
+                }
+            }
+        });
+        return false;
+    }
+</script>

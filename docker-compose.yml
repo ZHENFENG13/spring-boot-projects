@@ -1,0 +1,21 @@
+mysql:
+  image: mysql:5.7
+  environment:
+   - MYSQL_ROOT_PASSWORD=123456
+   - MYSQL_DATABASE=tale
+#mongo:
+#  image: mongo:3.3
+#  ports:
+#   - 27017:27017
+#redis:
+#  image: redis:3.0
+#  ports:
+#   - 6379:6379
+tale-blog:
+  image: blog/core
+  ports:
+   - 8080:8080
+  links:
+   - mysql
+#   - mongo
+#   - redis
