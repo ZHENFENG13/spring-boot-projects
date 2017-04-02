@@ -16,7 +16,9 @@
 2. 日志使用由'Starter POMs'，使用Commons Logging记录日志
 3. 使用的是 [https://github.com/astarring/mybatis-generator-gui/releases]() 生成的DAO层
 4. bug修复
-5. 为个人站上线做准备
+5. 数据源切换
+6. 结合docker，改写install过程，实现docker整合的优化
+7. 为个人站上线做准备
 
 # 存在的问题
 
