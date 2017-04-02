@@ -43,6 +43,7 @@ public class BaseInterceptor implements HandlerInterceptor {
         LOGGE.info("UserAgent: {}", request.getHeader(USER_AGENT));
         LOGGE.info("用户访问地址: {}, 来路地址: {}", uri, IPKit.getIpAddrByRequest(request));
 
+
 //        排除拦截的地址
         if (!WebConst.INSTALL && !uri.startsWith("/install")) {
             response.sendRedirect(request.getServletContext().getContextPath() + "/install");
@@ -59,7 +60,7 @@ public class BaseInterceptor implements HandlerInterceptor {
                 }
             }
             if (uri.startsWith("/admin") && !uri.startsWith("/admin/login") && null == user) {
-                response.sendRedirect(request.getContextPath()+"/admin/login");
+                response.sendRedirect(request.getContextPath() + "/admin/login");
                 return false;
             }
         }
@@ -75,8 +76,8 @@ public class BaseInterceptor implements HandlerInterceptor {
 
     @Override
     public void postHandle(HttpServletRequest httpServletRequest, HttpServletResponse httpServletResponse, Object o, ModelAndView modelAndView) throws Exception {
-        httpServletRequest.setAttribute("commons",commons);
-        httpServletRequest.setAttribute("adminCommons",adminCommons);
+        httpServletRequest.setAttribute("commons", commons);
+        httpServletRequest.setAttribute("adminCommons", adminCommons);
     }
 
     @Override

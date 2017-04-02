@@ -4,7 +4,6 @@ import com.my.blog.website.constant.WebConst;
 import com.my.blog.website.dto.DataSource;
 import com.my.blog.website.dto.LogActions;
 import com.my.blog.website.exception.TipException;
-import com.my.blog.website.listener.InitListener;
 import com.my.blog.website.modal.Bo.RestResponseBo;
 import com.my.blog.website.modal.Vo.UserVo;
 import com.my.blog.website.service.ILogService;
@@ -182,7 +181,7 @@ public class InstallController {
             optionService.getOptions().forEach((option) -> WebConst.initConfig.put(option.getName(), option.getValue()));
             WebConst.INSTALL = true;
 
-            InitListener.dbIsOk = true;
+            //InitListener.dbIsOk = true;
         } catch (Exception e) {
             String msg = "安装失败";
             if (e instanceof TipException) {

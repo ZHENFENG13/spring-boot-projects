@@ -12,6 +12,7 @@ import org.springframework.web.context.request.RequestContextHolder;
 import org.springframework.web.context.request.ServletRequestAttributes;
 
 import javax.servlet.http.HttpServletRequest;
+import javax.sql.DataSource;
 import java.util.Arrays;
 
 /**
@@ -21,7 +22,7 @@ import java.util.Arrays;
 @Aspect
 @Component
 public class LogAspect {
-    private static final Logger LOGGER = LoggerFactory.getLogger(CustomerRoutingDataSource.class);
+    private static final Logger LOGGER = LoggerFactory.getLogger(DataSource.class);
 
     @Pointcut("execution(public * com.my.blog.website.controller..*.*(..))")
     public void webLog(){}

@@ -22,7 +22,7 @@ public class WebConst {
     /**
      * 是否进行过安装
      */
-    public static Boolean INSTALL = false;
+    public static Boolean INSTALL = true;
 
     public static String LOGIN_SESSION_KEY = "login_user";
 

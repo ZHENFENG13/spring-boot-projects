@@ -24,3 +24,4 @@ nbdist/
 logs
 upload
 target
+application-jdbc.properties
