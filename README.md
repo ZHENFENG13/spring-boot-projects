@@ -10,5 +10,5 @@ fork from [Tale](https://github.com/otale/tale)
 2017-03-29 修复添加评论时空指针异常的bug<br/>
 2017-03-30 添加预览功能,如果文章为草稿状态,前端即使通过正确的url也不能浏览<br/>
 2017-03-31 文章浏览数不变的bug,后期浏览数及评论这些参数放到缓存里去<br/>
-2017-04-01 druid<br/>
+2017-04-01 添加druid数据源<br/>
 2017-04-02 重写mysql的Dockerfile文件，修改install过程<br/>
