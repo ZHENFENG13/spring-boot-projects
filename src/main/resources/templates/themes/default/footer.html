@@ -8,19 +8,19 @@
                 <th:block th:each="index:${commons.social()}">
                     <th:block th:if="${index.value}!=null and ${index.value}!=''">
                         <th:block th:switch="${index.key}">
-                            <th:block th:case="'weibo'" >
+                            <th:block th:case="'weibo'">
                                 <a class="social weibo" target="blank"
                                    th:href="@{${index.value}}">微博</a>
                             </th:block>
-                            <th:block th:case="'zhihu'" >
+                            <th:block th:case="'zhihu'">
                                 <a class="social zhihu" target="blank"
                                    th:href="@{${index.value}}">知乎</a>
                             </th:block>
-                            <th:block th:case="'github'" >
+                            <th:block th:case="'github'">
                                 <a class="social github" target="blank"
                                    th:href="@{${index.value}}">Github</a>
                             </th:block>
-                            <th:block th:case="'twitter'" >
+                            <th:block th:case="'twitter'">
                                 <a class="social twitter" target="blank"
                                    th:href="@{${index.value}}">Twitter</a>
                             </th:block>
@@ -34,39 +34,21 @@
         <div class="footer-container">
             <div class="meta-item meta-copyright">
                 <div class="meta-copyright-info">
-                    <a th:href="${commons.site_url()}" class="info-logo">
+                    <a href="http://blog.hanshuai.xin" class="info-logo">
                         <img th:src="@{/user/img/logo.png}" th:alt="${commons.site_title()}"/>
                     </a>
                     <div class="info-text">
-                        <p>一生有所追求.</p>
-                        <p>Powered by <a href="https://github.com/otale/tale" target="_blank" rel="nofollow">Tale</a>
+                        <p>我不怕千万人阻挡,只怕自己投降.</p>
+                        <br/>
+                        <p>&copy; 版权所有 2017 Powered by <a href="https://github.com/ZHENFENG13/my-tale-blog" target="_blank"
+                                         rel="nofollow">my-tale-blog</a> 保留一切权利.
                         </p>
-                        <p>&copy; 2017 <a href="https://github.com/biezhi">biezhi</a></p>
+                        <br/>
+                        <p>浙ICP备17008806号-1</p>
                     </div>
                 </div>
             </div>
 
-            <div class="meta-item meta-posts">
-                <h3 class="meta-title">最新文章</h3>
-                <div th:each="post : ${commons.recent_articles(8)}">
-                    <li>
-                        <a th:href="${commons.permalink(post)}" th:text="${post.title}"></a>
-                    </li>
-                </div>
-            </div>
-
-            <div class="meta-item meta-comments" th:with="listValue=${commons.recent_comments(8)}">
-                <h3 class="meta-title">最新评论</h3>
-                <div th:if="${listValue}!=null">
-                    <div th:each="comm : ${listValue}">
-                        <li>
-                            <a th:href="${commons.site_url('/article/')}+${comm.cid}+'#comment-'+${comm.coid}"
-                               th:text="${comm.author}+' : '+${comm.content}"></a>
-                        </li>
-                    </div>
-                </div>
-
-            </div>
         </div>
     </div>
 </footer>
@@ -79,89 +61,89 @@
         /*<![CDATA[*/
         var postDirectoryBuild = function () {
             var postChildren = function children(childNodes, reg) {
-                    var result = [],
-                        isReg = typeof reg === 'object',
-                        isStr = typeof reg === 'string',
-                        node, i, len;
-                    for (i = 0, len = childNodes.length; i < len; i++) {
-                        node = childNodes[i];
-                        if ((node.nodeType === 1 || node.nodeType === 9) &&
-                            (!reg ||
-                            isReg && reg.test(node.tagName.toLowerCase()) ||
-                            isStr && node.tagName.toLowerCase() === reg)) {
-                            result.push(node);
-                        }
-                    }
-                    return result;
-                },
-                createPostDirectory = function (article, directory, isDirNum) {
-                    var contentArr = [],
-                        titleId = [],
-                        levelArr, root, level,
-                        currentList, list, li, link, i, len;
-                    levelArr = (function (article, contentArr, titleId) {
-                        var titleElem = postChildren(article.childNodes, /^h\d$/),
-                            levelArr = [],
-                            lastNum = 1,
-                            lastRevNum = 1,
-                            count = 0,
-                            guid = 1,
-                            id = 'directory' + (Math.random() + '').replace(/\D/, ''),
-                            lastRevNum, num, elem;
-                        while (titleElem.length) {
-                            elem = titleElem.shift();
-                            contentArr.push(elem.innerHTML);
-                            num = +elem.tagName.match(/\d/)[0];
-                            if (num > lastNum) {
-                                levelArr.push(1);
-                                lastRevNum += 1;
-                            } else if (num === lastRevNum ||
-                                num > lastRevNum && num <= lastNum) {
-                                levelArr.push(0);
-                                lastRevNum = lastRevNum;
-                            } else if (num < lastRevNum) {
-                                levelArr.push(num - lastRevNum);
-                                lastRevNum = num;
+                        var result = [],
+                                isReg = typeof reg === 'object',
+                                isStr = typeof reg === 'string',
+                                node, i, len;
+                        for (i = 0, len = childNodes.length; i < len; i++) {
+                            node = childNodes[i];
+                            if ((node.nodeType === 1 || node.nodeType === 9) &&
+                                    (!reg ||
+                                    isReg && reg.test(node.tagName.toLowerCase()) ||
+                                    isStr && node.tagName.toLowerCase() === reg)) {
+                                result.push(node);
                             }
-                            count += levelArr[levelArr.length - 1];
-                            lastNum = num;
-                            elem.id = elem.id || (id + guid++);
-                            titleId.push(elem.id);
                         }
-                        if (count !== 0 && levelArr[0] === 1) levelArr[0] = 0;
+                        return result;
+                    },
+                    createPostDirectory = function (article, directory, isDirNum) {
+                        var contentArr = [],
+                                titleId = [],
+                                levelArr, root, level,
+                                currentList, list, li, link, i, len;
+                        levelArr = (function (article, contentArr, titleId) {
+                            var titleElem = postChildren(article.childNodes, /^h\d$/),
+                                    levelArr = [],
+                                    lastNum = 1,
+                                    lastRevNum = 1,
+                                    count = 0,
+                                    guid = 1,
+                                    id = 'directory' + (Math.random() + '').replace(/\D/, ''),
+                                    lastRevNum, num, elem;
+                            while (titleElem.length) {
+                                elem = titleElem.shift();
+                                contentArr.push(elem.innerHTML);
+                                num = +elem.tagName.match(/\d/)[0];
+                                if (num > lastNum) {
+                                    levelArr.push(1);
+                                    lastRevNum += 1;
+                                } else if (num === lastRevNum ||
+                                        num > lastRevNum && num <= lastNum) {
+                                    levelArr.push(0);
+                                    lastRevNum = lastRevNum;
+                                } else if (num < lastRevNum) {
+                                    levelArr.push(num - lastRevNum);
+                                    lastRevNum = num;
+                                }
+                                count += levelArr[levelArr.length - 1];
+                                lastNum = num;
+                                elem.id = elem.id || (id + guid++);
+                                titleId.push(elem.id);
+                            }
+                            if (count !== 0 && levelArr[0] === 1) levelArr[0] = 0;
 
-                        return levelArr;
-                    })(article, contentArr, titleId);
-                    currentList = root = document.createElement('ul');
-                    dirNum = [0];
-                    for (i = 0, len = levelArr.length; i < len; i++) {
-                        level = levelArr[i];
-                        if (level === 1) {
-                            list = document.createElement('ul');
-                            if (!currentList.lastElementChild) {
-                                currentList.appendChild(document.createElement('li'));
+                            return levelArr;
+                        })(article, contentArr, titleId);
+                        currentList = root = document.createElement('ul');
+                        dirNum = [0];
+                        for (i = 0, len = levelArr.length; i < len; i++) {
+                            level = levelArr[i];
+                            if (level === 1) {
+                                list = document.createElement('ul');
+                                if (!currentList.lastElementChild) {
+                                    currentList.appendChild(document.createElement('li'));
+                                }
+                                currentList.lastElementChild.appendChild(list);
+                                currentList = list;
+                                dirNum.push(0);
+                            } else if (level < 0) {
+                                level *= 2;
+                                while (level++) {
+                                    if (level % 2) dirNum.pop();
+                                    currentList = currentList.parentNode;
+                                }
                             }
-                            currentList.lastElementChild.appendChild(list);
-                            currentList = list;
-                            dirNum.push(0);
-                        } else if (level < 0) {
-                            level *= 2;
-                            while (level++) {
-                                if (level % 2) dirNum.pop();
-                                currentList = currentList.parentNode;
-                            }
-                        }
-                        dirNum[dirNum.length - 1]++;
-                        li = document.createElement('li');
-                        link = document.createElement('a');
-                        link.href = '#' + titleId[i];
-                        link.innerHTML = !isDirNum ? contentArr[i] :
+                            dirNum[dirNum.length - 1]++;
+                            li = document.createElement('li');
+                            link = document.createElement('a');
+                            link.href = '#' + titleId[i];
+                            link.innerHTML = !isDirNum ? contentArr[i] :
                             dirNum.join('.') + ' ' + contentArr[i];
-                        li.appendChild(link);
-                        currentList.appendChild(li);
-                    }
-                    directory.appendChild(root);
-                };
+                            li.appendChild(link);
+                            currentList.appendChild(li);
+                        }
+                        directory.appendChild(root);
+                    };
             createPostDirectory(document.getElementById('post-content'), document.getElementById('directory'), true);
         };
         postDirectoryBuild();
