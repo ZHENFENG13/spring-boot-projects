@@ -59,9 +59,9 @@ public class WebConst {
     public static final int HIT_EXCEED = 10;
 
     /**
-     * 上传文件最大20M
+     * 上传文件最大1M
      */
-    public static Integer MAX_FILE_SIZE = 204800;
+    public static Integer MAX_FILE_SIZE = 1048576;
 
     /**
      * 要过滤的ip列表
