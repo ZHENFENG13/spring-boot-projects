@@ -12,3 +12,5 @@ fork from [Tale](https://github.com/otale/tale)
 2017-03-31 文章浏览数不变的bug,后期浏览数及评论这些参数放到缓存里去<br/>
 2017-04-01 添加druid数据源<br/>
 2017-04-02 重写mysql的Dockerfile文件，修改install过程<br/>
+2017-04-15 bug修复,footer样式调整<br/>
+2017-04-17 logo文件修改,附件上传功能<br/>
