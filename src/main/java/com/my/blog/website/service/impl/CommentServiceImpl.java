@@ -40,12 +40,9 @@ public class CommentServiceImpl implements ICommentService {
             throw new TipException("评论对象为空");
         }
         if (StringUtils.isBlank(comments.getAuthor())) {
-            throw new TipException("姓名不能为空");
+            comments.setAuthor("热心网友");
         }
-        if (StringUtils.isBlank(comments.getMail())) {
-            throw new TipException("邮箱不能为空");
-        }
-        if (!TaleUtils.isEmail(comments.getMail())) {
+        if (StringUtils.isNotBlank(comments.getMail()) && !TaleUtils.isEmail(comments.getMail())) {
             throw new TipException("请输入正确的邮箱格式");
         }
         if (StringUtils.isBlank(comments.getContent())) {
@@ -75,8 +72,6 @@ public class CommentServiceImpl implements ICommentService {
     public PageInfo<CommentBo> getComments(Integer cid, int page, int limit) {
 
         if (null != cid) {
-//            获取顶层评论
-//            PageHelper.offsetPage((page - 1), limit);
             PageHelper.startPage(page, limit);
             CommentVoExample commentVoExample = new CommentVoExample();
             commentVoExample.createCriteria().andCidEqualTo(cid).andParentEqualTo(0);
@@ -107,7 +102,7 @@ public class CommentServiceImpl implements ICommentService {
 
     @Override
     public void update(CommentVo comments) {
-        if(null != comments && null != comments.getCoid()){
+        if (null != comments && null != comments.getCoid()) {
             commentDao.updateByPrimaryKeyWithBLOBs(comments);
         }
     }
@@ -118,8 +113,8 @@ public class CommentServiceImpl implements ICommentService {
             throw new TipException("主键为空");
         }
         commentDao.deleteByPrimaryKey(coid);
-        ContentVo contents = contentService.getContents(cid+"");
-        if(null != contents && contents.getCommentsNum() > 0){
+        ContentVo contents = contentService.getContents(cid + "");
+        if (null != contents && contents.getCommentsNum() > 0) {
             ContentVo temp = new ContentVo();
             temp.setCid(cid);
             temp.setCommentsNum(contents.getCommentsNum() - 1);
@@ -129,7 +124,7 @@ public class CommentServiceImpl implements ICommentService {
 
     @Override
     public CommentVo getCommentById(Integer coid) {
-        if(null != coid){
+        if (null != coid) {
             return commentDao.selectByPrimaryKey(coid);
         }
         return null;
@@ -137,11 +132,12 @@ public class CommentServiceImpl implements ICommentService {
 
     /**
      * copy原有的分页信息，除数据
+     *
      * @param ordinal
      * @param <T>
      * @return
      */
-    private <T> PageInfo<T> copyPageInfo(PageInfo ordinal){
+    private <T> PageInfo<T> copyPageInfo(PageInfo ordinal) {
         PageInfo<T> returnBo = new PageInfo<T>();
         returnBo.setPageSize(ordinal.getPageSize());
         returnBo.setPageNum(ordinal.getPageNum());

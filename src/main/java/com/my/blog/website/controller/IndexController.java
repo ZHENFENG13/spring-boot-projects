@@ -178,15 +178,15 @@ public class IndexController extends BaseController {
             return RestResponseBo.fail(ErrorCode.BAD_REQUEST);
         }
 
-        if (null == cid || StringUtils.isBlank(author) || StringUtils.isBlank(mail) || StringUtils.isBlank(text)) {
+        if (null == cid || StringUtils.isBlank(text)) {
             return RestResponseBo.fail("请输入完整后评论");
         }
 
-        if (author.length() > 50) {
+        if (StringUtils.isNotBlank(author) && author.length() > 50) {
             return RestResponseBo.fail("姓名过长");
         }
 
-        if (!TaleUtils.isEmail(mail)) {
+        if (StringUtils.isNotBlank(mail) && !TaleUtils.isEmail(mail)) {
             return RestResponseBo.fail("请输入正确的邮箱格式");
         }
 
@@ -194,8 +194,8 @@ public class IndexController extends BaseController {
             return RestResponseBo.fail("请输入正确的URL格式");
         }
 
-        if (text.length() > 2000) {
-            return RestResponseBo.fail("请输入2000个字符以内的评论");
+        if (text.length() > 200) {
+            return RestResponseBo.fail("请输入200个字符以内的评论");
         }
 
         String val = IPKit.getIpAddrByRequest(request) + ":" + cid;
