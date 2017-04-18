@@ -14,3 +14,4 @@ fork from [Tale](https://github.com/otale/tale)
 2017-04-02 重写mysql的Dockerfile文件，修改install过程<br/>
 2017-04-15 bug修复,footer样式调整<br/>
 2017-04-17 logo文件修改,附件上传功能<br/>
+2017-04-17 评论功能修改<br/>
