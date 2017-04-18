@@ -20,15 +20,14 @@
                     <input type="text" name="author" maxlength="12" id="author"
                            class="form-control input-control clearfix"
                            placeholder="姓名 (*)"
-                           th:value="${session.login_user}==null ?'': ${session.login_user.username}"
-                           required="required"/>
+                    />
                     <input type="email" name="mail" id="mail" class="form-control input-control clearfix"
                            placeholder="邮箱 (*)"
-                           th:value="${session.login_user}==null?'':${session.login_user.email}" required="required"/>
+                    />
                     <input type="url" name="url" id="url" class="form-control input-control clearfix"
                            placeholder="网址 (http://)"
-                           th:value="${session.login_user}==null?'':${session.login_user.homeUrl}"/>
-                    <textarea name="text" id="textarea" class="form-control" placeholder="赞!"
+                    />
+                    <textarea name="text" id="textarea" class="form-control" placeholder="以上信息可以为空,评论不能为空哦!"
                               required="required" minlength="5"
                               maxlength="2000"></textarea>
                     <button type="submit" class="submit" id="misubmit">提交</button>
