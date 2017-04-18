@@ -264,10 +264,10 @@ public class TaleUtils {
     public static void setCookie(HttpServletResponse response, Integer uid) {
         try {
             String val = Tools.enAes(uid.toString(), WebConst.AES_SALT);
-            boolean isSSL = WebConst.initConfig.get("site_url").startsWith("https");
+            boolean isSSL = false;
             Cookie cookie = new Cookie(WebConst.USER_IN_COOKIE, val);
             cookie.setPath("/");
-//            cookie.setMaxAge(60*30);
+            cookie.setMaxAge(60*30);
             cookie.setSecure(isSSL);
             response.addCookie(cookie);
         } catch (Exception e) {
@@ -334,10 +334,11 @@ public class TaleUtils {
 
     /**
      * 替换HTML脚本
+     *
      * @param value
      * @return
      */
-    public static String cleanXSS(String value){
+    public static String cleanXSS(String value) {
         //You'll need to remove the spaces from the html entities below
         value = value.replaceAll("<", "&lt;").replaceAll(">", "&gt;");
         value = value.replaceAll("\\(", "&#40;").replaceAll("\\)", "&#41;");
@@ -420,24 +421,24 @@ public class TaleUtils {
         return false;
     }
 
-    public static String getFileKey(String name){
+    public static String getFileKey(String name) {
         String prefix = "/upload/" + DateKit.dateFormat(new Date(), "yyyy/MM");
-        if (!new File(AttachController.CLASSPATH+prefix).exists()) {
-            new File(AttachController.CLASSPATH+prefix).mkdirs();
+        if (!new File(AttachController.CLASSPATH + prefix).exists()) {
+            new File(AttachController.CLASSPATH + prefix).mkdirs();
         }
 
         name = StringUtils.trimToNull(name);
-        if(name == null) {
-            return prefix + "/" + UUID.UU32() + "."+null;
+        if (name == null) {
+            return prefix + "/" + UUID.UU32() + "." + null;
         } else {
             name = name.replace('\\', '/');
             name = name.substring(name.lastIndexOf("/") + 1);
             int index = name.lastIndexOf(".");
             String ext = null;
-            if(index >= 0) {
+            if (index >= 0) {
                 ext = StringUtils.trimToNull(name.substring(index + 1));
             }
-            return prefix + "/" + UUID.UU32() + "." + (ext == null?null:(ext));
+            return prefix + "/" + UUID.UU32() + "." + (ext == null ? null : (ext));
         }
     }
 
@@ -461,13 +462,14 @@ public class TaleUtils {
 
     /**
      * 随机数
+     *
      * @param size
      * @return
      */
     public static String getRandomNumber(int size) {
         String num = "";
 
-        for(int i = 0; i < size; ++i) {
+        for (int i = 0; i < size; ++i) {
             double a = Math.random() * 9.0D;
             a = Math.ceil(a);
             int randomNum = (new Double(a)).intValue();
@@ -479,19 +481,20 @@ public class TaleUtils {
 
     /**
      * 获取保存文件的位置,jar所在目录的路径
+     *
      * @return
      */
-    public static String getUplodFilePath(){
+    public static String getUplodFilePath() {
         String path = TaleUtils.class.getProtectionDomain().getCodeSource().getLocation().getPath();
-        path = path.substring(1,path.length());
+        path = path.substring(1, path.length());
         try {
             path = java.net.URLDecoder.decode(path, "utf-8");
         } catch (UnsupportedEncodingException e) {
             e.printStackTrace();
         }
-        int lastIndex = path.lastIndexOf("/") +1;
+        int lastIndex = path.lastIndexOf("/") + 1;
         path = path.substring(0, lastIndex);
         File file = new File("");
-        return file.getAbsolutePath()+"/";
+        return file.getAbsolutePath() + "/";
     }
 }
