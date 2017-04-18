@@ -9,7 +9,7 @@
                 <th:block th:if="${session.login_user}">
                     Hi，<a th:href="${session.login_user.homeUrl}" data-no-instant=""
                           th:text="${session.login_user.username}"></a>
-            如果你想 <a href="/logout" title="注销" data-no-instant="">注销</a> ?
+                    如果你想 <a href="/logout" title="注销" data-no-instant="">注销</a> ?
                 </th:block>
             </span>
                 <form method="post" id="comment-form" class="comment-form" role="form"
@@ -28,7 +28,7 @@
                     <input type="url" name="url" id="url" class="form-control input-control clearfix"
                            placeholder="网址 (http://)"
                            th:value="${session.login_user}==null?'':${session.login_user.homeUrl}"/>
-                    <textarea name="text" id="textarea" class="form-control" placeholder="基佬，留下你的评论."
+                    <textarea name="text" id="textarea" class="form-control" placeholder="赞!"
                               required="required" minlength="5"
                               maxlength="2000"></textarea>
                     <button type="submit" class="submit" id="misubmit">提交</button>
@@ -51,7 +51,7 @@
                                              th:title="${comment.author}"
                                              width="80" height="80"/>
                                         <span class="comment-author">
-                                <a th:href="${comment.url}" target="_blank" rel="external nofollow"
+                                <a href="##" rel="external nofollow"
                                    th:text="${comment.author}"></a>
                             </span>
                                     </div>
@@ -62,49 +62,10 @@
                                     <div class="comment-meta">
                                         <time class="comment-time" th:text="${commons.fmtdate(comment.created)}"></time>
                                         <span class="comment-reply">
-                                <a rel="nofollow" th:onclick="|TaleComment.reply('${comment.coid}');|">回复</a>
                             </span>
                                     </div>
                                 </div>
                             </div>
-
-                            <div th:if="${comment.levels}>0">
-                                <div class="comment-children">
-                                    <ol class="comment-list">
-                                        <th:block th:each="child : ${comment.children}">
-                                            <li th:id="'li-comment-'+${child.coid}"
-                                                class="comment-body comment-child comment-level-odd comment-odd">
-                                                <div th:id="'comment-'+${child.coid}">
-                                                    <div class="comment-view">
-                                                        <div class="comment-header">
-                                                            <img class="avatar"
-                                                                 th:src="@{${commons.gravatar(child.mail)}(s='80',r='G',d='')}"
-                                                                 th:title="${child.author}" width="80" height="80"/>
-                                                            <span class="comment-author comment-by-author">
-                                            <a th:href="${child.url}" target="_blank" rel="external nofollow"
-                                               th:text="${child.author}"></a>
-                                        </span>
-                                                        </div>
-                                                        <div class="comment-content">
-                                                            <span class="comment-author-at" style="float:left;margin-right:5px"
-                                                                  th:utext="${commons.comment_at(child.parent)}"></span>
-                                                            <p  th:utext="${commons.article(child.content)}"></p>
-                                                        </div>
-                                                        <div class="comment-meta">
-                                                            <time class="comment-time"
-                                                                  th:text="${commons.fmtdate(child.created)}"></time>
-                                                            <span class="comment-reply">
-                                            <a rel="nofollow" th:onclick="|TaleComment.reply('${child.coid}');|">回复</a>
-                                        </span>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </li>
-                                        </th:block>
-                                    </ol>
-                                </div>
-                            </div>
-
                         </li>
                     </th:block>
                 </ol>

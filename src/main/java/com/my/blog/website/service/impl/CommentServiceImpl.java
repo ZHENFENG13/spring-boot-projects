@@ -83,23 +83,13 @@ public class CommentServiceImpl implements ICommentService {
             commentVoExample.setOrderByClause("coid desc");
             List<CommentVo> parents = commentDao.selectByExampleWithBLOBs(commentVoExample);
             PageInfo<CommentVo> commentPaginator = new PageInfo<>(parents);
-
-            //            获取父评论下的子评论内容
             PageInfo<CommentBo> returnBo = copyPageInfo(commentPaginator);
-
             if (parents.size() != 0) {
                 List<CommentBo> comments = new ArrayList<>(parents.size());
                 parents.forEach(parent -> {
                     CommentBo comment = new CommentBo(parent);
-                    List<CommentVo> children = new ArrayList<>();
-                    getChildren(children, comment.getCoid());
-                    comment.setChildren(children);
-                    if (children.size() > 0) {
-                        comment.setLevels(1);
-                    }
                     comments.add(comment);
                 });
-//                填充完整的评论体系和顶层评论的分页数据是相同的
                 returnBo.setList(comments);
             }
             return returnBo;
@@ -143,23 +133,6 @@ public class CommentServiceImpl implements ICommentService {
             return commentDao.selectByPrimaryKey(coid);
         }
         return null;
-    }
-
-    /**
-     * 获取该评论下的追加评论
-     *
-     * @param list list
-     * @param coid coid
-     */
-    private void getChildren(List<CommentVo> list, Integer coid) {
-        CommentVoExample commentVoExample = new CommentVoExample();
-        commentVoExample.setOrderByClause("coid asc");
-        commentVoExample.createCriteria().andParentEqualTo(coid);
-        List<CommentVo> cms = commentDao.selectByExampleWithBLOBs(commentVoExample);
-        if (null != cms) {
-            list.addAll(cms);
-            cms.forEach(c -> getChildren(list, c.getCoid()));
-        }
     }
 
     /**
