@@ -44,27 +44,20 @@ public class BaseInterceptor implements HandlerInterceptor {
         LOGGE.info("用户访问地址: {}, 来路地址: {}", uri, IPKit.getIpAddrByRequest(request));
 
 
-//        排除拦截的地址
-        if (!WebConst.INSTALL && !uri.startsWith("/install")) {
-            response.sendRedirect(request.getServletContext().getContextPath() + "/install");
+        //请求拦截处理
+        UserVo user = TaleUtils.getLoginUser(request);
+        if (null == user) {
+            Integer uid = TaleUtils.getCookieUid(request);
+            if (null != uid) {
+                user = userService.queryUserById(uid);
+                request.getSession().setAttribute(WebConst.LOGIN_SESSION_KEY, user);
+            }
+        }
+        if (uri.startsWith("/admin") && !uri.startsWith("/admin/login") && null == user) {
+            response.sendRedirect(request.getContextPath() + "/admin/login");
             return false;
         }
-
-        if (WebConst.INSTALL) {
-            UserVo user = TaleUtils.getLoginUser(request);
-            if (null == user) {
-                Integer uid = TaleUtils.getCookieUid(request);
-                if (null != uid) {
-                    user = userService.queryUserById(uid);
-                    request.getSession().setAttribute(WebConst.LOGIN_SESSION_KEY, user);
-                }
-            }
-            if (uri.startsWith("/admin") && !uri.startsWith("/admin/login") && null == user) {
-                response.sendRedirect(request.getContextPath() + "/admin/login");
-                return false;
-            }
-        }
-//        设置get请求的token
+        //设置get请求的token
         if (request.getMethod().equals("GET")) {
             String csrf_token = UUID.UU64();
             // 默认存储30分钟

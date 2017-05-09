@@ -19,10 +19,6 @@ public class WebConst {
 
     public static Map<String, String> initConfig = new HashMap<>();
 
-    /**
-     * 是否进行过安装
-     */
-    public static Boolean INSTALL = true;
 
     public static String LOGIN_SESSION_KEY = "login_user";
 
