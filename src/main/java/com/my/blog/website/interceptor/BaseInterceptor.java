@@ -49,6 +49,7 @@ public class BaseInterceptor implements HandlerInterceptor {
         if (null == user) {
             Integer uid = TaleUtils.getCookieUid(request);
             if (null != uid) {
+                //这里还是有安全隐患,cookie是可以伪造的
                 user = userService.queryUserById(uid);
                 request.getSession().setAttribute(WebConst.LOGIN_SESSION_KEY, user);
             }
