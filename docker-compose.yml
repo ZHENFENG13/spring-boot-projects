@@ -1,8 +1,13 @@
 mysql:
-  image: mysql:5.7
-  environment:
-   - MYSQL_ROOT_PASSWORD=123456
-   - MYSQL_DATABASE=tale
+  build: ./mysql
+#不暴露端口到宿主机
+#  expose:
+#      - "3306"
+
+#测试时使用
+  ports:
+   - 23306:3306
+
 #mongo:
 #  image: mongo:3.3
 #  ports:
@@ -12,9 +17,9 @@ mysql:
 #  ports:
 #   - 6379:6379
 tale-blog:
-  image: blog/core
+  image: blog/my-tale-blog
   ports:
-   - 8080:8080
+   - 28080:8080
   links:
    - mysql
 #   - mongo
