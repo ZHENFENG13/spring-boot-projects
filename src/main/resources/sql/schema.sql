@@ -100,7 +100,6 @@ LOCK TABLES `t_metas` WRITE;
 INSERT INTO `t_metas` (`mid`, `name`, `slug`, `type`, `description`, `sort`, `parent`)
 VALUES
 	(1,'默认分类',NULL,'category',NULL,0,0),
-	(6,'王爵的技术博客','http://biezhi.me','link',NULL,0,0);
 
 UNLOCK TABLES;
 
