@@ -50,13 +50,6 @@
                                         </div>
                                     </div>
 
-                                    <div class="form-group">
-                                        <label class="col-md-3 control-label">允许重新安装</label>
-                                        <div class="col-md-9">
-                                            <div th:class="'toggle toggle-success allow-'+${options.allow_install}"
-                                                 onclick="allow_reinstall(this);"></div>
-                                        </div>
-                                    </div>
                                     <input type="hidden" name="allow_install" id="allow_install"/>
                                     <div class="clearfix pull-right">
                                         <button type="button" class="btn btn-primary waves-effect waves-light" onclick="saveSetting()">
