@@ -4,26 +4,29 @@ set -e
 echo `service mysql status`
 
 echo '1.启动mysql....'
+
 #启动mysql
 service mysql start
 
 sleep 3
+
 echo `service mysql status`
 echo '2.开始导入数据....'
+
 #导入数据
 mysql < /mysql/schema.sql
+
 echo '3.导入数据完毕....'
-#停止mysql
+
 sleep 3
 echo `service mysql status`
+
 #重新设置mysql密码
 echo '4.开始修改密码....'
-mysql < /mysql/editpassword.sql
-echo '5.修改密码完毕....'
 
-#echo '6.重启mysql....'
-#service mysql stop
-#service mysql start
+mysql < /mysql/editpassword.sql
+
+echo '5.修改密码完毕....'
 
 #sleep 3
 echo `service mysql status`
