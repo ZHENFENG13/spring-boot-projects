@@ -8,19 +8,9 @@ mysql:
   ports:
    - 23306:3306
 
-#mongo:
-#  image: mongo:3.3
-#  ports:
-#   - 27017:27017
-#redis:
-#  image: redis:3.0
-#  ports:
-#   - 6379:6379
 tale-blog:
   image: blog/my-tale-blog
   ports:
    - 28080:8080
   links:
    - mysql
-#   - mongo
-#   - redis
