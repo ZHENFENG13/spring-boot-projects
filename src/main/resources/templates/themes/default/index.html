@@ -7,7 +7,7 @@
         <div class="post-lists-body">
             <div class="post-list-item" th:each="article: ${articles.list}">
                 <div class="post-list-item-container">
-                    <a th:href="${commons.permalink(article)}" class="item-thumb  bg-deepgrey"
+                    <a th:href="${commons.permalink(article)}" class="item-thumb  bg-blue"
                        th:style="'background-image:url('+@{${commons.show_thumb(article)}}+');'">
                     </a>
                     <div class="item-slant reverse-slant &lt; bg-deepgrey"></div>
