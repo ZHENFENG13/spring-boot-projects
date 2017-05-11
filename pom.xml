@@ -4,11 +4,11 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>com.my.blog.website</groupId>
-    <artifactId>my-tale-blog</artifactId>
+    <artifactId>my-blog</artifactId>
     <!-- now -->
     <version>3.0.1-SNAPSHOT</version>
     <!-- version的时间节点-->
-    <!-- tale -->
+    <!-- Tale -->
     <!--<version>0.0.1-SNAPSHOT</version>-->
     <!-- springboot -->
     <!--<version>1.0.1-SNAPSHOT</version>-->
@@ -16,8 +16,8 @@
     <!--<version>2.0.1-SNAPSHOT</version>-->
     <packaging>jar</packaging>
 
-    <name>my-tale-blog</name>
-    <description>my-tale-blog</description>
+    <name>my-blog</name>
+    <description>my-blog</description>
 
     <parent>
         <groupId>org.springframework.boot</groupId>
@@ -84,7 +84,7 @@
             <version>2.5</version>
         </dependency>
         <!-- End: log4j2 -->
-        
+
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-websocket</artifactId>

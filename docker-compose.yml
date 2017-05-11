@@ -9,7 +9,7 @@ mysql:
    - 23306:3306
 
 tale-blog:
-  image: blog/my-tale-blog
+  image: blog/my-blog
   ports:
    - 28080:8080
   links:
