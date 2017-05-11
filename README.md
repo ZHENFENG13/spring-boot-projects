@@ -1,8 +1,8 @@
-# Tale
+# My Blog
 
 fork from [Tale](https://github.com/otale/tale)
 
-感觉这个博客总体上还是挺干净的,因此想改为springboot项目,修复bug,按照自己的想法改一下相关功能,然后作为自己的个人博客模板
+感觉这个博客总体上还是挺干净的,因此打算进行二次开发，想改为springboot项目,修复bug,按照自己的想法改一下相关功能,然后作为自己的个人博客模板
 
 2017-03-27 添加docker整合<br/>
 2017-03-28 schema.sql修改<br/>
@@ -15,5 +15,4 @@ fork from [Tale](https://github.com/otale/tale)
 2017-04-15 bug修复,footer样式调整<br/>
 2017-04-17 logo文件修改,附件上传功能<br/>
 2017-04-18 评论功能及页面修改<br/>
-2017-04-25 docker-compose实现多容器部署<br/>
-2017-05-09 删除原install过程,改为脚本自动部署及初始化<br/>
+2017-04-20 域名及网站的公网备案<br/>
