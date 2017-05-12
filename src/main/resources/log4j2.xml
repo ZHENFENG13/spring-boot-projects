@@ -20,10 +20,10 @@
             <patternLayout pattern="${FORMAT}"/>
         </console>
         <!-- 常用于开发环境,把日志记录到文件中,默认追加 -->
-        <file name="db_log" fileName="${LOG_HOME}/my-tale-db.log" append="true">
+        <file name="db_log" fileName="${LOG_HOME}/my-blog-db.log" append="true">
             <patternLayout pattern="${FORMAT}"/>
         </file>
-        <file name="service_log" fileName="${LOG_HOME}/my-tale-info.log" append="true">
+        <file name="service_log" fileName="${LOG_HOME}/my-blog-info.log" append="true">
             <patternLayout pattern="${FORMAT}"/>
         </file>
     </appenders>
