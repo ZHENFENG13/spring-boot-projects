@@ -8,7 +8,7 @@ mysql:
   ports:
    - 23306:3306
 
-tale-blog:
+my-blog:
   image: blog/my-blog
   ports:
    - 28080:8080
