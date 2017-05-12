@@ -71,33 +71,6 @@
 <script type="text/javascript">
     /*<![CDATA[*/
     var tale = new $.tale();
-    function reply(coid) {
-        swal({
-            title: "回复评论",
-            text: "请输入你要回复的内容:",
-            input: 'text',
-            showCancelButton: true,
-            confirmButtonText: '回复',
-            cancelButtonText: '取消',
-            showLoaderOnConfirm: true,
-            preConfirm: function (comment) {
-                return new Promise(function (resolve, reject) {
-                    tale.post({
-                        url: '/admin/comments',
-                        data: {coid: coid, content: comment},
-                        success: function (result) {
-                            if (result && result.success) {
-                                tale.alertOk('已回复');
-                            } else {
-                                tale.alertError(result.msg || '回复失败');
-                            }
-                        }
-                    });
-                })
-            },
-            allowOutsideClick: false
-        });
-    }
 
     function delComment(coid) {
         tale.alertConfirm({
