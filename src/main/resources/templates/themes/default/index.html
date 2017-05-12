@@ -7,13 +7,15 @@
         <div class="post-lists-body">
             <div class="post-list-item" th:each="article: ${articles.list}">
                 <div class="post-list-item-container">
-                    <a th:href="${commons.permalink(article)}" class="item-thumb  bg-blue"
+                    <a th:href="${commons.permalink(article)}" class="item-thumb  bg-deepgrey"
                        th:style="'background-image:url('+@{${commons.show_thumb(article)}}+');'">
+                        <dir class="item-desc" th:text="${article.tags}"></dir>
                     </a>
                     <div class="item-slant reverse-slant &lt; bg-deepgrey"></div>
                     <div class="item-slant"></div>
                     <div class="item-label">
-                        <div class="item-title"><a th:href="${commons.permalink(article)}" th:text="${article.title}"></a>
+                        <div class="item-title"><a th:href="${commons.permalink(article)}"
+                                                   th:text="${article.title}"></a>
                         </div>
                         <div class="item-meta clearfix">
                             <div th:class="'item-meta-ico '+ ${commons.show_icon(article.cid)}"
