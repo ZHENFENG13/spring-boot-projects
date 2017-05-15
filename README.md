@@ -20,4 +20,6 @@ fork from [Tale](https://github.com/otale/tale)
 2017-05-09 删除原install过程,改为脚本自动部署及初始化<br/>
 2017-05-10 docker容器时区不同步问题修复,文件整理<br/>
 2017-05-11 文件整理,排版和文案修改<br/>
-2017-05-13 正式上线啦,[网站地址](http://blog.hanshuai.xin)<br/>
+2017-05-13 正式上线啦<br/>
+2017-05-15 如果已经有docker相关环境,直接运行```sh -x run.sh```即可<br/>
+
