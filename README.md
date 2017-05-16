@@ -19,7 +19,7 @@ fork from [Tale](https://github.com/otale/tale)
 
 [**常见问题**](https://github.com/ZHENFENG13/My-Blog/wiki/%E5%B8%B8%E8%A7%81%E9%97%AE%E9%A2%98)
 
-# 预览图
+# Preview
 
 **首页：**
 ![首页](http://images2015.cnblogs.com/blog/859549/201705/859549-20170511122850691-373579903.png)
@@ -34,7 +34,7 @@ fork from [Tale](https://github.com/otale/tale)
 **分类编辑：**
 ![分类编辑](http://images2015.cnblogs.com/blog/859549/201705/859549-20170510225357207-57945087.png)
 
-# 工作日志
+# Log
 
 2017-03-27 添加docker整合<br/>
 2017-03-28 schema.sql修改<br/>
