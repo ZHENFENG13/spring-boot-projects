@@ -3,6 +3,7 @@
 fork from [Tale](https://github.com/otale/tale)
 
 感觉这个博客总体上还是挺干净的，因此打算进行二次开发，改为springboot项目，修复bug，按照自己的想法改一下相关功能，然后作为自己的个人博客模板。<br/>
+
 [Docker+SpringBoot+Mybatis+thymeleaf的Java博客系统开源啦](http://www.cnblogs.com/han-1034683568/p/6840493.html)
 
 # Quick Start
@@ -19,7 +20,7 @@ fork from [Tale](https://github.com/otale/tale)
 
 [**常见问题**](https://github.com/ZHENFENG13/My-Blog/wiki/%E5%B8%B8%E8%A7%81%E9%97%AE%E9%A2%98)
 
-# 预览图
+# Preview
 
 **首页：**
 ![首页](http://images2015.cnblogs.com/blog/859549/201705/859549-20170511122850691-373579903.png)
@@ -34,7 +35,7 @@ fork from [Tale](https://github.com/otale/tale)
 **分类编辑：**
 ![分类编辑](http://images2015.cnblogs.com/blog/859549/201705/859549-20170510225357207-57945087.png)
 
-# 工作日志
+# Log
 
 2017-03-27 添加docker整合<br/>
 2017-03-28 schema.sql修改<br/>
