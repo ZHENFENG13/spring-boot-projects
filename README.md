@@ -6,6 +6,8 @@ fork from [Tale](https://github.com/otale/tale)
 
 [Docker+SpringBoot+Mybatis+thymeleaf的Java博客系统开源啦](http://www.cnblogs.com/han-1034683568/p/6840493.html)
 
+[My-Blog搭建过程：如何让一个网站从零到可以上线访问](http://www.cnblogs.com/han-1034683568/p/6885545.html)
+
 # Quick Start
 
 [1.如何部署My Blog](https://github.com/ZHENFENG13/My-Blog/wiki/1-%E5%A6%82%E4%BD%95%E9%83%A8%E7%BD%B2My-Blog)<br/>
@@ -55,3 +57,4 @@ fork from [Tale](https://github.com/otale/tale)
 2017-05-11 文件整理,排版和文案修改<br/>
 2017-05-13 正式上线啦<br/>
 2017-05-15 部署文档<br/>
+2017-05-21 My-Blog上线过程记录<br/>
