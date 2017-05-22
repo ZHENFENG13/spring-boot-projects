@@ -57,4 +57,3 @@ fork from [Tale](https://github.com/otale/tale)
 2017-05-11 文件整理,排版和文案修改<br/>
 2017-05-13 正式上线啦<br/>
 2017-05-15 部署文档<br/>
-2017-05-21 My-Blog上线过程记录<br/>
