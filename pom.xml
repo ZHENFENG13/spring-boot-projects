@@ -119,6 +119,12 @@
             <version>0.8.0</version>
         </dependency>
 
+        <dependency>
+            <groupId>com.atlassian.commonmark</groupId>
+            <artifactId>commonmark-ext-gfm-tables</artifactId>
+            <version>0.8.0</version>
+        </dependency>
+
         <!--mybatis分页插件-->
         <dependency>
             <groupId>com.github.pagehelper</groupId>
