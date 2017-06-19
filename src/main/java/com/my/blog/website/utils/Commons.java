@@ -141,18 +141,18 @@ public final class Commons {
     }
 
     /**
-     * 返回gravatar头像地址
+     * 返回github头像地址
      *
      * @param email
      * @return
      */
     public static String gravatar(String email) {
-        String avatarUrl = "https://secure.gravatar.com/avatar";
+        String avatarUrl = "https://github.com/identicons/";
         if (StringUtils.isBlank(email)) {
             return avatarUrl;
         }
         String hash = TaleUtils.MD5encode(email.trim().toLowerCase());
-        return avatarUrl + "/" + hash;
+        return avatarUrl + hash + ".png";
     }
 
     /**
