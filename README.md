@@ -22,6 +22,8 @@ fork from [Tale](https://github.com/otale/tale)
 
 [4.开发环境运行代码](https://github.com/ZHENFENG13/My-Blog/wiki/4-%E5%BC%80%E5%8F%91%E7%8E%AF%E5%A2%83%E8%BF%90%E8%A1%8C%E4%BB%A3%E7%A0%81)
 
+[5.博客上线及备案相关流程](https://github.com/ZHENFENG13/My-Blog/wiki/%E4%B8%8A%E7%BA%BF%E5%8F%8A%E5%A4%87%E6%A1%88%E7%9B%B8%E5%85%B3)
+
 [**常见问题**](https://github.com/ZHENFENG13/My-Blog/wiki/%E5%B8%B8%E8%A7%81%E9%97%AE%E9%A2%98)
 
 # Preview
@@ -60,3 +62,4 @@ fork from [Tale](https://github.com/otale/tale)
 2017-05-13 正式上线啦<br/>
 2017-05-15 部署文档<br/>
 2017-05-21 My-Blog上线过程记录<br/>
+
