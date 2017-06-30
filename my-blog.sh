@@ -1,6 +1,6 @@
 #!/bin/bash
-# author:13
-# date:2017-06-30
+# author: 13
+# date: 2017-06-30
 
 
 env_args="-Xms128m -Xmx128m"
