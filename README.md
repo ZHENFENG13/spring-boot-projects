@@ -19,7 +19,7 @@ fork from [Tale](https://github.com/otale/tale)
 
 [2.通过共享镜像直接部署My Blog](https://github.com/ZHENFENG13/My-Blog/wiki/2-%E9%80%9A%E8%BF%87%E5%85%B1%E4%BA%AB%E9%95%9C%E5%83%8F%E7%9B%B4%E6%8E%A5%E9%83%A8%E7%BD%B2My-Blog)<br/>
 
-[3.1 非docker环境运行My Blog](https://github.com/ZHENFENG13/My-Blog/wiki/3-%E9%9D%9Edocker%E7%8E%AF%E5%A2%83%E8%BF%90%E8%A1%8CMy-Blog)<br/>
+[3.1 非docker环境运行My Blog](https://github.com/ZHENFENG13/My-Blog/wiki/3.1-%E9%9D%9Edocker%E7%8E%AF%E5%A2%83%E8%BF%90%E8%A1%8CMy-Blog)<br/>
 
 [3.2 将My Blog部署到tomcat(非docker环境)](https://github.com/ZHENFENG13/My-Blog/wiki/3.2-%E5%B0%86My-Blog%E9%83%A8%E7%BD%B2%E5%88%B0tomcat(%E9%9D%9Edocker%E7%8E%AF%E5%A2%83))<br/>
 
