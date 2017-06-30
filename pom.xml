@@ -166,18 +166,18 @@
     </dependencies>
 
     <!-- 普通的maven打包方式 -->
-        <!--<build>
-            <plugins>
-                <plugin>
-                    <groupId>org.springframework.boot</groupId>
-                    <artifactId>spring-boot-maven-plugin</artifactId>
-                </plugin>
-            </plugins>
-        </build>-->
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-maven-plugin</artifactId>
+            </plugin>
+        </plugins>
+    </build>
     <!-- 普通的maven打包方式 -->
 
     <!-- 结合docker的maven打包方式,并上传提交创建的镜像 -->
-    <build>
+    <!--<build>
         <plugins>
             <plugin>
                 <groupId>org.springframework.boot</groupId>
@@ -208,7 +208,7 @@
                 </configuration>
             </plugin>
         </plugins>
-    </build>
+    </build>-->
     <!-- 结合docker的maven打包方式,并上传提交创建的镜像 -->
 
 </project>

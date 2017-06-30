@@ -1,6 +1,6 @@
 #!/bin/bash
-# author:bezhi
-# url:https://github.com/otale/scripts
+# author:13
+# date:2017-06-30
 
 
 env_args="-Xms128m -Xmx128m"
@@ -16,6 +16,9 @@ get_pid(){
 }
 
 startup(){
+
+    #构建并启动
+    mvn clean install -Dmaven.test.skip=true
     pid=$(get_pid)
     if [ "$pid" != "" ]
     then
