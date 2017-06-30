@@ -166,7 +166,7 @@
     </dependencies>
 
     <!-- 普通的maven打包方式 -->
-    <!--    <build>
+        <!--<build>
             <plugins>
                 <plugin>
                     <groupId>org.springframework.boot</groupId>
@@ -197,7 +197,7 @@
                 </executions>
                 <configuration>
                     <imageName>${docker.image.prefix}/${project.artifactId}</imageName>
-                    <dockerDirectory>${project.basedir}/src/main/docker</dockerDirectory>
+                    <dockerDirectory>${project.basedir}/docker-extension/my-blog</dockerDirectory>
                     <resources>
                         <resource>
                             <targetPath>/</targetPath>
