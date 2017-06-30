@@ -2,6 +2,8 @@
 
 set -e
 
+cd ../
+
 #如果已经创建好镜像,这一步要注释掉,避免重复操作
 #mvn clean install -Dmaven.test.skip=true
 
@@ -9,6 +11,8 @@ set -e
 mvn clean install -Dmaven.test.skip=true
 
 # 停止原先运行的容器
+cd docker-extension
+
 docker-compose stop
 docker-compose rm -f
 
