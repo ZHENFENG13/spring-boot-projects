@@ -2,6 +2,19 @@
 
 set -e
 
+#比较字符串的函数
+haveDatabase(){
+	DATABASES=$1
+	DATABASE=$2
+	result=$(echo $DATABASES | grep "${DATABASE}")
+	if [[ "$result" != "" ]]
+ 	then
+  	   	return 1
+ 	else
+    	return 0
+	 fi
+}
+
 echo `service mysql status`
 
 echo '1.启动mysql....'
@@ -14,11 +27,12 @@ sleep 3
 echo `service mysql status`
 echo '2.开始导入数据....'
 
-echo 'change database'
+echo 'SHOW DATABASES'
 
-errorMessage="ERROR 1049 (42000): Unknown database 'tale'"
-data=$(mysql > use tale;)
-if [ "$data" = "$errorMessage" ];then
+DATABASES=`mysql> SHOW DATABASES;`
+
+haveDatabase $DATABASES "tale"
+if [ $? -ne 1 ];then
 #导入数据
 mysql < /mysql/schema.sql
 
