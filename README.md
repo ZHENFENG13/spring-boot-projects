@@ -68,3 +68,4 @@ fork from [Tale](https://github.com/otale/tale)
 2017-05-15 部署文档<br/>
 2017-05-21 My-Blog上线过程记录<br/>
 2017-06-30 目录调整:docker组件化<br/>
+2017-07-20 问题修复:docker-compose重启时mysql容器中数据被删除并初始化的问题<br/>
