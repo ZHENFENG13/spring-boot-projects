@@ -31,6 +31,6 @@ echo '5.修改密码完毕....'
 
 #sleep 3
 echo `service mysql status`
-echo `mysql容器启动完毕,且数据导入成功`
+echo 'mysql容器启动完毕,且数据导入成功'
 
 tail -f /dev/null
