@@ -16,10 +16,9 @@ echo '2.开始导入数据....'
 
 echo 'change database'
 
-haveTale = `mysql > use tale`
-errorMessage = "ERROR 1049 (42000): Unknown database 'tale'"
-
-if [ "$haveTale" = "$errorMessage" ];then
+errorMessage="ERROR 1049 (42000): Unknown database 'tale'"
+data=$(mysql > use tale;)
+if [ "$data" = "$errorMessage" ];then
 #导入数据
 mysql < /mysql/schema.sql
 
