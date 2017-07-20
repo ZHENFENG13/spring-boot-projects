@@ -15,6 +15,7 @@ cd docker-extension
 
 # 停止原先运行的容器
 docker-compose stop
+# 删除停止的容器(如果想重启则不要执行此命令)
 docker-compose rm -f
 
 #删除停止的容器
@@ -28,3 +29,6 @@ docker-compose up --build -d
 
 # 日志
 docker-compose logs -f
+
+# 重启
+#docker-compose restart
