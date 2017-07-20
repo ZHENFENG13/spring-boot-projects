@@ -17,9 +17,12 @@ echo 'show databases'
 DATABASES=$(mysql -e "show databases")
 DATABASE="tale"
 echo $DATABASES
-result=$(echo $DATABASES | grep "${DATABASE}")
-echo $result
-if [ $result = "" ];then
+echo $DATABASE
+if [[ "$DATABASES" =~ "$DATABASE" ]];then
+
+echo '数据库已存在'
+
+else
 
 echo '2.开始导入数据....'
 #导入数据
@@ -40,10 +43,6 @@ echo '5.修改密码完毕....'
 #sleep 3
 echo `service mysql status`
 echo 'mysql容器启动完毕,且数据导入成功'
-
-else
- echo '数据库已存在'
-'
 
 fi
 
