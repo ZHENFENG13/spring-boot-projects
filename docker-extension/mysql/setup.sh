@@ -20,10 +20,12 @@ echo $DATABASES
 echo $DATABASE
 if [[ "$DATABASES" =~ "$DATABASE" ]];then
 
-echo '数据库已存在'
+echo '--------mysql容器重启--------'
+echo '2.数据库已存在,无需初始化数据....'
 
 else
 
+echo '--------mysql容器第一次启动--------'
 echo '2.开始导入数据....'
 #导入数据
 mysql < /mysql/schema.sql
