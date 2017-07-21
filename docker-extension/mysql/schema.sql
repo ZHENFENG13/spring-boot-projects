@@ -1,6 +1,5 @@
 
 -- 创建数据库
-drop database if exists tale;
 create database `tale` default character set utf8 collate utf8_general_ci;
 
 use tale;

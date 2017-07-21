@@ -10,6 +10,8 @@ fork from [Tale](https://github.com/otale/tale)
 
 [利用Dockerfile构建mysql镜像并实现数据的初始化及权限设置](http://www.cnblogs.com/han-1034683568/p/6941337.html)
 
+[Java开源博客My-Blog之docker容器组件化修改](http://www.cnblogs.com/han-1034683568/p/7102765.html)
+
 # Quick Start
 
 [1.如何部署My Blog](https://github.com/ZHENFENG13/My-Blog/wiki/1-%E5%A6%82%E4%BD%95%E9%83%A8%E7%BD%B2My-Blog)<br/>
@@ -66,3 +68,4 @@ fork from [Tale](https://github.com/otale/tale)
 2017-05-15 部署文档<br/>
 2017-05-21 My-Blog上线过程记录<br/>
 2017-06-30 目录调整:docker组件化<br/>
+2017-07-20 问题修复:docker-compose重启时mysql容器中数据被删除并初始化的问题<br/>
