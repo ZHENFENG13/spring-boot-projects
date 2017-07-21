@@ -7,4 +7,4 @@ echo '等待mysql.....'
 sleep 25
 
 echo '开始启动项目.....'
-nohup java -jar /app.jar
+nohup java -jar /app.jar --spring.profiles.active=docker

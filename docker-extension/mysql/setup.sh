@@ -1,4 +1,5 @@
 #!/bin/bash
+
 set -e
 
 echo `service mysql status`
@@ -24,7 +25,7 @@ echo `service mysql status`
 #重新设置mysql密码
 echo '4.开始修改密码....'
 
-mysql < /mysql/editpassword.sql
+mysql < /mysql/privileges.sql
 
 echo '5.修改密码完毕....'
 

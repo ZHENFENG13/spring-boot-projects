@@ -6,7 +6,7 @@
     <groupId>com.my.blog.website</groupId>
     <artifactId>my-blog</artifactId>
     <!-- now -->
-    <version>3.0.1-SNAPSHOT</version>
+    <version>3.1.1-SNAPSHOT</version>
     <!-- version的时间节点-->
     <!-- Tale -->
     <!--<version>0.0.1-SNAPSHOT</version>-->
@@ -35,10 +35,6 @@
     </properties>
 
     <dependencies>
-        <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-data-redis</artifactId>
-        </dependency>
         <dependency>
             <groupId>org.mybatis.spring.boot</groupId>
             <artifactId>mybatis-spring-boot-starter</artifactId>
@@ -166,18 +162,18 @@
     </dependencies>
 
     <!-- 普通的maven打包方式 -->
-    <!--    <build>
-            <plugins>
-                <plugin>
-                    <groupId>org.springframework.boot</groupId>
-                    <artifactId>spring-boot-maven-plugin</artifactId>
-                </plugin>
-            </plugins>
-        </build>-->
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-maven-plugin</artifactId>
+            </plugin>
+        </plugins>
+    </build>
     <!-- 普通的maven打包方式 -->
 
     <!-- 结合docker的maven打包方式,并上传提交创建的镜像 -->
-    <build>
+    <!--<build>
         <plugins>
             <plugin>
                 <groupId>org.springframework.boot</groupId>
@@ -197,7 +193,7 @@
                 </executions>
                 <configuration>
                     <imageName>${docker.image.prefix}/${project.artifactId}</imageName>
-                    <dockerDirectory>${project.basedir}/src/main/docker</dockerDirectory>
+                    <dockerDirectory>${project.basedir}/docker-extension/my-blog</dockerDirectory>
                     <resources>
                         <resource>
                             <targetPath>/</targetPath>
@@ -208,7 +204,7 @@
                 </configuration>
             </plugin>
         </plugins>
-    </build>
+    </build>-->
     <!-- 结合docker的maven打包方式,并上传提交创建的镜像 -->
 
 </project>
