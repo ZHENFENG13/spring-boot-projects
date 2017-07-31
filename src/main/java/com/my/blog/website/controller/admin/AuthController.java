@@ -81,6 +81,7 @@ public class AuthController extends BaseController {
 
     /**
      * 注销
+     *
      * @param session
      * @param response
      */
@@ -88,10 +89,12 @@ public class AuthController extends BaseController {
     public void logout(HttpSession session, HttpServletResponse response, HttpServletRequest request) {
         session.removeAttribute(WebConst.LOGIN_SESSION_KEY);
         Cookie cookie = new Cookie(WebConst.USER_IN_COOKIE, "");
-        cookie.setMaxAge(0);
+        cookie.setValue(null);
+        cookie.setMaxAge(0);// 立即销毁cookie
+        cookie.setPath("/");
         response.addCookie(cookie);
         try {
-            response.sendRedirect(Commons.site_url());
+            response.sendRedirect("/admin/login");
         } catch (IOException e) {
             e.printStackTrace();
             LOGGER.error("注销失败", e);
