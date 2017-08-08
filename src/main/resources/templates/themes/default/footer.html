@@ -36,14 +36,17 @@
                 <div class="meta-copyright-info">
                     <div class="info-text">
                         <a href="http://blog.hanshuai.xin" style="display: block;margin: 0 auto;" class="info-logo">
-                            <img style="display: block;margin: 0 auto;" th:src="@{/user/img/logo.png}" th:alt="${commons.site_title()}"/>
+                            <img style="display: block;margin: 0 auto;" th:src="@{/user/img/logo.png}"
+                                 th:alt="${commons.site_title()}"/>
                         </a>
                         <br/>
                         <p>&copy; 版权所有 <a href="https://github.com/ZHENFENG13/My-Blog" target="_blank"
-                                         rel="nofollow">My Blog</a> 保留一切权利
+                                          rel="nofollow">My Blog</a> 保留一切权利
                         </p>
                         <br/>
-                        <p>ICP备xxxxxxxx号-1</p>
+                        <th:block th:if="${option}!=null and ${option.getValue()}!=''">
+                            <p th:text="${option.getValue()}"></p>
+                        </th:block>
                     </div>
                 </div>
             </div>

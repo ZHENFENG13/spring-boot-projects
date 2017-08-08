@@ -124,10 +124,10 @@ VALUES
 	('social_zhihu','',NULL),
 	('social_github','',NULL),
 	('social_twitter','',NULL),
-	('allow_install','0',''),
 	('site_theme','default',NULL),
 	('site_keywords','13 Blog',NULL),
-	('site_description','13 Blog',NULL);
+	('site_description','13 Blog',NULL),
+	('site_record','','备案号');
 
 UNLOCK TABLES;
 
