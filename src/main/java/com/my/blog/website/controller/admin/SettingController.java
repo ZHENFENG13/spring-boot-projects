@@ -51,6 +51,9 @@ public class SettingController extends BaseController {
         voList.forEach((option) -> {
             options.put(option.getName(), option.getValue());
         });
+        if (options.get("site_record") == null) {
+            options.put("site_record", "");
+        }
         request.setAttribute("options", options);
         return "admin/setting";
     }
