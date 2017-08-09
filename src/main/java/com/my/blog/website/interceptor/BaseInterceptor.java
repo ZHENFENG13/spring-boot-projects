@@ -1,6 +1,8 @@
 package com.my.blog.website.interceptor;
 
+import com.my.blog.website.modal.Vo.OptionVo;
 import com.my.blog.website.modal.Vo.UserVo;
+import com.my.blog.website.service.IOptionService;
 import com.my.blog.website.service.IUserService;
 import com.my.blog.website.utils.*;
 import com.my.blog.website.constant.WebConst;
@@ -14,6 +16,8 @@ import org.springframework.web.servlet.ModelAndView;
 import javax.annotation.Resource;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import java.util.HashMap;
+import java.util.Map;
 
 /**
  * 自定义拦截器
@@ -27,6 +31,9 @@ public class BaseInterceptor implements HandlerInterceptor {
     @Resource
     private IUserService userService;
 
+    @Resource
+    private IOptionService optionService;
+
     private MapCache cache = MapCache.single();
 
     @Resource
@@ -34,7 +41,6 @@ public class BaseInterceptor implements HandlerInterceptor {
 
     @Resource
     private AdminCommons adminCommons;
-
 
     @Override
     public boolean preHandle(HttpServletRequest request, HttpServletResponse response, Object o) throws Exception {
@@ -70,7 +76,9 @@ public class BaseInterceptor implements HandlerInterceptor {
 
     @Override
     public void postHandle(HttpServletRequest httpServletRequest, HttpServletResponse httpServletResponse, Object o, ModelAndView modelAndView) throws Exception {
+        OptionVo ov = optionService.getOptionByName("site_record");
         httpServletRequest.setAttribute("commons", commons);//一些工具类和公共方法
+        httpServletRequest.setAttribute("option", ov);
         httpServletRequest.setAttribute("adminCommons", adminCommons);
     }
 

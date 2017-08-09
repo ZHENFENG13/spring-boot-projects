@@ -12,11 +12,6 @@ import java.util.Set;
  */
 @Component
 public class WebConst {
-    /**
-     * 存储安装信息的配置文件名称
-     */
-    public static final String INSTALL_FILE_CONF = "install.lock";
-
     public static Map<String, String> initConfig = new HashMap<>();
 
 
@@ -58,9 +53,4 @@ public class WebConst {
      * 上传文件最大1M
      */
     public static Integer MAX_FILE_SIZE = 1048576;
-
-    /**
-     * 要过滤的ip列表
-     */
-    public static final Set<String> BLOCK_IPS = new HashSet<>(16);
 }

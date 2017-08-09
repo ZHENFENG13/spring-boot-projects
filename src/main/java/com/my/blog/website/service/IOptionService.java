@@ -24,4 +24,6 @@ public interface IOptionService {
      * @param options
      */
     void saveOptions(Map<String, String> options);
+
+    OptionVo getOptionByName(String name);
 }
