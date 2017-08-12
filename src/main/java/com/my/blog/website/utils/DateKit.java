@@ -1,10 +1,14 @@
 package com.my.blog.website.utils;
 
-import org.apache.commons.lang3.StringUtils;
-
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
-import java.util.*;
+import java.util.ArrayList;
+import java.util.Calendar;
+import java.util.Date;
+import java.util.Iterator;
+import java.util.List;
+
+import org.apache.commons.lang3.StringUtils;
 
 /**
  * Created by Administrator on 2017/3/10 010.
@@ -370,9 +374,9 @@ public class DateKit {
         } else {
             if(endDate == null) {
                 Calendar calendar = Calendar.getInstance();
-                String year = (new Integer(calendar.get(1))).toString();
-                String month = (new Integer(calendar.get(2) + 1)).toString();
-                String day = (new Integer(calendar.get(5))).toString();
+                String year = Integer.toString(calendar.get(Calendar.YEAR));
+                String month = Integer.toString(calendar.get(Calendar.MONTH) + 1);
+                String day = Integer.toString(calendar.get(Calendar.DATE));
                 String strtodaytime = year + "-" + month + "-" + day;
                 SimpleDateFormat formatter = new SimpleDateFormat("yyyy-MM-dd");
 

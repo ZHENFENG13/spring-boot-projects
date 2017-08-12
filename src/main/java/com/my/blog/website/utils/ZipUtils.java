@@ -60,11 +60,14 @@ public class ZipUtils {
     public static void addFolderToZip(String path, String srcFolder, ZipOutputStream zip) throws Exception {
         File folder = new File(srcFolder);
         if (null != path && folder.isDirectory()) {
-            for (String fileName : folder.list()) {
-                if (path.equals("")) {
-                    addFileToZip(folder.getName(), srcFolder + "/" + fileName, zip);
-                } else {
-                    addFileToZip(path + "/" + folder.getName(), srcFolder + "/" + fileName, zip);
+            String[] fileList = folder.list();
+            if (fileList != null) {
+                for (String fileName : fileList) {
+                    if (path.equals("")) {
+                        addFileToZip(folder.getName(), srcFolder + "/" + fileName, zip);
+                    } else {
+                        addFileToZip(path + "/" + folder.getName(), srcFolder + "/" + fileName, zip);
+                    }
                 }
             }
         }
