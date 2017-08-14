@@ -1,16 +1,16 @@
 package com.my.blog.website.utils;
 
-import sun.misc.BASE64Decoder;
-import sun.misc.BASE64Encoder;
-
-import javax.crypto.Cipher;
-import javax.crypto.spec.SecretKeySpec;
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileOutputStream;
 import java.io.IOException;
 import java.nio.channels.FileChannel;
 import java.util.Random;
+import javax.crypto.Cipher;
+import javax.crypto.spec.SecretKeySpec;
+
+import sun.misc.BASE64Decoder;
+import sun.misc.BASE64Encoder;
 
 /**
  * 工具类
@@ -38,15 +38,17 @@ public class Tools {
         return random.nextInt(max) % (max - min + 1) + min;
     }
 
-    public static String flowAutoShow(int value) {
+	public static String flowAutoShow(double value) {
+		// Math.round 方法接收 float 和 double 类型,如果参数是 int 的话,会强转为 float,这个时候调用该方法无意义
         int kb = 1024;
         int mb = 1048576;
         int gb = 1073741824;
-        if (Math.abs(value) > gb) {
+		double abs = Math.abs(value);
+		if (abs > gb) {
             return Math.round(value / gb) + "GB";
-        } else if (Math.abs(value) > mb) {
+		} else if (abs > mb) {
             return Math.round(value / mb) + "MB";
-        } else if (Math.abs(value) > kb) {
+		} else if (abs > kb) {
             return Math.round(value / kb) + "KB";
         }
         return Math.round(value) + "";

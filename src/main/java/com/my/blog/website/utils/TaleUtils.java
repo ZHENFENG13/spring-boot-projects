@@ -1,9 +1,26 @@
 package com.my.blog.website.utils;
 
-import com.my.blog.website.exception.TipException;
-import com.my.blog.website.constant.WebConst;
-import com.my.blog.website.controller.admin.AttachController;
-import com.my.blog.website.modal.Vo.UserVo;
+import java.awt.Image;
+import java.io.File;
+import java.io.FileInputStream;
+import java.io.IOException;
+import java.io.InputStream;
+import java.io.UnsupportedEncodingException;
+import java.security.MessageDigest;
+import java.security.NoSuchAlgorithmException;
+import java.text.Normalizer;
+import java.util.Arrays;
+import java.util.Date;
+import java.util.Properties;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
+import javax.imageio.ImageIO;
+import javax.servlet.http.Cookie;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
+import javax.sql.DataSource;
+
 import org.apache.commons.lang3.StringUtils;
 import org.commonmark.Extension;
 import org.commonmark.ext.gfm.tables.TablesExtension;
@@ -14,22 +31,10 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.jdbc.datasource.DriverManagerDataSource;
 
-import javax.imageio.ImageIO;
-import javax.servlet.http.Cookie;
-import javax.servlet.http.HttpServletRequest;
-import javax.servlet.http.HttpServletResponse;
-import javax.servlet.http.HttpSession;
-import javax.sql.DataSource;
-import java.awt.*;
-import java.io.*;
-import java.security.MessageDigest;
-import java.security.NoSuchAlgorithmException;
-import java.text.Normalizer;
-import java.util.Arrays;
-import java.util.Date;
-import java.util.Properties;
-import java.util.regex.Matcher;
-import java.util.regex.Pattern;
+import com.my.blog.website.constant.WebConst;
+import com.my.blog.website.controller.admin.AttachController;
+import com.my.blog.website.exception.TipException;
+import com.my.blog.website.modal.Vo.UserVo;
 
 /**
  * Tale工具类
@@ -38,8 +43,6 @@ import java.util.regex.Pattern;
  */
 public class TaleUtils {
     private static final Logger LOGGER = LoggerFactory.getLogger(TaleUtils.class);
-
-    private static DataSource newDataSource;
     /**
      * 一个月
      */
@@ -50,6 +53,8 @@ public class TaleUtils {
     private static final Pattern VALID_EMAIL_ADDRESS_REGEX =
             Pattern.compile("^[A-Z0-9._%+-]+@[A-Z0-9.-]+\\.[A-Z]{2,6}$", Pattern.CASE_INSENSITIVE);
     private static final Pattern SLUG_REGEX = Pattern.compile("^[A-Za-z0-9_-]{5,100}$", Pattern.CASE_INSENSITIVE);
+    // 使用双重检查锁的单例方式需要添加 volatile 关键字
+    private static volatile DataSource newDataSource;
     /**
      * markdown解析器
      */

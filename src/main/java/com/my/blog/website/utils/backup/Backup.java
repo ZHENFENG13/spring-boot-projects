@@ -1,9 +1,6 @@
 package com.my.blog.website.utils.backup;
 
 
-import com.my.blog.website.utils.backup.db.DataTable;
-import com.my.blog.website.utils.backup.db.Row;
-
 import java.sql.Connection;
 import java.sql.DatabaseMetaData;
 import java.sql.SQLException;
@@ -11,13 +8,21 @@ import java.sql.Types;
 import java.text.DateFormat;
 import java.text.SimpleDateFormat;
 
+import com.my.blog.website.utils.backup.db.DataTable;
+import com.my.blog.website.utils.backup.db.Row;
+
 public class Backup {
+	// DateFormat 对象不是线程安全的,所以绑定到ThreadLocal对象里面,单个线程格式化使用同一个对象
+	private final static ThreadLocal<DateFormat> DATE_FORMAT_THREAD_LOCAL = ThreadLocal.withInitial(() -> new SimpleDateFormat("yyy-MM-dd"));
+	private final static ThreadLocal<DateFormat> DATE_TIME_FORMAT_THREAD_LOCAL = ThreadLocal.withInitial(() -> new SimpleDateFormat("yyy-MM-dd hh:mm:ss"));
+	private final static ThreadLocal<DateFormat> TIME_FORMAT_THREAD_LOCAL = ThreadLocal.withInitial(() -> new SimpleDateFormat("hh:mm:ss"));
 	private Connection connection;
 	private TableCollection tables;
 	private boolean addEmptyTable;
-	private static final DateFormat DATE_FORMAT = new SimpleDateFormat("yyy-MM-dd");
-	private static final DateFormat DATE_TIME_FORMAT = new SimpleDateFormat("yyy-MM-dd hh:mm:ss");
-	private static final DateFormat TIME_FORMAT = new SimpleDateFormat("hh:mm:ss");
+
+	//private static final DateFormat DATE_FORMAT = new SimpleDateFormat("yyy-MM-dd");
+	//private static final DateFormat DATE_TIME_FORMAT = new SimpleDateFormat("yyy-MM-dd hh:mm:ss");
+	//private static final DateFormat TIME_FORMAT = new SimpleDateFormat("hh:mm:ss");
 
 	public Backup(Connection connection) {
 		this.addEmptyTable = true;
@@ -136,13 +141,13 @@ public class Backup {
 				return "\"" + row.getString(index) + "\"";
 
 			case Types.DATE:
-				return "\"" +  DATE_FORMAT.format(row.getDate(index)) + "\"";
-				
+				return "\"" + DATE_FORMAT_THREAD_LOCAL.get().format(row.getDate(index)) + "\"";
+
 			case Types.TIME:
-				return "\"" + TIME_FORMAT.format(row.getDate(index)) + "\"";
-				
+				return "\"" + TIME_FORMAT_THREAD_LOCAL.get().format(row.getDate(index)) + "\"";
+
 			case Types.TIMESTAMP:
-				return "\"" + DATE_TIME_FORMAT.format(row.getDate(index)) + "\"";
+				return "\"" + DATE_TIME_FORMAT_THREAD_LOCAL.get().format(row.getDate(index)) + "\"";
 
 			default:
 				return row.getString(index);
