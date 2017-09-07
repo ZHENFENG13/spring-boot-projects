@@ -30,6 +30,7 @@
                     success: function (result) {
                         $('#comment-form input[name=coid]').val('');
                         if (result && result.success) {
+                            alert("评论已提交至后台审核!");
                             window.location.reload();
                         } else {
                             if (result.msg) {

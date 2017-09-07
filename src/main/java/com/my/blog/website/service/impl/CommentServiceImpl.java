@@ -59,6 +59,7 @@ public class CommentServiceImpl implements ICommentService {
             throw new TipException("不存在的文章");
         }
         comments.setOwnerId(contents.getAuthorId());
+        comments.setStatus("not_audit");
         comments.setCreated(DateKit.getCurrentUnixTime());
         commentDao.insertSelective(comments);
 
@@ -74,7 +75,7 @@ public class CommentServiceImpl implements ICommentService {
         if (null != cid) {
             PageHelper.startPage(page, limit);
             CommentVoExample commentVoExample = new CommentVoExample();
-            commentVoExample.createCriteria().andCidEqualTo(cid).andParentEqualTo(0);
+            commentVoExample.createCriteria().andCidEqualTo(cid).andParentEqualTo(0).andStatusIsNotNull().andStatusEqualTo("approved");
             commentVoExample.setOrderByClause("coid desc");
             List<CommentVo> parents = commentDao.selectByExampleWithBLOBs(commentVoExample);
             PageInfo<CommentVo> commentPaginator = new PageInfo<>(parents);
