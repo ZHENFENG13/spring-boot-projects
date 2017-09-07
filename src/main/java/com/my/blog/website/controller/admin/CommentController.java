@@ -92,46 +92,4 @@ public class CommentController extends BaseController {
         return RestResponseBo.ok();
     }
 
-    @PostMapping(value = "")
-    @ResponseBody
-    @Transactional(rollbackFor = TipException.class)
-    public RestResponseBo reply(@RequestParam Integer coid, @RequestParam String content, HttpServletRequest request) {
-        if(null == coid || StringUtils.isBlank(content)){
-            return RestResponseBo.fail("请输入完整后评论");
-        }
-
-        if(content.length() > 2000){
-            return RestResponseBo.fail("请输入2000个字符以内的回复");
-        }
-        CommentVo c = commentsService.getCommentById(coid);
-        if(null == c){
-            return RestResponseBo.fail("不存在该评论");
-        }
-        UserVo users = this.user(request);
-        content = TaleUtils.cleanXSS(content);
-        content = EmojiParser.parseToAliases(content);
-
-        CommentVo comments = new CommentVo();
-        comments.setAuthor(users.getUsername());
-        comments.setAuthorId(users.getUid());
-        comments.setCid(c.getCid());
-        comments.setIp(request.getRemoteAddr());
-        comments.setUrl(users.getHomeUrl());
-        comments.setContent(content);
-        comments.setMail(users.getEmail());
-        comments.setParent(coid);
-        try {
-            commentsService.insertComment(comments);
-            return RestResponseBo.ok();
-        } catch (Exception e) {
-            String msg = "回复失败";
-            if (e instanceof TipException) {
-                msg = e.getMessage();
-            } else {
-                LOGGER.error(msg, e);
-            }
-            return RestResponseBo.fail(msg);
-        }
-    }
-
 }
