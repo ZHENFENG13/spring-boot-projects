@@ -2,21 +2,15 @@ package com.my.blog.website.utils;
 
 
 import com.github.pagehelper.PageInfo;
-import com.my.blog.website.service.ISiteService;
-import com.vdurmont.emoji.EmojiParser;
 import com.my.blog.website.constant.WebConst;
-import com.my.blog.website.dto.MetaDto;
-import com.my.blog.website.dto.Types;
-import com.my.blog.website.modal.Vo.CommentVo;
 import com.my.blog.website.modal.Vo.ContentVo;
+import com.vdurmont.emoji.EmojiParser;
 import org.apache.commons.lang3.StringUtils;
 import org.springframework.stereotype.Component;
 
 import java.io.UnsupportedEncodingException;
 import java.net.URLEncoder;
-import java.util.ArrayList;
 import java.util.HashMap;
-import java.util.List;
 import java.util.Map;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
@@ -29,16 +23,7 @@ import java.util.regex.Pattern;
 @Component
 public final class Commons {
 
-    private static ISiteService siteService;
-
     public static String THEME = "themes/default";
-
-    private static final List EMPTY = new ArrayList(0);
-
-    public static void setSiteService(ISiteService ss) {
-        siteService = ss;
-    }
-
 
     /**
      * 判断分页中是否有数据
@@ -295,81 +280,6 @@ public final class Commons {
         return "/user/img/rand/" + size + ".jpg";
     }
 
-    /**
-     * 最新文章
-     *
-     * @param limit
-     * @return
-     */
-    public static List<ContentVo> recent_articles(int limit) {
-        if (null == siteService) {
-            return EMPTY;
-        }
-        return siteService.recentContents(limit);
-    }
-
-    /**
-     * 最新评论
-     *
-     * @param limit
-     * @return
-     */
-    public static List<CommentVo> recent_comments(int limit) {
-        if (null == siteService) {
-            return EMPTY;
-        }
-        return siteService.recentComments(limit);
-    }
-
-    /**
-     * 获取分类列表
-     *
-     * @return
-     */
-    public static List<MetaDto> categries(int limit) {
-        return siteService.metas(Types.CATEGORY.getType(), null, limit);
-    }
-
-    /**
-     * 获取所有分类
-     *
-     * @return
-     */
-    public static List<MetaDto> categries() {
-        return categries(WebConst.MAX_POSTS);
-    }
-
-    /**
-     * 获取标签列表
-     *
-     * @return
-     */
-    public static List<MetaDto> tags(int limit) {
-        return siteService.metas(Types.TAG.getType(), null, limit);
-    }
-
-    /**
-     * 获取所有标签
-     *
-     * @return
-     */
-    public static List<MetaDto> tags() {
-        return tags(WebConst.MAX_POSTS);
-    }
-
-    /**
-     * 获取评论at信息
-     *
-     * @param coid
-     * @return
-     */
-    public static String comment_at(Integer coid) {
-        CommentVo comments = siteService.getComment(coid);
-        if (null != comments) {
-            return "<a href=\"#comment-" + coid + "\">@" + comments.getAuthor() + "</a>";
-        }
-        return "";
-    }
 
     /**
      * An :grinning:awesome :smiley:string &#128516;with a few :wink:emojis!
