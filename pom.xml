@@ -6,7 +6,7 @@
     <groupId>com.my.blog.website</groupId>
     <artifactId>my-blog</artifactId>
     <!-- now -->
-    <version>3.2.0-SNAPSHOT</version>
+    <version>3.3.0-SNAPSHOT</version>
     <!-- version的时间节点-->
     <!-- Tale -->
     <!--<version>0.0.1-SNAPSHOT</version>-->
