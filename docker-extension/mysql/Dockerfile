@@ -1,4 +1,4 @@
-FROM mysql:5.7
+FROM hub.c.163.com/library/mysql:5.7
 
 #这条语句可有可无
 ENV MYSQL_DATABASE test
