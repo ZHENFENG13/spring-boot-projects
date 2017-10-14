@@ -19,7 +19,7 @@ public interface IContentService {
      * 发布文章
      * @param contents
      */
-    void publish(ContentVo contents);
+    String publish(ContentVo contents);
 
     /**
      *查询文章返回多条数据
@@ -75,13 +75,13 @@ public interface IContentService {
      * 根据文章id删除
      * @param cid
      */
-    void deleteByCid(Integer cid);
+    String deleteByCid(Integer cid);
 
     /**
      * 编辑文章
      * @param contents
      */
-    void updateArticle(ContentVo contents);
+    String updateArticle(ContentVo contents);
 
 
     /**

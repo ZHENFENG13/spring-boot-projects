@@ -10,6 +10,7 @@ import com.my.blog.website.service.IAttachService;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
 import javax.annotation.Resource;
 import java.util.List;
@@ -42,6 +43,7 @@ public class AttachServiceImpl implements IAttachService {
     }
 
     @Override
+    @Transactional
     public void save(String fname, String fkey, String ftype, Integer author) {
         AttachVo attach = new AttachVo();
         attach.setFname(fname);
@@ -53,6 +55,7 @@ public class AttachServiceImpl implements IAttachService {
     }
 
     @Override
+    @Transactional
     public void deleteById(Integer id) {
         if (null != id) {
             attachDao.deleteByPrimaryKey( id);

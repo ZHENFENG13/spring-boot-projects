@@ -52,7 +52,6 @@ public class CommentController extends BaseController {
      */
     @PostMapping(value = "delete")
     @ResponseBody
-    @Transactional(rollbackFor = TipException.class)
     public RestResponseBo delete(@RequestParam Integer coid) {
         try {
             CommentVo comments = commentsService.getCommentById(coid);
@@ -62,11 +61,7 @@ public class CommentController extends BaseController {
             commentsService.delete(coid, comments.getCid());
         } catch (Exception e) {
             String msg = "评论删除失败";
-            if (e instanceof TipException) {
-                msg = e.getMessage();
-            } else {
-                LOGGER.error(msg, e);
-            }
+            LOGGER.error(msg, e);
             return RestResponseBo.fail(msg);
         }
         return RestResponseBo.ok();
@@ -74,7 +69,6 @@ public class CommentController extends BaseController {
 
     @PostMapping(value = "status")
     @ResponseBody
-    @Transactional(rollbackFor = TipException.class)
     public RestResponseBo delete(@RequestParam Integer coid, @RequestParam String status) {
         try {
             CommentVo comments = commentsService.getCommentById(coid);
@@ -87,11 +81,6 @@ public class CommentController extends BaseController {
             }
         } catch (Exception e) {
             String msg = "操作失败";
-            if (e instanceof TipException) {
-                msg = e.getMessage();
-            } else {
-                LOGGER.error(msg, e);
-            }
             return RestResponseBo.fail(msg);
         }
         return RestResponseBo.ok();

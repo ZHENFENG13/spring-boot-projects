@@ -2,6 +2,7 @@ package com.my.blog.website.service.impl;
 
 import com.github.pagehelper.PageHelper;
 import com.github.pagehelper.PageInfo;
+import com.my.blog.website.constant.WebConst;
 import com.my.blog.website.exception.TipException;
 import com.my.blog.website.utils.DateKit;
 import com.my.blog.website.utils.TaleUtils;
@@ -16,6 +17,7 @@ import org.apache.commons.lang3.StringUtils;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
 import javax.annotation.Resource;
 import java.util.ArrayList;
@@ -35,28 +37,29 @@ public class CommentServiceImpl implements ICommentService {
     private IContentService contentService;
 
     @Override
-    public void insertComment(CommentVo comments) {
+    @Transactional
+    public String insertComment(CommentVo comments) {
         if (null == comments) {
-            throw new TipException("评论对象为空");
+            return "评论对象为空";
         }
         if (StringUtils.isBlank(comments.getAuthor())) {
             comments.setAuthor("热心网友");
         }
         if (StringUtils.isNotBlank(comments.getMail()) && !TaleUtils.isEmail(comments.getMail())) {
-            throw new TipException("请输入正确的邮箱格式");
+            return "请输入正确的邮箱格式";
         }
         if (StringUtils.isBlank(comments.getContent())) {
-            throw new TipException("评论内容不能为空");
+            return "评论内容不能为空";
         }
         if (comments.getContent().length() < 5 || comments.getContent().length() > 2000) {
-            throw new TipException("评论字数在5-2000个字符");
+            return "评论字数在5-2000个字符";
         }
         if (null == comments.getCid()) {
-            throw new TipException("评论文章不能为空");
+            return "评论文章不能为空";
         }
         ContentVo contents = contentService.getContents(String.valueOf(comments.getCid()));
         if (null == contents) {
-            throw new TipException("不存在的文章");
+            return "不存在的文章";
         }
         comments.setOwnerId(contents.getAuthorId());
         comments.setStatus("not_audit");
@@ -67,6 +70,8 @@ public class CommentServiceImpl implements ICommentService {
         temp.setCid(contents.getCid());
         temp.setCommentsNum(contents.getCommentsNum() + 1);
         contentService.updateContentByCid(temp);
+
+        return WebConst.SUCCESS_RESULT;
     }
 
     @Override
@@ -102,6 +107,7 @@ public class CommentServiceImpl implements ICommentService {
     }
 
     @Override
+    @Transactional
     public void update(CommentVo comments) {
         if (null != comments && null != comments.getCoid()) {
             commentDao.updateByPrimaryKeyWithBLOBs(comments);
@@ -109,6 +115,7 @@ public class CommentServiceImpl implements ICommentService {
     }
 
     @Override
+    @Transactional
     public void delete(Integer coid, Integer cid) {
         if (null == coid) {
             throw new TipException("主键为空");

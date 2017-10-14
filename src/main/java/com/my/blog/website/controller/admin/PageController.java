@@ -60,7 +60,6 @@ public class PageController extends BaseController {
 
     @PostMapping(value = "publish")
     @ResponseBody
-    @Transactional(rollbackFor = TipException.class)
     public RestResponseBo publishPage(@RequestParam String title, @RequestParam String content,
                                       @RequestParam String status, @RequestParam String slug,
                                       @RequestParam(required = false) Integer allowComment, @RequestParam(required = false) Integer allowPing, HttpServletRequest request) {
@@ -79,24 +78,15 @@ public class PageController extends BaseController {
             contents.setAllowPing(allowPing == 1);
         }
         contents.setAuthorId(users.getUid());
-
-        try {
-            contentsService.publish(contents);
-        } catch (Exception e) {
-            String msg = "页面发布失败";
-            if (e instanceof TipException) {
-                msg = e.getMessage();
-            } else {
-                LOGGER.error(msg, e);
-            }
-            return RestResponseBo.fail(msg);
+        String result = contentsService.publish(contents);
+        if (!WebConst.SUCCESS_RESULT.equals(result)) {
+            return RestResponseBo.fail(result);
         }
         return RestResponseBo.ok();
     }
 
     @PostMapping(value = "modify")
     @ResponseBody
-    @Transactional(rollbackFor = TipException.class)
     public RestResponseBo modifyArticle(@RequestParam Integer cid, @RequestParam String title,
                                         @RequestParam String content,
                                         @RequestParam String status, @RequestParam String slug,
@@ -117,35 +107,20 @@ public class PageController extends BaseController {
             contents.setAllowPing(allowPing == 1);
         }
         contents.setAuthorId(users.getUid());
-        try {
-            contentsService.updateArticle(contents);
-        } catch (Exception e) {
-            String msg = "页面编辑失败";
-            if (e instanceof TipException) {
-                msg = e.getMessage();
-            } else {
-                LOGGER.error(msg, e);
-            }
-            return RestResponseBo.fail(msg);
+        String result = contentsService.updateArticle(contents);
+        if (!WebConst.SUCCESS_RESULT.equals(result)) {
+            return RestResponseBo.fail(result);
         }
         return RestResponseBo.ok();
     }
 
     @RequestMapping(value = "delete")
     @ResponseBody
-    @Transactional(rollbackFor = TipException.class)
     public RestResponseBo delete(@RequestParam int cid, HttpServletRequest request) {
-        try {
-            contentsService.deleteByCid(cid);
-            logService.insertLog(LogActions.DEL_PAGE.getAction(), cid + "", request.getRemoteAddr(), this.getUid(request));
-        } catch (Exception e) {
-            String msg = "页面删除失败";
-            if (e instanceof TipException) {
-                msg = e.getMessage();
-            } else {
-                LOGGER.error(msg, e);
-            }
-            return RestResponseBo.fail(msg);
+        String result = contentsService.deleteByCid(cid);
+        logService.insertLog(LogActions.DEL_ARTICLE.getAction(), cid + "", request.getRemoteAddr(), this.getUid(request));
+        if (!WebConst.SUCCESS_RESULT.equals(result)) {
+            return RestResponseBo.fail(result);
         }
         return RestResponseBo.ok();
     }

@@ -63,7 +63,6 @@ public class SettingController extends BaseController {
      */
     @PostMapping(value = "")
     @ResponseBody
-    @Transactional(rollbackFor = TipException.class)
     public RestResponseBo saveSetting(@RequestParam(required = false) String site_theme, HttpServletRequest request) {
         try {
             Map<String, String[]> parameterMap = request.getParameterMap();
@@ -71,11 +70,8 @@ public class SettingController extends BaseController {
             parameterMap.forEach((key, value) -> {
                 querys.put(key, join(value));
             });
-
             optionService.saveOptions(querys);
-
             WebConst.initConfig = querys;
-
             if (StringUtils.isNotBlank(site_theme)) {
                 BaseController.THEME = "themes/" + site_theme;
             }
@@ -83,11 +79,6 @@ public class SettingController extends BaseController {
             return RestResponseBo.ok();
         } catch (Exception e) {
             String msg = "保存设置失败";
-            if (e instanceof TipException) {
-                msg = e.getMessage();
-            } else {
-                LOGGER.error(msg, e);
-            }
             return RestResponseBo.fail(msg);
         }
     }
@@ -100,7 +91,6 @@ public class SettingController extends BaseController {
      */
     @PostMapping(value = "backup")
     @ResponseBody
-    @Transactional(rollbackFor = TipException.class)
     public RestResponseBo backup(@RequestParam String bk_type, @RequestParam String bk_path,
                                  HttpServletRequest request) {
         if (StringUtils.isBlank(bk_type)) {

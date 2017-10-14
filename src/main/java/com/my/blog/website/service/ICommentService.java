@@ -14,7 +14,7 @@ public interface ICommentService {
      * 保存对象
      * @param commentVo
      */
-    void insertComment(CommentVo commentVo);
+    String insertComment(CommentVo commentVo);
 
     /**
      * 获取文章下的评论

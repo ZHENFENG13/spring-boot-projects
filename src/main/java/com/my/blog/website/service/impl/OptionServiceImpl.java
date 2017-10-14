@@ -7,6 +7,7 @@ import com.my.blog.website.service.IOptionService;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
 import javax.annotation.Resource;
 import java.util.List;
@@ -32,6 +33,7 @@ public class OptionServiceImpl implements IOptionService {
     }
 
     @Override
+    @Transactional
     public void insertOption(String name, String value) {
         LOGGER.debug("Enter insertOption method:name={},value={}", name, value);
         OptionVo optionVo = new OptionVo();
@@ -46,6 +48,7 @@ public class OptionServiceImpl implements IOptionService {
     }
 
     @Override
+    @Transactional
     public void saveOptions(Map<String, String> options) {
         if (null != options && !options.isEmpty()) {
             options.forEach(this::insertOption);

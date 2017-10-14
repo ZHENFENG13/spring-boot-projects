@@ -37,7 +37,6 @@ public class LinksController extends BaseController {
 
     @PostMapping(value = "save")
     @ResponseBody
-    @Transactional(rollbackFor = TipException.class)
     public RestResponseBo saveLink(@RequestParam String title, @RequestParam String url,
                                    @RequestParam String logo, @RequestParam Integer mid,
                                    @RequestParam(value = "sort", defaultValue = "0") int sort) {
@@ -56,11 +55,7 @@ public class LinksController extends BaseController {
             }
         } catch (Exception e) {
             String msg = "友链保存失败";
-            if (e instanceof TipException) {
-                msg = e.getMessage();
-            } else {
-                LOGGER.error(msg, e);
-            }
+            LOGGER.error(msg, e);
             return RestResponseBo.fail(msg);
         }
         return RestResponseBo.ok();
@@ -68,17 +63,12 @@ public class LinksController extends BaseController {
 
     @RequestMapping(value = "delete")
     @ResponseBody
-    @Transactional(rollbackFor = TipException.class)
     public RestResponseBo delete(@RequestParam int mid) {
         try {
             metasService.delete(mid);
         } catch (Exception e) {
             String msg = "友链删除失败";
-            if (e instanceof TipException) {
-                msg = e.getMessage();
-            } else {
-                LOGGER.error(msg, e);
-            }
+            LOGGER.error(msg, e);
             return RestResponseBo.fail(msg);
         }
         return RestResponseBo.ok();
