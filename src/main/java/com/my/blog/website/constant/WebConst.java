@@ -53,4 +53,9 @@ public class WebConst {
      * 上传文件最大1M
      */
     public static Integer MAX_FILE_SIZE = 1048576;
+
+    /**
+     * 成功返回
+     */
+    public static String SUCCESS_RESULT = "SUCCESS";
 }
