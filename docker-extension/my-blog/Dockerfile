@@ -1,4 +1,4 @@
-FROM java:8
+FROM hub.c.163.com/library/java:8
 VOLUME /tmp
 ADD *.jar app.jar
 COPY startup.sh /startup.sh
