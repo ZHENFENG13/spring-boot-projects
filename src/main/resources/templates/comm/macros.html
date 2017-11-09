@@ -23,7 +23,7 @@
     <div class="clearfix">
         <ul class="pagination m-b-5 pull-right">
             <li th:if="${pageInfo.hasPreviousPage}">
-                <a th:href="@{page=${pageInfo.prePage}}" aria-label="Previous">
+                <a th:href="@{'?page='+${pageInfo.prePage}}" aria-label="Previous">
                     <i class="fa fa-angle-left"></i>&nbsp;上一页
                 </a>
             </li>
