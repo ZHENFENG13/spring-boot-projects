@@ -126,7 +126,7 @@ public class TaleUtils {
     public static DataSource getNewDataSource() {
         if (newDataSource == null) synchronized (TaleUtils.class) {
             if (newDataSource == null) {
-                Properties properties = TaleUtils.getPropFromFile("application-jdbc.properties");
+                Properties properties = TaleUtils.getPropFromFile("application-default.properties");
                 if (properties.size() == 0) {
                     return newDataSource;
                 }
