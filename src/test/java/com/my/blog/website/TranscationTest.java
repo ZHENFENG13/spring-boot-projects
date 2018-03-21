@@ -1,7 +1,7 @@
 package com.my.blog.website;
 
 import com.my.blog.website.exception.TipException;
-import com.my.blog.website.modal.Vo.UserVo;
+import com.my.blog.website.model.Vo.UserVo;
 import com.my.blog.website.service.IUserService;
 import com.my.blog.website.service.IOptionService;
 import org.junit.Ignore;

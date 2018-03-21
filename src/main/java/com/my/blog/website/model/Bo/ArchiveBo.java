@@ -1,6 +1,6 @@
-package com.my.blog.website.modal.Bo;
+package com.my.blog.website.model.Bo;
 
-import com.my.blog.website.modal.Vo.ContentVo;
+import com.my.blog.website.model.Vo.ContentVo;
 
 import java.io.Serializable;
 import java.util.List;

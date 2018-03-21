@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.my.blog.website.dao.MetaVoMapper">
-  <resultMap id="BaseResultMap" type="com.my.blog.website.modal.Vo.MetaVo">
+  <resultMap id="BaseResultMap" type="com.my.blog.website.model.Vo.MetaVo">
     <id column="mid" jdbcType="INTEGER" property="mid" />
     <result column="name" jdbcType="VARCHAR" property="name" />
     <result column="slug" jdbcType="VARCHAR" property="slug" />
@@ -76,7 +76,7 @@
   <sql id="Base_Column_List">
     mid, name, slug, type, description, sort, parent
   </sql>
-  <select id="selectByExample" parameterType="com.my.blog.website.modal.Vo.MetaVoExample" resultMap="BaseResultMap">
+  <select id="selectByExample" parameterType="com.my.blog.website.model.Vo.MetaVoExample" resultMap="BaseResultMap">
     select
     <if test="distinct">
       distinct
@@ -108,13 +108,13 @@
     delete from t_metas
     where mid = #{mid,jdbcType=INTEGER}
   </delete>
-  <delete id="deleteByExample" parameterType="com.my.blog.website.modal.Vo.MetaVoExample">
+  <delete id="deleteByExample" parameterType="com.my.blog.website.model.Vo.MetaVoExample">
     delete from t_metas
     <if test="_parameter != null">
       <include refid="Example_Where_Clause" />
     </if>
   </delete>
-  <insert id="insert" parameterType="com.my.blog.website.modal.Vo.MetaVo" useGeneratedKeys="true" keyProperty="mid">
+  <insert id="insert" parameterType="com.my.blog.website.model.Vo.MetaVo" useGeneratedKeys="true" keyProperty="mid">
     insert into t_metas (mid, name, slug,
       type, description, sort,
       parent)
@@ -122,7 +122,7 @@
       #{type,jdbcType=VARCHAR}, #{description,jdbcType=VARCHAR}, #{sort,jdbcType=INTEGER},
       #{parent,jdbcType=INTEGER})
   </insert>
-  <insert id="insertSelective" parameterType="com.my.blog.website.modal.Vo.MetaVo" useGeneratedKeys="true" keyProperty="mid">
+  <insert id="insertSelective" parameterType="com.my.blog.website.model.Vo.MetaVo" useGeneratedKeys="true" keyProperty="mid">
     insert into t_metas
     <trim prefix="(" suffix=")" suffixOverrides=",">
       <if test="mid != null">
@@ -171,7 +171,7 @@
       </if>
     </trim>
   </insert>
-  <select id="countByExample" parameterType="com.my.blog.website.modal.Vo.MetaVoExample" resultType="java.lang.Long">
+  <select id="countByExample" parameterType="com.my.blog.website.model.Vo.MetaVoExample" resultType="java.lang.Long">
     select count(*) from t_metas
     <if test="_parameter != null">
       <include refid="Example_Where_Clause" />
@@ -219,7 +219,7 @@
       <include refid="Update_By_Example_Where_Clause" />
     </if>
   </update>
-  <update id="updateByPrimaryKeySelective" parameterType="com.my.blog.website.modal.Vo.MetaVo">
+  <update id="updateByPrimaryKeySelective" parameterType="com.my.blog.website.model.Vo.MetaVo">
     update t_metas
     <set>
       <if test="name != null">
@@ -243,7 +243,7 @@
     </set>
     where mid = #{mid,jdbcType=INTEGER}
   </update>
-  <update id="updateByPrimaryKey" parameterType="com.my.blog.website.modal.Vo.MetaVo">
+  <update id="updateByPrimaryKey" parameterType="com.my.blog.website.model.Vo.MetaVo">
     update t_metas
     set name = #{name,jdbcType=VARCHAR},
       slug = #{slug,jdbcType=VARCHAR},

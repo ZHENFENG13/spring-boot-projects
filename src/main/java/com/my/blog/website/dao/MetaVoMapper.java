@@ -1,8 +1,8 @@
 package com.my.blog.website.dao;
 
 import com.my.blog.website.dto.MetaDto;
-import com.my.blog.website.modal.Vo.MetaVo;
-import com.my.blog.website.modal.Vo.MetaVoExample;
+import com.my.blog.website.model.Vo.MetaVo;
+import com.my.blog.website.model.Vo.MetaVoExample;
 
 import java.util.List;
 import java.util.Map;

@@ -1,4 +1,4 @@
-package com.my.blog.website.modal.Bo;
+package com.my.blog.website.model.Bo;
 
 import java.io.Serializable;
 

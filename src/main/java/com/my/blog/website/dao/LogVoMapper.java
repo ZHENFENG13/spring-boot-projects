@@ -1,7 +1,7 @@
 package com.my.blog.website.dao;
 
-import com.my.blog.website.modal.Vo.LogVo;
-import com.my.blog.website.modal.Vo.LogVoExample;
+import com.my.blog.website.model.Vo.LogVo;
+import com.my.blog.website.model.Vo.LogVoExample;
 import java.util.List;
 import org.apache.ibatis.annotations.Param;
 import org.springframework.stereotype.Component;

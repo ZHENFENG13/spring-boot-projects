@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.my.blog.website.dao.CommentVoMapper">
-  <resultMap id="BaseResultMap" type="com.my.blog.website.modal.Vo.CommentVo">
+  <resultMap id="BaseResultMap" type="com.my.blog.website.model.Vo.CommentVo">
     <id column="coid" jdbcType="INTEGER" property="coid" />
     <result column="cid" jdbcType="INTEGER" property="cid" />
     <result column="created" jdbcType="INTEGER" property="created" />
@@ -16,7 +16,7 @@
     <result column="status" jdbcType="VARCHAR" property="status" />
     <result column="parent" jdbcType="INTEGER" property="parent" />
   </resultMap>
-  <resultMap extends="BaseResultMap" id="ResultMapWithBLOBs" type="com.my.blog.website.modal.Vo.CommentVo">
+  <resultMap extends="BaseResultMap" id="ResultMapWithBLOBs" type="com.my.blog.website.model.Vo.CommentVo">
     <result column="content" jdbcType="LONGVARCHAR" property="content" />
   </resultMap>
   <sql id="Example_Where_Clause">
@@ -84,7 +84,7 @@
   <sql id="Blob_Column_List">
     content
   </sql>
-  <select id="selectByExampleWithBLOBs" parameterType="com.my.blog.website.modal.Vo.CommentVoExample" resultMap="ResultMapWithBLOBs">
+  <select id="selectByExampleWithBLOBs" parameterType="com.my.blog.website.model.Vo.CommentVoExample" resultMap="ResultMapWithBLOBs">
     select
     <if test="distinct">
       distinct
@@ -100,7 +100,7 @@
       order by ${orderByClause}
     </if>
   </select>
-  <select id="selectByExample" parameterType="com.my.blog.website.modal.Vo.CommentVoExample" resultMap="BaseResultMap">
+  <select id="selectByExample" parameterType="com.my.blog.website.model.Vo.CommentVoExample" resultMap="BaseResultMap">
     select
     <if test="distinct">
       distinct
@@ -134,13 +134,13 @@
     delete from t_comments
     where coid = #{coid,jdbcType=INTEGER}
   </delete>
-  <delete id="deleteByExample" parameterType="com.my.blog.website.modal.Vo.CommentVoExample">
+  <delete id="deleteByExample" parameterType="com.my.blog.website.model.Vo.CommentVoExample">
     delete from t_comments
     <if test="_parameter != null">
       <include refid="Example_Where_Clause" />
     </if>
   </delete>
-  <insert id="insert" parameterType="com.my.blog.website.modal.Vo.CommentVo" useGeneratedKeys="true" keyProperty="coid">
+  <insert id="insert" parameterType="com.my.blog.website.model.Vo.CommentVo" useGeneratedKeys="true" keyProperty="coid">
     insert into t_comments (coid, cid, created, 
       author, author_id, owner_id, 
       mail, url, ip, agent, 
@@ -152,7 +152,7 @@
       #{type,jdbcType=VARCHAR}, #{status,jdbcType=VARCHAR}, #{parent,jdbcType=INTEGER}, 
       #{content,jdbcType=LONGVARCHAR})
   </insert>
-  <insert id="insertSelective" parameterType="com.my.blog.website.modal.Vo.CommentVo" useGeneratedKeys="true" keyProperty="coid">
+  <insert id="insertSelective" parameterType="com.my.blog.website.model.Vo.CommentVo" useGeneratedKeys="true" keyProperty="coid">
     insert into t_comments
     <trim prefix="(" suffix=")" suffixOverrides=",">
       <if test="coid != null">
@@ -243,7 +243,7 @@
       </if>
     </trim>
   </insert>
-  <select id="countByExample" parameterType="com.my.blog.website.modal.Vo.CommentVoExample" resultType="java.lang.Long">
+  <select id="countByExample" parameterType="com.my.blog.website.model.Vo.CommentVoExample" resultType="java.lang.Long">
     select count(*) from t_comments
     <if test="_parameter != null">
       <include refid="Example_Where_Clause" />
@@ -338,7 +338,7 @@
       <include refid="Update_By_Example_Where_Clause" />
     </if>
   </update>
-  <update id="updateByPrimaryKeySelective" parameterType="com.my.blog.website.modal.Vo.CommentVo">
+  <update id="updateByPrimaryKeySelective" parameterType="com.my.blog.website.model.Vo.CommentVo">
     update t_comments
     <set>
       <if test="cid != null">
@@ -383,7 +383,7 @@
     </set>
     where coid = #{coid,jdbcType=INTEGER}
   </update>
-  <update id="updateByPrimaryKeyWithBLOBs" parameterType="com.my.blog.website.modal.Vo.CommentVo">
+  <update id="updateByPrimaryKeyWithBLOBs" parameterType="com.my.blog.website.model.Vo.CommentVo">
     update t_comments
     set cid = #{cid,jdbcType=INTEGER},
       created = #{created,jdbcType=INTEGER},
@@ -400,7 +400,7 @@
       content = #{content,jdbcType=LONGVARCHAR}
     where coid = #{coid,jdbcType=INTEGER}
   </update>
-  <update id="updateByPrimaryKey" parameterType="com.my.blog.website.modal.Vo.CommentVo">
+  <update id="updateByPrimaryKey" parameterType="com.my.blog.website.model.Vo.CommentVo">
     update t_comments
     set cid = #{cid,jdbcType=INTEGER},
       created = #{created,jdbcType=INTEGER},

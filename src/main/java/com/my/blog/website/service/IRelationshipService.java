@@ -1,6 +1,6 @@
 package com.my.blog.website.service;
 
-import com.my.blog.website.modal.Vo.RelationshipVoKey;
+import com.my.blog.website.model.Vo.RelationshipVoKey;
 
 import java.util.List;
 

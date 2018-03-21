@@ -1,7 +1,7 @@
 package com.my.blog.website.service.impl;
 
-import com.my.blog.website.modal.Vo.RelationshipVoExample;
-import com.my.blog.website.modal.Vo.RelationshipVoKey;
+import com.my.blog.website.model.Vo.RelationshipVoExample;
+import com.my.blog.website.model.Vo.RelationshipVoKey;
 import com.my.blog.website.service.IRelationshipService;
 import com.my.blog.website.dao.RelationshipVoMapper;
 import org.slf4j.Logger;

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.my.blog.website.dao.ContentVoMapper">
-  <resultMap id="BaseResultMap" type="com.my.blog.website.modal.Vo.ContentVo">
+  <resultMap id="BaseResultMap" type="com.my.blog.website.model.Vo.ContentVo">
     <id column="cid" jdbcType="INTEGER" property="cid" />
     <result column="title" jdbcType="VARCHAR" property="title" />
     <result column="slug" jdbcType="VARCHAR" property="slug" />
@@ -18,7 +18,7 @@
     <result column="allow_ping" jdbcType="BIT" property="allowPing" />
     <result column="allow_feed" jdbcType="BIT" property="allowFeed" />
   </resultMap>
-  <resultMap extends="BaseResultMap" id="ResultMapWithBLOBs" type="com.my.blog.website.modal.Vo.ContentVo">
+  <resultMap extends="BaseResultMap" id="ResultMapWithBLOBs" type="com.my.blog.website.model.Vo.ContentVo">
     <result column="content" jdbcType="LONGVARCHAR" property="content" />
   </resultMap>
   <sql id="Example_Where_Clause">
@@ -86,7 +86,7 @@
   <sql id="Blob_Column_List">
     content
   </sql>
-  <select id="selectByExampleWithBLOBs" parameterType="com.my.blog.website.modal.Vo.ContentVoExample" resultMap="ResultMapWithBLOBs">
+  <select id="selectByExampleWithBLOBs" parameterType="com.my.blog.website.model.Vo.ContentVoExample" resultMap="ResultMapWithBLOBs">
     select
     <if test="distinct">
       distinct
@@ -102,7 +102,7 @@
       order by ${orderByClause}
     </if>
   </select>
-  <select id="selectByExample" parameterType="com.my.blog.website.modal.Vo.ContentVoExample" resultMap="BaseResultMap">
+  <select id="selectByExample" parameterType="com.my.blog.website.model.Vo.ContentVoExample" resultMap="BaseResultMap">
     select
     <if test="distinct">
       distinct
@@ -136,13 +136,13 @@
     delete from t_contents
     where cid = #{cid,jdbcType=INTEGER}
   </delete>
-  <delete id="deleteByExample" parameterType="com.my.blog.website.modal.Vo.ContentVoExample">
+  <delete id="deleteByExample" parameterType="com.my.blog.website.model.Vo.ContentVoExample">
     delete from t_contents
     <if test="_parameter != null">
       <include refid="Example_Where_Clause" />
     </if>
   </delete>
-  <insert id="insert" parameterType="com.my.blog.website.modal.Vo.ContentVo" useGeneratedKeys="true" keyProperty="cid">
+  <insert id="insert" parameterType="com.my.blog.website.model.Vo.ContentVo" useGeneratedKeys="true" keyProperty="cid">
     insert into t_contents (cid, title, slug, 
       created, modified, author_id, 
       type, status, tags, 
@@ -156,7 +156,7 @@
       #{allowComment,jdbcType=BIT}, #{allowPing,jdbcType=BIT}, #{allowFeed,jdbcType=BIT}, 
       #{content,jdbcType=LONGVARCHAR})
   </insert>
-  <insert id="insertSelective" parameterType="com.my.blog.website.modal.Vo.ContentVo" useGeneratedKeys="true" keyProperty="cid">
+  <insert id="insertSelective" parameterType="com.my.blog.website.model.Vo.ContentVo" useGeneratedKeys="true" keyProperty="cid">
     insert into t_contents
     <trim prefix="(" suffix=")" suffixOverrides=",">
       <if test="cid != null">
@@ -259,7 +259,7 @@
       </if>
     </trim>
   </insert>
-  <select id="countByExample" parameterType="com.my.blog.website.modal.Vo.ContentVoExample" resultType="java.lang.Long">
+  <select id="countByExample" parameterType="com.my.blog.website.model.Vo.ContentVoExample" resultType="java.lang.Long">
     select count(*) from t_contents
     <if test="_parameter != null">
       <include refid="Example_Where_Clause" />
@@ -364,7 +364,7 @@
       <include refid="Update_By_Example_Where_Clause" />
     </if>
   </update>
-  <update id="updateByPrimaryKeySelective" parameterType="com.my.blog.website.modal.Vo.ContentVo">
+  <update id="updateByPrimaryKeySelective" parameterType="com.my.blog.website.model.Vo.ContentVo">
     update t_contents
     <set>
       <if test="title != null">
@@ -415,7 +415,7 @@
     </set>
     where cid = #{cid,jdbcType=INTEGER}
   </update>
-  <update id="updateByPrimaryKeyWithBLOBs" parameterType="com.my.blog.website.modal.Vo.ContentVo">
+  <update id="updateByPrimaryKeyWithBLOBs" parameterType="com.my.blog.website.model.Vo.ContentVo">
     update t_contents
     set title = #{title,jdbcType=VARCHAR},
       slug = #{slug,jdbcType=VARCHAR},
@@ -434,7 +434,7 @@
       content = #{content,jdbcType=LONGVARCHAR}
     where cid = #{cid,jdbcType=INTEGER}
   </update>
-  <update id="updateByPrimaryKey" parameterType="com.my.blog.website.modal.Vo.ContentVo">
+  <update id="updateByPrimaryKey" parameterType="com.my.blog.website.model.Vo.ContentVo">
     update t_contents
     set title = #{title,jdbcType=VARCHAR},
       slug = #{slug,jdbcType=VARCHAR},
@@ -454,7 +454,7 @@
   </update>
 
 
-  <resultMap id="archiveBoMap" type="com.my.blog.website.modal.Bo.ArchiveBo">
+  <resultMap id="archiveBoMap" type="com.my.blog.website.model.Bo.ArchiveBo">
     <id column="date" property="date"/>
     <result column="count" property="count"/>
   </resultMap>

@@ -1,6 +1,6 @@
 package com.my.blog.website.service;
 
-import com.my.blog.website.modal.Vo.OptionVo;
+import com.my.blog.website.model.Vo.OptionVo;
 
 import java.util.List;
 import java.util.Map;

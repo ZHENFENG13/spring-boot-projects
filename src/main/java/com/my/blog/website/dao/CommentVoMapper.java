@@ -1,7 +1,7 @@
 package com.my.blog.website.dao;
 
-import com.my.blog.website.modal.Vo.CommentVo;
-import com.my.blog.website.modal.Vo.CommentVoExample;
+import com.my.blog.website.model.Vo.CommentVo;
+import com.my.blog.website.model.Vo.CommentVoExample;
 
 import java.util.List;
 import org.apache.ibatis.annotations.Param;

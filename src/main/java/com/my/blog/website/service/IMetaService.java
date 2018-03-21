@@ -1,7 +1,7 @@
 package com.my.blog.website.service;
 
 import com.my.blog.website.dto.MetaDto;
-import com.my.blog.website.modal.Vo.MetaVo;
+import com.my.blog.website.model.Vo.MetaVo;
 
 import java.util.List;
 
