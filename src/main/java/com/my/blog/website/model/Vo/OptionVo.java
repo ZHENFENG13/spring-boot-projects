@@ -1,4 +1,4 @@
-package com.my.blog.website.modal.Vo;
+package com.my.blog.website.model.Vo;
 
 import java.io.Serializable;
 

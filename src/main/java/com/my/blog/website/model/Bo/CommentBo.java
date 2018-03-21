@@ -1,6 +1,6 @@
-package com.my.blog.website.modal.Bo;
+package com.my.blog.website.model.Bo;
 
-import com.my.blog.website.modal.Vo.CommentVo;
+import com.my.blog.website.model.Vo.CommentVo;
 
 import java.util.List;
 

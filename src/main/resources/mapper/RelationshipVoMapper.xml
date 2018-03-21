@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.my.blog.website.dao.RelationshipVoMapper">
-  <resultMap id="BaseResultMap" type="com.my.blog.website.modal.Vo.RelationshipVoKey">
+  <resultMap id="BaseResultMap" type="com.my.blog.website.model.Vo.RelationshipVoKey">
     <id column="cid" jdbcType="INTEGER" property="cid" />
     <id column="mid" jdbcType="INTEGER" property="mid" />
   </resultMap>
@@ -66,7 +66,7 @@
   <sql id="Base_Column_List">
     cid, mid
   </sql>
-  <select id="selectByExample" parameterType="com.my.blog.website.modal.Vo.RelationshipVoExample" resultMap="BaseResultMap">
+  <select id="selectByExample" parameterType="com.my.blog.website.model.Vo.RelationshipVoExample" resultMap="BaseResultMap">
     select
     <if test="distinct">
       distinct
@@ -88,22 +88,22 @@
       </if>
     </if>
   </select>
-  <delete id="deleteByPrimaryKey" parameterType="com.my.blog.website.modal.Vo.RelationshipVoKey">
+  <delete id="deleteByPrimaryKey" parameterType="com.my.blog.website.model.Vo.RelationshipVoKey">
     delete from t_relationships
     where cid = #{cid,jdbcType=INTEGER}
       and mid = #{mid,jdbcType=INTEGER}
   </delete>
-  <delete id="deleteByExample" parameterType="com.my.blog.website.modal.Vo.RelationshipVoExample">
+  <delete id="deleteByExample" parameterType="com.my.blog.website.model.Vo.RelationshipVoExample">
     delete from t_relationships
     <if test="_parameter != null">
       <include refid="Example_Where_Clause" />
     </if>
   </delete>
-  <insert id="insert" parameterType="com.my.blog.website.modal.Vo.RelationshipVoKey">
+  <insert id="insert" parameterType="com.my.blog.website.model.Vo.RelationshipVoKey">
     insert into t_relationships (cid, mid)
     values (#{cid,jdbcType=INTEGER}, #{mid,jdbcType=INTEGER})
   </insert>
-  <insert id="insertSelective" parameterType="com.my.blog.website.modal.Vo.RelationshipVoKey">
+  <insert id="insertSelective" parameterType="com.my.blog.website.model.Vo.RelationshipVoKey">
     insert into t_relationships
     <trim prefix="(" suffix=")" suffixOverrides=",">
       <if test="cid != null">
@@ -122,7 +122,7 @@
       </if>
     </trim>
   </insert>
-  <select id="countByExample" parameterType="com.my.blog.website.modal.Vo.RelationshipVoExample" resultType="java.lang.Long">
+  <select id="countByExample" parameterType="com.my.blog.website.model.Vo.RelationshipVoExample" resultType="java.lang.Long">
     select count(*) from t_relationships
     <if test="_parameter != null">
       <include refid="Example_Where_Clause" />

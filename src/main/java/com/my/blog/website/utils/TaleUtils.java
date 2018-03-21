@@ -34,7 +34,7 @@ import org.springframework.jdbc.datasource.DriverManagerDataSource;
 import com.my.blog.website.constant.WebConst;
 import com.my.blog.website.controller.admin.AttachController;
 import com.my.blog.website.exception.TipException;
-import com.my.blog.website.modal.Vo.UserVo;
+import com.my.blog.website.model.Vo.UserVo;
 
 /**
  * Tale工具类

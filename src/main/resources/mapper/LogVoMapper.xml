@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.my.blog.website.dao.LogVoMapper">
-  <resultMap id="BaseResultMap" type="com.my.blog.website.modal.Vo.LogVo">
+  <resultMap id="BaseResultMap" type="com.my.blog.website.model.Vo.LogVo">
     <id column="id" jdbcType="INTEGER" property="id" />
     <result column="action" jdbcType="VARCHAR" property="action" />
     <result column="data" jdbcType="VARCHAR" property="data" />
@@ -70,7 +70,7 @@
   <sql id="Base_Column_List">
     id, action, data, author_id, ip, created
   </sql>
-  <select id="selectByExample" parameterType="com.my.blog.website.modal.Vo.LogVoExample" resultMap="BaseResultMap">
+  <select id="selectByExample" parameterType="com.my.blog.website.model.Vo.LogVoExample" resultMap="BaseResultMap">
     select
     <if test="distinct">
       distinct
@@ -102,13 +102,13 @@
     delete from t_logs
     where id = #{id,jdbcType=INTEGER}
   </delete>
-  <delete id="deleteByExample" parameterType="com.my.blog.website.modal.Vo.LogVoExample">
+  <delete id="deleteByExample" parameterType="com.my.blog.website.model.Vo.LogVoExample">
     delete from t_logs
     <if test="_parameter != null">
       <include refid="Example_Where_Clause" />
     </if>
   </delete>
-  <insert id="insert" parameterType="com.my.blog.website.modal.Vo.LogVo" useGeneratedKeys="true" keyProperty="id">
+  <insert id="insert" parameterType="com.my.blog.website.model.Vo.LogVo" useGeneratedKeys="true" keyProperty="id">
     insert into t_logs (id, action, data, 
       author_id, ip, created
       )
@@ -116,7 +116,7 @@
       #{authorId,jdbcType=INTEGER}, #{ip,jdbcType=VARCHAR}, #{created,jdbcType=INTEGER}
       )
   </insert>
-  <insert id="insertSelective" parameterType="com.my.blog.website.modal.Vo.LogVo" useGeneratedKeys="true" keyProperty="id">
+  <insert id="insertSelective" parameterType="com.my.blog.website.model.Vo.LogVo" useGeneratedKeys="true" keyProperty="id">
     insert into t_logs
     <trim prefix="(" suffix=")" suffixOverrides=",">
       <if test="id != null">
@@ -159,7 +159,7 @@
       </if>
     </trim>
   </insert>
-  <select id="countByExample" parameterType="com.my.blog.website.modal.Vo.LogVoExample" resultType="java.lang.Long">
+  <select id="countByExample" parameterType="com.my.blog.website.model.Vo.LogVoExample" resultType="java.lang.Long">
     select count(*) from t_logs
     <if test="_parameter != null">
       <include refid="Example_Where_Clause" />
@@ -203,7 +203,7 @@
       <include refid="Update_By_Example_Where_Clause" />
     </if>
   </update>
-  <update id="updateByPrimaryKeySelective" parameterType="com.my.blog.website.modal.Vo.LogVo">
+  <update id="updateByPrimaryKeySelective" parameterType="com.my.blog.website.model.Vo.LogVo">
     update t_logs
     <set>
       <if test="action != null">
@@ -224,7 +224,7 @@
     </set>
     where id = #{id,jdbcType=INTEGER}
   </update>
-  <update id="updateByPrimaryKey" parameterType="com.my.blog.website.modal.Vo.LogVo">
+  <update id="updateByPrimaryKey" parameterType="com.my.blog.website.model.Vo.LogVo">
     update t_logs
     set action = #{action,jdbcType=VARCHAR},
       data = #{data,jdbcType=VARCHAR},

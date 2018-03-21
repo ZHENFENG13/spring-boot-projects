@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.my.blog.website.dao.UserVoMapper">
-  <resultMap id="BaseResultMap" type="com.my.blog.website.modal.Vo.UserVo">
+  <resultMap id="BaseResultMap" type="com.my.blog.website.model.Vo.UserVo">
     <id column="uid" jdbcType="INTEGER" property="uid" />
     <result column="username" jdbcType="VARCHAR" property="username" />
     <result column="password" jdbcType="VARCHAR" property="password" />
@@ -75,7 +75,7 @@
     uid, username, password, email, home_url, screen_name, created, activated, logged, 
     group_name
   </sql>
-  <select id="selectByExample" parameterType="com.my.blog.website.modal.Vo.UserVoExample" resultMap="BaseResultMap">
+  <select id="selectByExample" parameterType="com.my.blog.website.model.Vo.UserVoExample" resultMap="BaseResultMap">
     select
     <if test="distinct">
       distinct
@@ -107,13 +107,13 @@
     delete from t_users
     where uid = #{uid,jdbcType=INTEGER}
   </delete>
-  <delete id="deleteByExample" parameterType="com.my.blog.website.modal.Vo.UserVoExample">
+  <delete id="deleteByExample" parameterType="com.my.blog.website.model.Vo.UserVoExample">
     delete from t_users
     <if test="_parameter != null">
       <include refid="Example_Where_Clause" />
     </if>
   </delete>
-  <insert id="insert" parameterType="com.my.blog.website.modal.Vo.UserVo" useGeneratedKeys="true" keyProperty="uid">
+  <insert id="insert" parameterType="com.my.blog.website.model.Vo.UserVo" useGeneratedKeys="true" keyProperty="uid">
     insert into t_users (uid, username, password, 
       email, home_url, screen_name, 
       created, activated, logged, 
@@ -123,7 +123,7 @@
       #{created,jdbcType=INTEGER}, #{activated,jdbcType=INTEGER}, #{logged,jdbcType=INTEGER}, 
       #{groupName,jdbcType=VARCHAR})
   </insert>
-  <insert id="insertSelective" parameterType="com.my.blog.website.modal.Vo.UserVo" useGeneratedKeys="true" keyProperty="uid">
+  <insert id="insertSelective" parameterType="com.my.blog.website.model.Vo.UserVo" useGeneratedKeys="true" keyProperty="uid">
     insert into t_users
     <trim prefix="(" suffix=")" suffixOverrides=",">
       <if test="uid != null">
@@ -190,7 +190,7 @@
       </if>
     </trim>
   </insert>
-  <select id="countByExample" parameterType="com.my.blog.website.modal.Vo.UserVoExample" resultType="java.lang.Long">
+  <select id="countByExample" parameterType="com.my.blog.website.model.Vo.UserVoExample" resultType="java.lang.Long">
     select count(*) from t_users
     <if test="_parameter != null">
       <include refid="Example_Where_Clause" />
@@ -250,7 +250,7 @@
       <include refid="Update_By_Example_Where_Clause" />
     </if>
   </update>
-  <update id="updateByPrimaryKeySelective" parameterType="com.my.blog.website.modal.Vo.UserVo">
+  <update id="updateByPrimaryKeySelective" parameterType="com.my.blog.website.model.Vo.UserVo">
     update t_users
     <set>
       <if test="username != null">
@@ -283,7 +283,7 @@
     </set>
     where uid = #{uid,jdbcType=INTEGER}
   </update>
-  <update id="updateByPrimaryKey" parameterType="com.my.blog.website.modal.Vo.UserVo">
+  <update id="updateByPrimaryKey" parameterType="com.my.blog.website.model.Vo.UserVo">
     update t_users
     set username = #{username,jdbcType=VARCHAR},
       password = #{password,jdbcType=VARCHAR},

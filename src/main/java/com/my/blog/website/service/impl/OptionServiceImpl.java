@@ -1,8 +1,8 @@
 package com.my.blog.website.service.impl;
 
 import com.my.blog.website.dao.OptionVoMapper;
-import com.my.blog.website.modal.Vo.OptionVo;
-import com.my.blog.website.modal.Vo.OptionVoExample;
+import com.my.blog.website.model.Vo.OptionVo;
+import com.my.blog.website.model.Vo.OptionVoExample;
 import com.my.blog.website.service.IOptionService;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.my.blog.website.dao.AttachVoMapper">
-  <resultMap id="BaseResultMap" type="com.my.blog.website.modal.Vo.AttachVo">
+  <resultMap id="BaseResultMap" type="com.my.blog.website.model.Vo.AttachVo">
     <id column="id" jdbcType="INTEGER" property="id" />
     <result column="fname" jdbcType="VARCHAR" property="fname" />
     <result column="ftype" jdbcType="VARCHAR" property="ftype" />
@@ -70,7 +70,7 @@
   <sql id="Base_Column_List">
     id, fname, ftype, fkey, author_id, created
   </sql>
-  <select id="selectByExample" parameterType="com.my.blog.website.modal.Vo.AttachVoExample" resultMap="BaseResultMap">
+  <select id="selectByExample" parameterType="com.my.blog.website.model.Vo.AttachVoExample" resultMap="BaseResultMap">
     select
     <if test="distinct">
       distinct
@@ -102,13 +102,13 @@
     delete from t_attach
     where id = #{id,jdbcType=INTEGER}
   </delete>
-  <delete id="deleteByExample" parameterType="com.my.blog.website.modal.Vo.AttachVoExample">
+  <delete id="deleteByExample" parameterType="com.my.blog.website.model.Vo.AttachVoExample">
     delete from t_attach
     <if test="_parameter != null">
       <include refid="Example_Where_Clause" />
     </if>
   </delete>
-  <insert id="insert" parameterType="com.my.blog.website.modal.Vo.AttachVo" useGeneratedKeys="true" keyProperty="id">
+  <insert id="insert" parameterType="com.my.blog.website.model.Vo.AttachVo" useGeneratedKeys="true" keyProperty="id">
     insert into t_attach (id, fname, ftype, 
       fkey, author_id, created
       )
@@ -116,7 +116,7 @@
       #{fkey,jdbcType=VARCHAR}, #{authorId,jdbcType=INTEGER}, #{created,jdbcType=INTEGER}
       )
   </insert>
-  <insert id="insertSelective" parameterType="com.my.blog.website.modal.Vo.AttachVo" useGeneratedKeys="true" keyProperty="id">
+  <insert id="insertSelective" parameterType="com.my.blog.website.model.Vo.AttachVo" useGeneratedKeys="true" keyProperty="id">
     insert into t_attach
     <trim prefix="(" suffix=")" suffixOverrides=",">
       <if test="id != null">
@@ -159,7 +159,7 @@
       </if>
     </trim>
   </insert>
-  <select id="countByExample" parameterType="com.my.blog.website.modal.Vo.AttachVoExample" resultType="java.lang.Long">
+  <select id="countByExample" parameterType="com.my.blog.website.model.Vo.AttachVoExample" resultType="java.lang.Long">
     select count(*) from t_attach
     <if test="_parameter != null">
       <include refid="Example_Where_Clause" />
@@ -203,7 +203,7 @@
       <include refid="Update_By_Example_Where_Clause" />
     </if>
   </update>
-  <update id="updateByPrimaryKeySelective" parameterType="com.my.blog.website.modal.Vo.AttachVo">
+  <update id="updateByPrimaryKeySelective" parameterType="com.my.blog.website.model.Vo.AttachVo">
     update t_attach
     <set>
       <if test="fname != null">
@@ -224,7 +224,7 @@
     </set>
     where id = #{id,jdbcType=INTEGER}
   </update>
-  <update id="updateByPrimaryKey" parameterType="com.my.blog.website.modal.Vo.AttachVo">
+  <update id="updateByPrimaryKey" parameterType="com.my.blog.website.model.Vo.AttachVo">
     update t_attach
     set fname = #{fname,jdbcType=VARCHAR},
       ftype = #{ftype,jdbcType=VARCHAR},

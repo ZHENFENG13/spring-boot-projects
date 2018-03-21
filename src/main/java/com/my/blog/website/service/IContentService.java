@@ -1,8 +1,8 @@
 package com.my.blog.website.service;
 
 import com.github.pagehelper.PageInfo;
-import com.my.blog.website.modal.Vo.ContentVoExample;
-import com.my.blog.website.modal.Vo.ContentVo;
+import com.my.blog.website.model.Vo.ContentVoExample;
+import com.my.blog.website.model.Vo.ContentVo;
 
 /**
  * Created by Administrator on 2017/3/13 013.

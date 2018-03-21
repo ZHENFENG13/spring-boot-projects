@@ -1,9 +1,9 @@
 package com.my.blog.website.service;
 
 import com.github.pagehelper.PageInfo;
-import com.my.blog.website.modal.Vo.CommentVo;
-import com.my.blog.website.modal.Vo.CommentVoExample;
-import com.my.blog.website.modal.Bo.CommentBo;
+import com.my.blog.website.model.Vo.CommentVo;
+import com.my.blog.website.model.Vo.CommentVoExample;
+import com.my.blog.website.model.Bo.CommentBo;
 
 /**
  * Created by BlueT on 2017/3/16.
