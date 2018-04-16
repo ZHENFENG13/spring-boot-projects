@@ -38,7 +38,7 @@ public class AttachController extends BaseController {
 
     private static final Logger LOGGER = LoggerFactory.getLogger(AttachController.class);
 
-    public static final String CLASSPATH = TaleUtils.getUplodFilePath();
+    public static final String CLASSPATH = TaleUtils.getUploadFilePath();
 
     @Resource
     private IAttachService attachService;
