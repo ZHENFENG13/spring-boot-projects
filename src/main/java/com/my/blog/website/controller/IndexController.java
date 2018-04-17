@@ -98,7 +98,9 @@ public class IndexController extends BaseController {
         request.setAttribute("article", contents);
         request.setAttribute("is_post", true);
         completeArticle(request, contents);
-        updateArticleHit(contents.getCid(), contents.getHits());
+        if (!checkHitsFrequency(request,cid)){
+            updateArticleHit(contents.getCid(), contents.getHits());
+        }
         return this.render("post");
 
 
@@ -120,7 +122,9 @@ public class IndexController extends BaseController {
         request.setAttribute("article", contents);
         request.setAttribute("is_post", true);
         completeArticle(request, contents);
-        updateArticleHit(contents.getCid(), contents.getHits());
+        if (!checkHitsFrequency(request,cid)){
+            updateArticleHit(contents.getCid(), contents.getHits());
+        }
         return this.render("post");
 
 
@@ -308,7 +312,9 @@ public class IndexController extends BaseController {
             request.setAttribute("comments", commentsPaginator);
         }
         request.setAttribute("article", contents);
-        updateArticleHit(contents.getCid(), contents.getHits());
+        if (!checkHitsFrequency(request, String.valueOf(contents.getCid()))){
+            updateArticleHit(contents.getCid(), contents.getHits());
+        }
         return this.render("page");
     }
 
@@ -410,6 +416,22 @@ public class IndexController extends BaseController {
         cookie.setMaxAge(maxAge);
         cookie.setSecure(false);
         response.addCookie(cookie);
+    }
+
+    /**
+     * 检查同一个ip地址是否在2小时内访问同一文章
+     * @param request
+     * @param cid
+     * @return
+     */
+    private boolean checkHitsFrequency(HttpServletRequest request,String cid){
+        String val = IPKit.getIpAddrByRequest(request) + ":" + cid;
+        Integer count = cache.hget(Types.HITS_FREQUENCY.getType(),val);
+        if (null != count && count > 0){
+            return true;
+        }
+        cache.hset(Types.HITS_FREQUENCY.getType(),val,1,WebConst.HITS_LIMIT_TIME);
+        return false;
     }
 
 }
