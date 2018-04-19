@@ -98,7 +98,7 @@ public class IndexController extends BaseController {
         request.setAttribute("article", contents);
         request.setAttribute("is_post", true);
         completeArticle(request, contents);
-        if (!checkHitsFrequency(request,cid)){
+        if (!checkHitsFrequency(request, cid)) {
             updateArticleHit(contents.getCid(), contents.getHits());
         }
         return this.render("post");
@@ -122,7 +122,7 @@ public class IndexController extends BaseController {
         request.setAttribute("article", contents);
         request.setAttribute("is_post", true);
         completeArticle(request, contents);
-        if (!checkHitsFrequency(request,cid)){
+        if (!checkHitsFrequency(request, cid)) {
             updateArticleHit(contents.getCid(), contents.getHits());
         }
         return this.render("post");
@@ -312,7 +312,7 @@ public class IndexController extends BaseController {
             request.setAttribute("comments", commentsPaginator);
         }
         request.setAttribute("article", contents);
-        if (!checkHitsFrequency(request, String.valueOf(contents.getCid()))){
+        if (!checkHitsFrequency(request, String.valueOf(contents.getCid()))) {
             updateArticleHit(contents.getCid(), contents.getHits());
         }
         return this.render("page");
@@ -347,7 +347,7 @@ public class IndexController extends BaseController {
      * @param chits
      */
     private void updateArticleHit(Integer cid, Integer chits) {
-        Integer hits = cache.hget("article", "hits");
+        Integer hits = cache.hget("article" + cid, "hits");
         if (chits == null) {
             chits = 0;
         }
@@ -357,9 +357,9 @@ public class IndexController extends BaseController {
             temp.setCid(cid);
             temp.setHits(chits + hits);
             contentService.updateContentByCid(temp);
-            cache.hset("article", "hits", 1);
+            cache.hset("article" + cid, "hits", 1);
         } else {
-            cache.hset("article", "hits", hits);
+            cache.hset("article" + cid, "hits", hits);
         }
     }
 
@@ -420,17 +420,18 @@ public class IndexController extends BaseController {
 
     /**
      * 检查同一个ip地址是否在2小时内访问同一文章
+     *
      * @param request
      * @param cid
      * @return
      */
-    private boolean checkHitsFrequency(HttpServletRequest request,String cid){
+    private boolean checkHitsFrequency(HttpServletRequest request, String cid) {
         String val = IPKit.getIpAddrByRequest(request) + ":" + cid;
-        Integer count = cache.hget(Types.HITS_FREQUENCY.getType(),val);
-        if (null != count && count > 0){
+        Integer count = cache.hget(Types.HITS_FREQUENCY.getType(), val);
+        if (null != count && count > 0) {
             return true;
         }
-        cache.hset(Types.HITS_FREQUENCY.getType(),val,1,WebConst.HITS_LIMIT_TIME);
+        cache.hset(Types.HITS_FREQUENCY.getType(), val, 1, WebConst.HITS_LIMIT_TIME);
         return false;
     }
 

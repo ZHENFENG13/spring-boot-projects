@@ -3,6 +3,7 @@ package com.my.blog.website.service.impl;
 import com.github.pagehelper.PageHelper;
 import com.github.pagehelper.PageInfo;
 import com.my.blog.website.constant.WebConst;
+import com.my.blog.website.dao.ContentVoMapper;
 import com.my.blog.website.dao.MetaVoMapper;
 import com.my.blog.website.dto.Types;
 import com.my.blog.website.exception.TipException;
@@ -15,7 +16,6 @@ import com.my.blog.website.utils.DateKit;
 import com.my.blog.website.utils.TaleUtils;
 import com.my.blog.website.utils.Tools;
 import com.vdurmont.emoji.EmojiParser;
-import com.my.blog.website.dao.ContentVoMapper;
 import org.apache.commons.lang3.StringUtils;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -115,10 +115,6 @@ public class ContentServiceImpl implements IContentService {
         if (StringUtils.isNotBlank(id)) {
             if (Tools.isNumber(id)) {
                 ContentVo contentVo = contentDao.selectByPrimaryKey(Integer.valueOf(id));
-                if (contentVo != null) {
-                    contentVo.setHits(contentVo.getHits() + 1);
-                    contentDao.updateByPrimaryKey(contentVo);
-                }
                 return contentVo;
             } else {
                 ContentVoExample contentVoExample = new ContentVoExample();
