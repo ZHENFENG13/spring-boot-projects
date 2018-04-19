@@ -12,6 +12,7 @@ public enum Types {
     FILE("file"),
     CSRF_TOKEN("csrf_token"),
     COMMENTS_FREQUENCY("comments:frequency"),
+    HITS_FREQUENCY("hits:frequency"),
 
     /**
      * 附件存放的URL，默认为网站地址，如集成第三方则为第三方CDN域名
