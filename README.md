@@ -50,18 +50,16 @@ My Blog是由Docker+SpringBoot+Mybatis+thymeleaf等技术实现的Java博客系�
 
 # Preview
 
-**首页：**
-![首页](http://images2015.cnblogs.com/blog/859549/201705/859549-20170511122850691-373579903.png)
-**文章详情页：**
-![文章页](http://images2015.cnblogs.com/blog/859549/201705/859549-20170510225208988-1419050749.png)
+**博客展示页1：**
+![My Blog](https://raw.githubusercontent.com/ZHENFENG13/resource/master/images/2018-06-13/my-blog-2.gif)
+**博客展示页2：**
+![My Blog](https://raw.githubusercontent.com/ZHENFENG13/resource/master/images/2018-06-13/my-blog-1.gif)
 **登录页：**
 ![登录页](http://images2015.cnblogs.com/blog/859549/201705/859549-20170511122916004-738411708.png)
-**文章列表页：**
-![文章列表页](http://images2015.cnblogs.com/blog/859549/201705/859549-20170510225259722-688622603.png)
-**文章编辑页：**
-![文章编辑页](http://images2015.cnblogs.com/blog/859549/201705/859549-20170510225330566-559394265.png)
-**分类编辑：**
-![分类编辑](http://images2015.cnblogs.com/blog/859549/201705/859549-20170510225357207-57945087.png)
+**My Blog后台：**
+![My Blog](https://raw.githubusercontent.com/ZHENFENG13/resource/master/images/2018-06-13/My-Blog-admin-1.gif)
+**My Blog后台：**
+![My Blog](https://raw.githubusercontent.com/ZHENFENG13/resource/master/images/2018-06-13/My-Blog-admin-2.gif)
 
 # Log
 
