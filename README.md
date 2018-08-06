@@ -18,6 +18,10 @@ My Blog是由Docker+SpringBoot+Mybatis+thymeleaf等技术实现的Java博客系�
 ![Version 3.2.0](https://img.shields.io/badge/version-3.2.0-yellow.svg)
 [![License](https://img.shields.io/badge/license-apache-blue.svg)](https://github.com/ZHENFENG13/My-Blog/blob/master/LICENSE)
 
+#### 联系作者
+
+十三的java学习交流QQ群:```658365129```
+
 #### 宣传
 
 十三近期于CSDN上传了一份自己制作的达人课课程,感兴趣的朋友可以看一下：
