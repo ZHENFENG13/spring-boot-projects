@@ -19,8 +19,9 @@ import javax.sql.DataSource;
 @SpringBootApplication
 @EnableTransactionManagement
 public class CoreApplication {
+
     @Bean(initMethod = "init", destroyMethod = "close")
-    @ConfigurationProperties(prefix = "spring.datasource")
+    @ConfigurationProperties(prefix = "spring.datasource.druid")
     public DataSource dataSource() {
         return new DruidDataSource();
     }
