@@ -19,7 +19,7 @@ import java.util.List;
  * Created by 13 on 2017/2/21.
  */
 @Controller
-@RequestMapping("admin/category")
+@RequestMapping("littleluck/category")
 public class CategoryController extends BaseController {
 
     private static final Logger LOGGER = LoggerFactory.getLogger(CategoryController.class);
@@ -33,7 +33,7 @@ public class CategoryController extends BaseController {
         List<MetaDto> tags = metasService.getMetaList(Types.TAG.getType(), null, WebConst.MAX_POSTS);
         request.setAttribute("categories", categories);
         request.setAttribute("tags", tags);
-        return "admin/category";
+        return "littleluck/category";
     }
 
     @PostMapping(value = "save")

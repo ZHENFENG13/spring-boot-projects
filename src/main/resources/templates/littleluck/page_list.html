@@ -1,9 +1,9 @@
 <!DOCTYPE html>
 <html lang="en" xmlns:th="http://www.thymeleaf.org" th:with="title='页面管理',active='page'">
-<header th:replace="admin/header::headerFragment(${title},${active})"></header>
+<header th:replace="littleluck/header::headerFragment(${title},${active})"></header>
 <body class="fixed-left">
 <div id="wrapper">
-    <div th:replace="admin/header::header-body"></div>
+    <div th:replace="littleluck/header::header-body"></div>
     <div class="content-page">
         <div class="content">
             <div class="container">
@@ -13,7 +13,7 @@
                     </div>
                     <div class="col-md-12">
                         <div class="pull-right">
-                            <a th:href="@{/admin/page/new}" class="btn btn-success waves-effect waves-light m-b-5">添加新页面</a>
+                            <a th:href="@{/littleluck/page/new}" class="btn btn-success waves-effect waves-light m-b-5">添加新页面</a>
                         </div>
                         <table class="table table-striped table-bordered">
                             <thead>
@@ -36,7 +36,7 @@
                                         <th:block th:if="${post.status == 'draft'}" th:text="草稿"/>
                                     </td>
                                     <td>
-                                        <a th:href="@{'/admin/page/'+${post.cid}}" class="btn btn-primary btn-sm waves-effect waves-light m-b-5"><i
+                                        <a th:href="@{'/littleluck/page/'+${post.cid}}" class="btn btn-primary btn-sm waves-effect waves-light m-b-5"><i
                                                 class="fa fa-edit"></i> <span>编辑</span></a>
                                         <a href="javascript:void(0)" th:onclick="'delPost('+${post.cid}+');'"
                                            class="btn btn-danger btn-sm waves-effect waves-light m-b-5"><i
@@ -51,12 +51,12 @@
                         </table>
                     </div>
                 </div>
-                <div th:replace="admin/footer :: footer-content"></div>
+                <div th:replace="littleluck/footer :: footer-content"></div>
             </div>
         </div>
     </div>
 </div>
-<div th:replace="admin/footer :: footer"></div>
+<div th:replace="littleluck/footer :: footer"></div>
 <script type="text/javascript">
     /*<![CDATA[*/
     var tale = new $.tale();
@@ -65,7 +65,7 @@
             title:'确定删除这个页面吗?',
             then: function () {
                 tale.post({
-                    url : '/admin/page/delete',
+                    url : '/littleluck/page/delete',
                     data: {cid: cid},
                     success: function (result) {
                         if(result && result.success){

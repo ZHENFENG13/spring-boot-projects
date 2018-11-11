@@ -6,10 +6,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
     <meta content="Coderthemes" name="author"/>
     <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
-    <link rel="shortcut icon" th:href="@{/admin/images/favicon.png}"/>
+    <link rel="shortcut icon" th:href="@{/littleluck/images/favicon.png}"/>
     <link th:href="@{https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/css/bootstrap.min.css}" rel="stylesheet" type="text/css"/>
     <link th:href="@{https://cdn.jsdelivr.net/npm/font-awesome@4.7.0/css/font-awesome.min.css}" rel="stylesheet"/>
-    <link th:href="@{/admin/css/style.min.css}" rel="stylesheet" type="text/css"/>
+    <link th:href="@{/littleluck/css/style.min.css}" rel="stylesheet" type="text/css"/>
     <link th:href="@{https://cdn.jsdelivr.net/npm/sweetalert2@6.4.1/dist/sweetalert2.min.css}" rel="stylesheet"/>
 
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
@@ -24,8 +24,8 @@
     <div class="topbar-left">
         <div class="text-center p-t-10" style="margin: 0 auto;">
             <div class="pull-left" style="padding-left: 10px;">
-                <a th:href="@{/admin/index}">
-                    <img th:src="@{/admin/images/logo.png}" width="50" height="50"/>
+                <a th:href="@{/littleluck/index}">
+                    <img th:src="@{/littleluck/images/logo.png}" width="50" height="50"/>
                 </a>
             </div>
             <div class="pull-left" style="padding-left: 10px;">
@@ -52,8 +52,8 @@
                             <li><a th:href="@{${commons.site_url()}}" target="_blank"><i class="fa fa-eye"
                                                                                          aria-hidden="true"></i>
                                 查看网站</a></li>
-                            <li><a th:href="@{/admin/profile}"><i class="fa fa-sun-o"></i> 个人设置</a></li>
-                            <li><a th:href="@{/admin/logout}"><i class="fa fa-sign-out"></i> 注销</a></li>
+                            <li><a th:href="@{/littleluck/profile}"><i class="fa fa-sun-o"></i> 个人设置</a></li>
+                            <li><a th:href="@{/littleluck/logout}"><i class="fa fa-sign-out"></i> 注销</a></li>
                         </ul>
                     </li>
                 </ul>
@@ -66,45 +66,45 @@
         <div id="sidebar-menu">
             <ul>
                 <li th:class="${active}=='home'?'active':''">
-                    <a th:href="@{/admin/index}"
+                    <a th:href="@{/littleluck/index}"
                        th:class="${active}=='home'?'waves-effect active':'waves-effect'"><i
                             class="fa fa-dashboard" aria-hidden="true"></i><span> 仪表盘 </span></a>
                 </li>
                 <li th:class="${active}=='publish'?'active':''">
-                    <a th:href="@{/admin/article/publish}"
+                    <a th:href="@{/littleluck/article/publish}"
                        th:class="${active}=='publish'?'waves-effect active':'waves-effect'"><i
                             class="fa fa-pencil-square-o" aria-hidden="true"></i><span> 发布文章 </span></a>
                 </li>
                 <li th:class="${active}=='article'?'active':''">
-                    <a th:href="@{/admin/article}"
+                    <a th:href="@{/littleluck/article}"
                        th:class="${active}=='article'?'waves-effect active':'waves-effect'"><i
                             class="fa fa-list" aria-hidden="true"></i><span> 文章管理 </span></a>
                 </li>
                 <li th:class="${active}=='page'?'active':''">
-                    <a th:href="@{/admin/page}" th:class="${active}=='page'?'waves-effect active':'waves-effect'"><i
+                    <a th:href="@{/littleluck/page}" th:class="${active}=='page'?'waves-effect active':'waves-effect'"><i
                             class="fa fa-file-text" aria-hidden="true"></i><span> 页面管理 </span></a>
                 </li>
                 <li th:class="${active}=='comments'?'active':''">
-                    <a th:href="@{/admin/comments}"
+                    <a th:href="@{/littleluck/comments}"
                        th:class="${active}=='comments'?'waves-effect active':'waves-effect'"><i
                             class="fa fa-comments" aria-hidden="true"></i><span> 评论管理 </span></a>
                 </li>
                 <li th:class="${active}=='category'?'active':''">
-                    <a th:href="@{/admin/category}"
+                    <a th:href="@{/littleluck/category}"
                        th:class="${active}=='category'?'waves-effect active':'waves-effect'"><i
                             class="fa fa-tags" aria-hidden="true"></i><span> 分类/标签 </span></a>
                 </li>
                 <li th:class="${active}=='attach'?'active':''">
-                    <a th:href="@{/admin/attach}"
+                    <a th:href="@{/littleluck/attach}"
                        th:class="${active}=='attach'?'waves-effect active':'waves-effect'"><i
                             class="fa fa-cloud-upload" aria-hidden="true"></i><span> 文件管理 </span></a>
                 </li>
                 <li th:class="${active}=='links'?'active':''">
-                    <a th:href="@{/admin/links}" th:class="${active}=='links'?'waves-effect active':'waves-effect'"><i
+                    <a th:href="@{/littleluck/links}" th:class="${active}=='links'?'waves-effect active':'waves-effect'"><i
                             class="fa fa-link" aria-hidden="true"></i><span> 友链管理 </span></a>
                 </li>
                 <li th:class="${active}=='setting'?'active':''">
-                    <a th:href="@{/admin/setting}"
+                    <a th:href="@{/littleluck/setting}"
                        th:class="${active}=='setting'?'waves-effect active':'waves-effect'"><i
                             class="fa fa-gear" aria-hidden="true"></i><span> 系统设置 </span></a>
                 </li>

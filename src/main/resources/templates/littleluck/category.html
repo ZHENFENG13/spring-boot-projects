@@ -1,9 +1,9 @@
 <!DOCTYPE html>
 <html lang="en" xmlns:th="http://www.thymeleaf.org" th:with="title='分类管理',active='category'">
-<header th:replace="admin/header::headerFragment(${title},${active})"></header>
+<header th:replace="littleluck/header::headerFragment(${title},${active})"></header>
 <body class="fixed-left">
 <div id="wrapper">
-    <div th:replace="admin/header::header-body"></div>
+    <div th:replace="littleluck/header::header-body"></div>
     <div class="content-page">
         <div class="content">
             <div class="container">
@@ -89,12 +89,12 @@
                         </div>
                     </div>
                 </div>
-                <div th:replace="admin/footer :: footer-content"></div>
+                <div th:replace="littleluck/footer :: footer-content"></div>
             </div>
         </div>
     </div>
 </div>
-<div th:replace="admin/footer :: footer"></div>
+<div th:replace="littleluck/footer :: footer"></div>
 <script type="text/javascript">
     /*<![CDATA[*/
     var tale = new $.tale();
@@ -104,7 +104,7 @@
         var mid = $('#cform #mid').val();
         if (cname && cname != '') {
             tale.post({
-                url: '/admin/category/save',
+                url: '/littleluck/category/save',
                 data: {mid: mid, cname: cname},
                 success: function (result) {
                     $('#cform #mid').val('');
@@ -132,7 +132,7 @@
             title: '确定删除该项吗?',
             then: function () {
                 tale.post({
-                    url: '/admin/category/delete',
+                    url: '/littleluck/category/delete',
                     data: {mid: mid},
                     success: function (result) {
                         if (result && result.success) {

@@ -1,9 +1,9 @@
 <!DOCTYPE html>
 <html lang="en" xmlns:th="http://www.thymeleaf.org" th:with="title='个人设置',active='home'">
-<header th:replace="admin/header::headerFragment(${title},${active})"></header>
+<header th:replace="littleluck/header::headerFragment(${title},${active})"></header>
 <body>
 <div id="wrapper">
-    <div th:replace="admin/header::header-body"></div>
+    <div th:replace="littleluck/header::header-body"></div>
     <div class="content-page">
         <div class="content">
             <div class="container">
@@ -87,12 +87,12 @@
                     </div>
 
                 </div>
-                <div th:replace="admin/footer :: footer-content"></div>
+                <div th:replace="littleluck/footer :: footer-content"></div>
             </div>
         </div>
     </div>
 </div>
-<div th:replace="admin/footer :: footer"></div>
+<div th:replace="littleluck/footer :: footer"></div>
 <script src="https://cdn.jsdelivr.net/npm/jquery-validation@1.15.1/dist/jquery.validate.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/jquery-validation@1.15.1/dist/localization/messages_zh.min.js"></script>
 <script type="text/javascript">
@@ -105,7 +105,7 @@
     function saveSetting() {
         var param = $('#user-form').serialize();
         tale.post({
-            url : '/admin/profile',
+            url : '/littleluck/profile',
             data: param,
             success: function (result) {
                 if(result && result.success){
@@ -121,7 +121,7 @@
         submitHandler: function (form) {
             var params = $("#pwd-form").serialize();
             tale.post({
-                url : '/admin/password',
+                url : '/littleluck/password',
                 data: params,
                 success: function (result) {
                     if(result && result.success){

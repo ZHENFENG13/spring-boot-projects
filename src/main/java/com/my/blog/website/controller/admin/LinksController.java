@@ -18,7 +18,7 @@ import java.util.List;
  * Created by 13 on 2017/2/21.
  */
 @Controller
-@RequestMapping("admin/links")
+@RequestMapping("littleluck/links")
 public class LinksController extends BaseController {
 
     private static final Logger LOGGER = LoggerFactory.getLogger(LinksController.class);
@@ -30,7 +30,7 @@ public class LinksController extends BaseController {
     public String index(HttpServletRequest request) {
         List<MetaVo> metas = metasService.getMetas(Types.LINK.getType());
         request.setAttribute("links", metas);
-        return "admin/links";
+        return "littleluck/links";
     }
 
     @PostMapping(value = "save")

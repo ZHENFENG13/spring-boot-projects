@@ -1,13 +1,13 @@
 <!DOCTYPE html>
-<html lang="en" xmlns:th="http://www.thymeleaf.org" th:with="pic=${commons.random(5, '.png')}" th:style="'background:url(/admin/images/bg/'+@{${pic}}+');no-repeat; background-size: cover;'">
+<html lang="en" xmlns:th="http://www.thymeleaf.org" th:with="pic=${commons.random(5, '.png')}" th:style="'background:url(/littleluck/images/bg/'+@{${pic}}+');no-repeat; background-size: cover;'">
 <head>
     <meta charset="utf-8"/>
     <meta name="viewport" content="width=device-width,initial-scale=1"/>
-    <link rel="shortcut icon" th:href="@{/admin/images/favicon.png}"/>
+    <link rel="shortcut icon" th:href="@{/littleluck/images/favicon.png}"/>
     <title>My Blog - 用户登录</title>
     <link th:href="@{https://cdn.jsdelivr.net/npm/font-awesome@4.7.0/css/font-awesome.min.css}" rel="stylesheet"/>
     <link th:href="@{https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/css/bootstrap.min.css}" rel="stylesheet" type="text/css"/>
-    <link th:href="@{/admin/css/style.min.css}" rel="stylesheet" type="text/css"/>
+    <link th:href="@{/littleluck/css/style.min.css}" rel="stylesheet" type="text/css"/>
     <link th:href="@{https://cdn.jsdelivr.net/npm/sweetalert2@6.4.1/dist/sweetalert2.min.css}" rel="stylesheet"/>
 
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
@@ -49,7 +49,7 @@
     </style>
 
 </head>
-<body th:style="'background:url(/admin/images/bg/'+@{${pic}}+');no-repeat; background-size: cover;'" >
+<body th:style="'background:url(/littleluck/images/bg/'+@{${pic}}+');no-repeat; background-size: cover;'" >
 <div style="margin: 0 auto; padding-bottom: 0%; padding-top: 7.5%; width: 380px;">
     <div class="panel panel-color panel-danger panel-pages panel-shadow">
         <div class="panel-heading bg-img">
@@ -92,17 +92,17 @@
 <script th:src="@{https://cdn.jsdelivr.net/npm/jquery@2.2.3/dist/jquery.min.js}"></script>
 <script th:src="@{https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/js/bootstrap.min.js}"></script>
 <script th:src="@{https://cdn.jsdelivr.net/npm/sweetalert2@6.4.1/dist/sweetalert2.min.js}"></script>
-<script th:src="@{/admin/js/base.js}"></script>
+<script th:src="@{/littleluck/js/base.js}"></script>
 <script type="text/javascript">
     /*<![CDATA[*/
     var tale = new $.tale();
     function checkForm() {
         tale.post({
-            url: '/admin/login',
+            url: '/littleluck/login',
             data: $("#loginForm").serialize(),
             success: function (result) {
                 if (result && result.success) {
-                    window.location.href = '/admin/index';
+                    window.location.href = '/littleluck/index';
                 } else {
                     tale.alertError(result.msg || '登录失败');
                 }

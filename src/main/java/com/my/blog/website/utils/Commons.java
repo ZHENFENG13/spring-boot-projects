@@ -132,12 +132,13 @@ public final class Commons {
      * @return
      */
     public static String gravatar(String email) {
-        String avatarUrl = "https://github.com/identicons/";
-        if (StringUtils.isBlank(email)) {
-            email = "user@hanshuai.xin";
-        }
-        String hash = TaleUtils.MD5encode(email.trim().toLowerCase());
-        return avatarUrl + hash + ".png";
+//        String avatarUrl = "https://github.com/identicons/";
+//        if (StringUtils.isBlank(email)) {
+//            email = "user@hanshuai.xin";
+//        }
+//        String hash = TaleUtils.MD5encode(email.trim().toLowerCase());
+//        return avatarUrl + hash + ".png";
+        return "https://avatars3.githubusercontent.com/u/43947662?s=400&u=87ed5834027b03dc0473a0b33c00df05d05e5cc8&v=4";
     }
 
     /**

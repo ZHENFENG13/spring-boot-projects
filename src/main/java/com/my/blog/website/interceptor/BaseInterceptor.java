@@ -60,8 +60,8 @@ public class BaseInterceptor implements HandlerInterceptor {
                 request.getSession().setAttribute(WebConst.LOGIN_SESSION_KEY, user);
             }
         }
-        if (uri.startsWith(contextPath + "/admin") && !uri.startsWith(contextPath + "/admin/login") && null == user) {
-            response.sendRedirect(request.getContextPath() + "/admin/login");
+        if (uri.startsWith(contextPath + "/littleluck") && !uri.startsWith(contextPath + "/littleluck/login") && !uri.startsWith("/littleluck/js") && !uri.startsWith("/littleluck/css") && !uri.startsWith("/littleluck/images") && null == user) {
+            response.sendRedirect(request.getContextPath() + "/littleluck/login");
             return false;
         }
         //设置get请求的token

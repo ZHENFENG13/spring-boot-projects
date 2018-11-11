@@ -1,13 +1,13 @@
 <!DOCTYPE html>
 <html lang="en" xmlns:th="http://www.thymeleaf.org" th:with="title='保存文章',active='publish'">
-<header th:replace="admin/header::headerFragment(${title},${active})"></header>
-<link th:href="@{/admin/plugins/tagsinput/jquery.tagsinput.css}" rel="stylesheet"/>
-<link th:href="@{/admin/plugins/select2.dist.css/select2-bootstrap.css}" rel="stylesheet"/>
-<link th:href="@{/admin/plugins/toggles/toggles.css}" rel="stylesheet"/>
+<header th:replace="littleluck/header::headerFragment(${title},${active})"></header>
+<link th:href="@{/littleluck/plugins/tagsinput/jquery.tagsinput.css}" rel="stylesheet"/>
+<link th:href="@{/littleluck/plugins/select2.dist.css/select2-bootstrap.css}" rel="stylesheet"/>
+<link th:href="@{/littleluck/plugins/toggles/toggles.css}" rel="stylesheet"/>
 
-<link th:href="@{/admin/plugins/md/css/multi-select.css}" rel="stylesheet"/>
-<link th:href="@{/admin/plugins/md/css/select2.min.css}" rel="stylesheet"/>
-<link th:href="@{/admin/plugins/md/css/style.css}" rel="stylesheet"/>
+<link th:href="@{/littleluck/css/multi-select.css}" rel="stylesheet"/>
+<link th:href="@{/littleluck/css/select2.min.css}" rel="stylesheet"/>
+<link th:href="@{/littleluck/plugins/md/css/style.css}" rel="stylesheet"/>
 <style>
     #tags_tagsinput {
         background-color: #fafafa;
@@ -24,7 +24,7 @@
 </style>
 <body class="fixed-left">
 <div id="wrapper">
-    <div th:replace="admin/header::header-body"></div>
+    <div th:replace="littleluck/header::header-body"></div>
     <div class="content-page">
         <div class="content">
             <div class="container">
@@ -124,7 +124,7 @@
                             <div class="clearfix"></div>
 
                             <div class="text-right">
-                                <a class="btn btn-default waves-effect waves-light" th:href="@{/admin/article}">返回列表</a>
+                                <a class="btn btn-default waves-effect waves-light" th:href="@{/littleluck/article}">返回列表</a>
                                 <button type="button" class="btn btn-primary waves-effect waves-light"
                                         onclick="subArticle('publish');">
                                     保存文章
@@ -137,25 +137,25 @@
                         </form>
                     </div>
                 </div>
-                <div th:replace="admin/footer :: footer-content"></div>
+                <div th:replace="littleluck/footer :: footer-content"></div>
             </div>
         </div>
     </div>
 </div>
-<div th:replace="admin/footer :: footer"></div>
+<div th:replace="littleluck/footer :: footer"></div>
 
-<script th:src="@{/admin/plugins/tagsinput/jquery.tagsinput.min.js}"></script>
-<script th:src="@{/admin/plugins/jquery-multi-select/jquery.quicksearch.js}"></script>
+<script th:src="@{/littleluck/plugins/tagsinput/jquery.tagsinput.min.js}"></script>
+<script th:src="@{/littleluck/plugins/jquery-multi-select/jquery.quicksearch.js}"></script>
 
-<script th:src="@{/admin/plugins/md/js/jquery.scrollto.js}"></script>
-<script th:src="@{/admin/plugins/md/js/pagedown.js}"></script>
-<script th:src="@{/admin/plugins/md/js/pagedown-extra.js}"></script>
-<script th:src="@{/admin/plugins/md/js/diff.js}"></script>
-<script th:src="@{/admin/plugins/md/js/md.js}"></script>
+<script th:src="@{/littleluck/plugins/md/js/jquery.scrollto.js}"></script>
+<script th:src="@{/littleluck/plugins/md/js/pagedown.js}"></script>
+<script th:src="@{/littleluck/plugins/md/js/pagedown-extra.js}"></script>
+<script th:src="@{/littleluck/plugins/md/js/diff.js}"></script>
+<script th:src="@{/littleluck/plugins/md/js/md.js}"></script>
 
-<script th:src="@{/admin/js/jquery.multi-select.min.js}"></script>
-<script th:src="@{/admin/js/select2.min.js}"></script>
+<script th:src="@{/littleluck/js/jquery.multi-select.min.js}"></script>
+<script th:src="@{/littleluck/js/select2.min.js}"></script>
 <script th:src="@{https://cdn.jsdelivr.net/npm/jquery-toggles@4.0.0/toggles.min.js}"></script>
-<script th:src="@{/admin/js/article.js}"></script>
+<script th:src="@{/littleluck/js/article.js}"></script>
 </body>
 </html>

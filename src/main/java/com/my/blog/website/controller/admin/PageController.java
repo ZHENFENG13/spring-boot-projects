@@ -23,7 +23,7 @@ import javax.servlet.http.HttpServletRequest;
  * Created by 13 on 2017/2/21.
  */
 @Controller()
-@RequestMapping("admin/page")
+@RequestMapping("littleluck/page")
 public class PageController extends BaseController {
 
     private static final Logger LOGGER = LoggerFactory.getLogger(PageController.class);
@@ -41,19 +41,19 @@ public class PageController extends BaseController {
         contentVoExample.createCriteria().andTypeEqualTo(Types.PAGE.getType());
         PageInfo<ContentVo> contentsPaginator = contentsService.getArticlesWithpage(contentVoExample, 1, WebConst.MAX_POSTS);
         request.setAttribute("articles", contentsPaginator);
-        return "admin/page_list";
+        return "littleluck/page_list";
     }
 
     @GetMapping(value = "new")
     public String newPage(HttpServletRequest request) {
-        return "admin/page_edit";
+        return "littleluck/page_edit";
     }
 
     @GetMapping(value = "/{cid}")
     public String editPage(@PathVariable String cid, HttpServletRequest request) {
         ContentVo contents = contentsService.getContents(cid);
         request.setAttribute("contents", contents);
-        return "admin/page_edit";
+        return "littleluck/page_edit";
     }
 
     @PostMapping(value = "publish")

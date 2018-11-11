@@ -27,7 +27,7 @@ import java.util.Map;
  * Created by wangq on 2017/3/20.
  */
 @Controller
-@RequestMapping("/admin/setting")
+@RequestMapping("/littleluck/setting")
 public class SettingController extends BaseController {
     private static final Logger LOGGER = LoggerFactory.getLogger(SettingController.class);
 
@@ -54,7 +54,7 @@ public class SettingController extends BaseController {
             options.put("site_record", "");
         }
         request.setAttribute("options", options);
-        return "admin/setting";
+        return "littleluck/setting";
     }
 
     /**

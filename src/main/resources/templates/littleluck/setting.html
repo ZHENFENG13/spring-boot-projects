@@ -1,10 +1,10 @@
 <!DOCTYPE html>
 <html lang="en" xmlns:th="http://www.thymeleaf.org" th:with="title='系统设置',active='settings'">
-<header th:replace="admin/header::headerFragment(${title},${active})"></header>
-<link th:href="@{/admin/plugins/toggles/toggles.css}" rel="stylesheet"/>
+<header th:replace="littleluck/header::headerFragment(${title},${active})"></header>
+<link th:href="@{/littleluck/plugins/toggles/toggles.css}" rel="stylesheet"/>
 <body class="fixed-left">
 <div id="wrapper">
-    <div th:replace="admin/header::header-body"></div>
+    <div th:replace="littleluck/header::header-body"></div>
     <div class="content-page">
         <div class="content">
             <div class="container">
@@ -132,12 +132,12 @@
                     </div>
 
                 </div>
-                <div th:replace="admin/footer :: footer-content"></div>
+                <div th:replace="littleluck/footer :: footer-content"></div>
             </div>
         </div>
     </div>
 </div>
-<div th:replace="admin/footer :: footer"></div>
+<div th:replace="littleluck/footer :: footer"></div>
 <script src="https://cdn.jsdelivr.net/npm/jquery-toggles@4.0.0/toggles.min.js"></script>
 <script type="text/javascript">
     /*<![CDATA[*/
@@ -149,7 +149,7 @@
     function saveSetting() {
         var param = $('#global-form').serialize();
         tale.post({
-            url : '/admin/setting',
+            url : '/littleluck/setting',
             data: param,
             success: function (result) {
                 if(result && result.success){
@@ -167,7 +167,7 @@
     function saveIndiviSetting() {
         var param = $('#indivi-form').serialize();
         tale.post({
-            url : '/admin/setting',
+            url : '/littleluck/setting',
             data: param,
             success: function (result) {
                 if(result && result.success){
@@ -203,7 +203,7 @@
             bk_path: $('#backup_dir').val()
         };
         tale.post({
-            url : '/admin/setting/backup',
+            url : '/littleluck/setting/backup',
             data: param,
             success: function (result) {
                 if(result && result.success){

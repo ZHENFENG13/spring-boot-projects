@@ -28,7 +28,7 @@ import java.io.IOException;
  * Created by BlueT on 2017/3/11.
  */
 @Controller
-@RequestMapping("/admin")
+@RequestMapping("/littleluck")
 @Transactional(rollbackFor = TipException.class)
 public class AuthController extends BaseController {
 
@@ -42,7 +42,7 @@ public class AuthController extends BaseController {
 
     @GetMapping(value = "/login")
     public String login() {
-        return "admin/login";
+        return "littleluck/login";
     }
 
     @PostMapping(value = "login")
@@ -93,7 +93,7 @@ public class AuthController extends BaseController {
         cookie.setPath("/");
         response.addCookie(cookie);
         try {
-            response.sendRedirect("/admin/login");
+            response.sendRedirect("/littleluck/login");
         } catch (IOException e) {
             e.printStackTrace();
             LOGGER.error("注销失败", e);

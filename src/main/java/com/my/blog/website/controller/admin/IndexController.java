@@ -32,7 +32,7 @@ import java.util.List;
  * Created by Administrator on 2017/3/9 009.
  */
 @Controller("adminIndexController")
-@RequestMapping("/admin")
+@RequestMapping("/littleluck")
 @Transactional(rollbackFor = TipException.class)
 public class IndexController extends BaseController {
     private static final Logger LOGGER = LoggerFactory.getLogger(IndexController.class);
@@ -52,7 +52,7 @@ public class IndexController extends BaseController {
      */
     @GetMapping(value = {"","/index"})
     public String index(HttpServletRequest request){
-        LOGGER.info("Enter admin index method");
+        LOGGER.info("Enter littleluck index method");
         List<CommentVo> comments = siteService.recentComments(5);
         List<ContentVo> contents = siteService.recentContents(5);
         StatisticsBo statistics = siteService.getStatistics();
@@ -63,8 +63,8 @@ public class IndexController extends BaseController {
         request.setAttribute("articles", contents);
         request.setAttribute("statistics", statistics);
         request.setAttribute("logs", logs);
-        LOGGER.info("Exit admin index method");
-        return "admin/index";
+        LOGGER.info("Exit littleluck index method");
+        return "littleluck/index";
     }
 
     /**
@@ -72,7 +72,7 @@ public class IndexController extends BaseController {
      */
     @GetMapping(value = "profile")
     public String profile() {
-        return "admin/profile";
+        return "littleluck/profile";
     }
 
 

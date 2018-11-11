@@ -1,9 +1,9 @@
 <!DOCTYPE html>
 <html lang="en" xmlns:th="http://www.thymeleaf.org" th:with="title='友链管理',active='links'">
-<header th:replace="admin/header::headerFragment(${title},${active})"></header>
+<header th:replace="littleluck/header::headerFragment(${title},${active})"></header>
 <body class="fixed-left">
 <div id="wrapper">
-    <div th:replace="admin/header::header-body"></div>
+    <div th:replace="littleluck/header::header-body"></div>
     <div class="content-page">
         <div class="content">
             <div class="container">
@@ -83,12 +83,12 @@
 
                     </div>
                 </div>
-                <div th:replace="admin/footer :: footer-content"></div>
+                <div th:replace="littleluck/footer :: footer-content"></div>
             </div>
         </div>
     </div>
 </div>
-<div th:replace="admin/footer :: footer"></div>
+<div th:replace="littleluck/footer :: footer"></div>
 <script src="https://cdn.jsdelivr.net/npm/jquery-validation@1.15.1/dist/jquery.validate.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/jquery-validation@1.15.1/dist/localization/messages_zh.min.js"></script>
 <script type="text/javascript">
@@ -99,7 +99,7 @@
         submitHandler: function (form) {
             var params = $("#linkForm").serialize();
             tale.post({
-                url : '/admin/links/save',
+                url : '/littleluck/links/save',
                 data: params,
                 success: function (result) {
                     $('#linkForm input').val('');
@@ -135,7 +135,7 @@
             title:'确定删除该链接吗?',
             then: function () {
                 tale.post({
-                    url : '/admin/links/delete',
+                    url : '/littleluck/links/delete',
                     data: {mid: mid},
                     success: function (result) {
                         if(result && result.success){

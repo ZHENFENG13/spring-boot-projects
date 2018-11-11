@@ -1,11 +1,11 @@
 <!DOCTYPE html>
 <html lang="en" xmlns:th="http://www.thymeleaf.org" th:with="title='保存页面',active='page'">
-<header th:replace="admin/header::headerFragment(${title},${active})"></header>
-<link th:href="@{/admin/plugins/toggles/toggles.css}" rel="stylesheet"/>
-<link th:href="@{/admin/plugins/md/css/style.css}" rel="stylesheet"/>
+<header th:replace="littleluck/header::headerFragment(${title},${active})"></header>
+<link th:href="@{/littleluck/plugins/toggles/toggles.css}" rel="stylesheet"/>
+<link th:href="@{/littleluck/plugins/md/css/style.css}" rel="stylesheet"/>
 <body class="fixed-left">
 <div id="wrapper">
-    <div th:replace="admin/header::header-body"></div>
+    <div th:replace="littleluck/header::header-body"></div>
     <div class="content-page">
         <div class="content">
             <div class="container">
@@ -49,17 +49,17 @@
                     </div>
 
                 </div>
-                <div th:replace="admin/footer :: footer-content"></div>
+                <div th:replace="littleluck/footer :: footer-content"></div>
             </div>
         </div>
     </div>
 </div>
-<div th:replace="admin/footer :: footer"></div>
-<script th:src="@{/admin/plugins/md/js/jquery.scrollto.js}"></script>
-<script th:src="@{/admin/plugins/md/js/pagedown.js}"></script>
-<script th:src="@{/admin/plugins/md/js/pagedown-extra.js}"></script>
-<script th:src="@{/admin/plugins/md/js/diff.js}"></script>
-<script th:src="@{/admin/plugins/md/js/md.js}"></script>
+<div th:replace="littleluck/footer :: footer"></div>
+<script th:src="@{/littleluck/plugins/md/js/jquery.scrollto.js}"></script>
+<script th:src="@{/littleluck/plugins/md/js/pagedown.js}"></script>
+<script th:src="@{/littleluck/plugins/md/js/pagedown-extra.js}"></script>
+<script th:src="@{/littleluck/plugins/md/js/diff.js}"></script>
+<script th:src="@{/littleluck/plugins/md/js/md.js}"></script>
 
 <script th:src="@{https://cdn.jsdelivr.net/npm/jquery-toggles@4.0.0/toggles.min.js}"></script>
 <script src="https://cdn.jsdelivr.net/npm/jquery-validation@1.15.1/dist/jquery.validate.min.js"></script>
@@ -73,7 +73,7 @@
             $('#content-editor').val($('#text').val());
             $("#articleForm #categories").val($('#multiple-sel').val());
             var params = $("#articleForm").serialize();
-            var url = $('#articleForm #cid').val() != '' ? '/admin/page/modify' : '/admin/page/publish';
+            var url = $('#articleForm #cid').val() != '' ? '/littleluck/page/modify' : '/littleluck/page/publish';
 
             tale.post({
                 url:url,
@@ -84,7 +84,7 @@
                             text:'页面保存成功',
                             then: function () {
                                 setTimeout(function () {
-                                    window.location.href = '/admin/page';
+                                    window.location.href = '/littleluck/page';
                                 }, 500);
                             }
                         });

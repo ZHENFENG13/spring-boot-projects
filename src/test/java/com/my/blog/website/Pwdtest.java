@@ -9,9 +9,11 @@ import com.my.blog.website.utils.TaleUtils;
 public class Pwdtest {
     public static void main(String args[]){
         UserVo user = new UserVo();
-        user.setUsername("admin");
+        user.setUsername("littleluck");
         user.setPassword("J9lew2irojE23");
         String encodePwd = TaleUtils.MD5encode(user.getUsername() + user.getPassword());
         System.out.println(encodePwd);
+
+        System.out.println(TaleUtils.MD5encode("wangruofei.wing@gmail.com".toLowerCase()));
     }
 }

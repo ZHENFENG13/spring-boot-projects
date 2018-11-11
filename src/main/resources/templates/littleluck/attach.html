@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en" xmlns:th="http://www.thymeleaf.org" th:with="title='文件管理',active='attach'">
-<header th:replace="admin/header::headerFragment(${title},${active})"></header>
+<header th:replace="littleluck/header::headerFragment(${title},${active})"></header>
 <link href="https://cdn.jsdelivr.net/npm/dropzone@4.3.0/dist/dropzone.min.css" rel="stylesheet"/>
 <style>
     #dropzone {
@@ -42,7 +42,7 @@
 </style>
 <body class="fixed-left">
 <div id="wrapper">
-    <div th:replace="admin/header::header-body"></div>
+    <div th:replace="littleluck/header::header-body"></div>
     <div class="content-page">
         <div class="content">
             <div class="container">
@@ -80,7 +80,7 @@
                                 <div class="col-md-2 text-center m-t-10">
                                     <a th:href="${commons.site_url(attach.fkey)}" target="_blank">
                                         <img class="attach-img"
-                                             th:src="@{${attach.ftype == 'image'}?${attach.fkey}: '/admin/images/attach.png'}"
+                                             th:src="@{${attach.ftype == 'image'}?${attach.fkey}: '/littleluck/images/attach.png'}"
                                              th:title="${attach.fname}"/>
                                     </a>
                                     <div class="clearfix m-t-10">
@@ -105,12 +105,12 @@
                         </th:block>
                     </div>
                 </div>
-                <div th:replace="admin/footer :: footer-content"></div>
+                <div th:replace="littleluck/footer :: footer-content"></div>
             </div>
         </div>
     </div>
 </div>
-<div th:replace="admin/footer :: footer"></div>
+<div th:replace="littleluck/footer :: footer"></div>
 <script src="https://cdn.jsdelivr.net/npm/dropzone@4.3.0/dist/dropzone.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/clipboard@1.6.0/lib/clipboard.min.js"></script>
 <script type="text/javascript" th:inline="javascript">
@@ -119,7 +119,7 @@
 
     $("#dropzone").dropzone({
         paramName: "file",
-        url: "/admin/attach/upload",
+        url: "/littleluck/attach/upload",
         maxFilesize: 1,
         init: function () {
             this.on("success", function (file, msg) {
@@ -151,7 +151,7 @@
             title: '确定删除该附件吗?',
             then: function () {
                 tale.post({
-                    url: '/admin/attach/delete',
+                    url: '/littleluck/attach/delete',
                     data: {id: id},
                     success: function (result) {
                         if (result && result.success) {

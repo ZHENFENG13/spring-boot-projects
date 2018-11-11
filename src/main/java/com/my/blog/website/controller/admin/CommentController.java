@@ -19,7 +19,7 @@ import javax.servlet.http.HttpServletRequest;
  * Created by 13 on 2017/2/26.
  */
 @Controller
-@RequestMapping("admin/comments")
+@RequestMapping("littleluck/comments")
 public class CommentController extends BaseController {
 
     private static final Logger LOGGER = LoggerFactory.getLogger(CommentController.class);
@@ -36,7 +36,7 @@ public class CommentController extends BaseController {
         commentVoExample.createCriteria().andAuthorIdNotEqualTo(users.getUid());
         PageInfo<CommentVo> commentsPaginator = commentsService.getCommentsWithPage(commentVoExample, page, limit);
         request.setAttribute("comments", commentsPaginator);
-        return "admin/comment_list";
+        return "littleluck/comment_list";
     }
 
     /**

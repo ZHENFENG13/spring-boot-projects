@@ -30,7 +30,7 @@ import java.util.List;
  * Created by 13 on 2017/2/21.
  */
 @Controller
-@RequestMapping("/admin/article")
+@RequestMapping("/littleluck/article")
 @Transactional(rollbackFor = TipException.class)
 public class ArticleController extends BaseController {
 
@@ -53,14 +53,14 @@ public class ArticleController extends BaseController {
         contentVoExample.createCriteria().andTypeEqualTo(Types.ARTICLE.getType());
         PageInfo<ContentVo> contentsPaginator = contentsService.getArticlesWithpage(contentVoExample, page, limit);
         request.setAttribute("articles", contentsPaginator);
-        return "admin/article_list";
+        return "littleluck/article_list";
     }
 
     @GetMapping(value = "/publish")
     public String newArticle(HttpServletRequest request) {
         List<MetaVo> categories = metasService.getMetas(Types.CATEGORY.getType());
         request.setAttribute("categories", categories);
-        return "admin/article_edit";
+        return "littleluck/article_edit";
     }
 
     @GetMapping(value = "/{cid}")
@@ -70,7 +70,7 @@ public class ArticleController extends BaseController {
         List<MetaVo> categories = metasService.getMetas(Types.CATEGORY.getType());
         request.setAttribute("categories", categories);
         request.setAttribute("active", "article");
-        return "admin/article_edit";
+        return "littleluck/article_edit";
     }
 
     @PostMapping(value = "/publish")
