@@ -12,23 +12,11 @@ My Blog是由Docker+SpringBoot+Mybatis+thymeleaf等技术实现的Java博客系�
 - **部署后你可以根据自己需求修改版权文案、logo图片、备案记录等信息；**
 - **My Blog还有许多不完善的地方，鄙人才疏学浅，望见谅！**
 
-演示站点：http://13blog.site
 
 [![Build Status](https://travis-ci.org/ZHENFENG13/My-Blog.svg?branch=master)](https://travis-ci.org/ZHENFENG13/My-Blog)
 ![Version 3.2.0](https://img.shields.io/badge/version-3.2.0-yellow.svg)
 [![License](https://img.shields.io/badge/license-apache-blue.svg)](https://github.com/ZHENFENG13/My-Blog/blob/master/LICENSE)
 
-#### 联系作者
-
-十三的java学习交流QQ群:```658365129```
-
-#### 宣传
-
-十三近期于CSDN上传了一份自己制作的达人课课程,感兴趣的朋友可以看一下：
-
-* [x] [GitChat达人课-SSM搭建精美实用的管理系统](https://gitbook.cn/gitchat/column/5b4dae389bcda53d07056bc9)
-
-![gitchat](https://raw.githubusercontent.com/ZHENFENG13/resource/master/images/2018-07-19/gitchat.png)
 
 #### 相关博客文章
 
