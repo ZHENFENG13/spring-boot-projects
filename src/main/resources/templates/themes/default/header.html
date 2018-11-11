@@ -12,13 +12,13 @@
     <link rel="shortcut icon" th:href="@{/user/img/favicon.png}"/>
     <link rel="apple-touch-icon" th:href="@{/user/img/apple-touch-icon.png}"/>
     <title><th:block th:text="${title ?: '首页'}+' - '+${commons.site_option('site_title','My Blog')}"></th:block></title>
-    <link th:href="@{//cdn.bootcss.com/highlight.js/9.9.0/styles/xcode.min.css}" rel="stylesheet"/>
+    <link th:href="@{https://cdn.jsdelivr.net/npm/highlight.js@9.9.0/styles/xcode.min.css}" rel="stylesheet"/>
     <link th:href="@{/user/css/style.min.css}" rel="stylesheet"/>
-    <script th:src="@{//cdn.bootcss.com/jquery/2.2.3/jquery.min.js}"></script>
+    <script th:src="@{https://cdn.jsdelivr.net/npm/jquery@2.2.3/dist/jquery.min.js}"></script>
 
     <!--[if lt IE 9]>
-    <script src="//cdn.bootcss.com/html5shiv/r29/html5.min.js"></script>
-    <script src="//cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/html5shiv@3.7.3/dist/html5shiv.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/respond.js@1.4.2/dest/respond.min.js"></script>
     <![endif]-->
 </head>
 <body  gtools_scp_screen_capture_injected="true" th:class="${is_post}?'':'bg-grey'">

@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en" xmlns:th="http://www.thymeleaf.org" th:with="title='文件管理',active='attach'">
 <header th:replace="admin/header::headerFragment(${title},${active})"></header>
-<link href="//cdn.bootcss.com/dropzone/4.3.0/min/dropzone.min.css" rel="stylesheet"/>
+<link href="https://cdn.jsdelivr.net/npm/dropzone@4.3.0/dist/dropzone.min.css" rel="stylesheet"/>
 <style>
     #dropzone {
         margin-bottom: 3rem;
@@ -111,8 +111,8 @@
     </div>
 </div>
 <div th:replace="admin/footer :: footer"></div>
-<script src="//cdn.bootcss.com/dropzone/4.3.0/min/dropzone.min.js"></script>
-<script src="//cdn.bootcss.com/clipboard.js/1.6.0/clipboard.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/dropzone@4.3.0/dist/dropzone.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/clipboard@1.6.0/lib/clipboard.min.js"></script>
 <script type="text/javascript" th:inline="javascript">
     /*<![CDATA[*/
     var tale = new $.tale();
