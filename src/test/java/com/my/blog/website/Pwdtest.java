@@ -13,7 +13,5 @@ public class Pwdtest {
         user.setPassword("J9lew2irojE23");
         String encodePwd = TaleUtils.MD5encode(user.getUsername() + user.getPassword());
         System.out.println(encodePwd);
-
-        System.out.println(TaleUtils.MD5encode("wangruofei.wing@gmail.com".toLowerCase()));
     }
 }

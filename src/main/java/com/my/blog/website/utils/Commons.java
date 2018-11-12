@@ -132,13 +132,23 @@ public final class Commons {
      * @return
      */
     public static String gravatar(String email) {
-//        String avatarUrl = "https://github.com/identicons/";
-//        if (StringUtils.isBlank(email)) {
-//            email = "user@hanshuai.xin";
-//        }
-//        String hash = TaleUtils.MD5encode(email.trim().toLowerCase());
-//        return avatarUrl + hash + ".png";
-        return "https://avatars3.githubusercontent.com/u/43947662?s=400&u=87ed5834027b03dc0473a0b33c00df05d05e5cc8&v=4";
+
+        if (StringUtils.isBlank(email)) {
+            email = "1016167260@qq.com";
+        }
+
+        //获取固定的图片
+//        return "https://avatars3.githubusercontent.com/u/43947662?s=400&u=87ed5834027b03dc0473a0b33c00df05d05e5cc8&v=4";
+
+        if (email.toLowerCase().contains("qq.com")) {
+            //根据邮箱获取qq头像(只有qq邮箱才可行)
+            return "http://q4.qlogo.cn/g?b=qq&nk=" + email + "&s=1";
+        } else {
+            //这个方法获取到的好像不是真实的github头像
+            String avatar = "https://www.gravatar.com/avatar/";
+            String hash = TaleUtils.MD5encode(email.trim().toLowerCase());
+            return avatar + hash + "?s=96&d=mp&r=g";
+        }
     }
 
     /**

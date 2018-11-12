@@ -30,7 +30,7 @@
                 <div id="comment-${comment.coid}">
                     <div class="comment-view" onclick="">
                         <div class="comment-header">
-                            <img class="avatar" src="${gravatar(comment.mail)}?s=80&r=G&d=" title="${comment.author}"
+                            <img class="avatar" src="${gravatar(comment.mail)}" title="${comment.author}"
                                  width="80" height="80">
                             <span class="comment-author">
                                 <a href="${comment.url}" target="_blank" rel="external nofollow">${comment.author}</a>
@@ -57,7 +57,7 @@
                             <div id="comment-${child.coid}">
                                 <div class="comment-view">
                                     <div class="comment-header">
-                                        <img class="avatar" src="${gravatar(child.mail)}?s=80&r=G&d=" title="${child.author}" width="80" height="80">
+                                        <img class="avatar" src="${gravatar(child.mail)}" title="${child.author}" width="80" height="80">
                                         <span class="comment-author comment-by-author">
                                             <a href="${child.url}" target="_blank" rel="external nofollow">${child.author}</a>
                                         </span>

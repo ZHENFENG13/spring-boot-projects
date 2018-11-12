@@ -46,7 +46,7 @@
                                     <div class="comment-header">
                                         <!--设置get请求的参数-->
                                         <img class="avatar"
-                                             th:src="@{${commons.gravatar(comment.mail)}(s='80',r='G',d='')}"
+                                             th:src="@{${commons.gravatar(comment.mail)}}"
                                              th:title="${comment.author}"
                                              width="80" height="80"/>
                                         <span class="comment-author">
