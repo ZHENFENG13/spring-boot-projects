@@ -125,8 +125,8 @@ VALUES
 	('social_github','',NULL),
 	('social_twitter','',NULL),
 	('site_theme','default',NULL),
-	('site_keywords','13 Blog',NULL),
-	('site_description','13 Blog',NULL),
+	('site_keywords','My Blog',NULL),
+	('site_description','My Blog',NULL),
 	('site_record','','备案号');
 
 UNLOCK TABLES;
@@ -167,4 +167,4 @@ CREATE TABLE `t_users` (
 
 INSERT INTO `t_users` (`uid`, `username`, `password`, `email`, `home_url`, `screen_name`, `created`, `activated`, `logged`, `group_name`)
 VALUES
-	(1, 'littleluck', 'a66abb5684c45962d887564f08346e8d', '1034683568@qq.com', NULL, 'littleluck', 1490756162, 0, 0, 'visitor');
+	(1, 'littleluck', 'a66abb5684c45962d887564f08346e8d', '1016167260@qq.com', NULL, 'littleluck', 1016167260, 0, 0, 'visitor');
