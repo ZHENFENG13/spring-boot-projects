@@ -20,7 +20,7 @@ My Blog是由Docker+SpringBoot+Mybatis+thymeleaf等技术实现的Java博客系�
 
 #### 联系作者
 
-十三的java学习交流QQ群:```658365129```
+十三的java学习交流QQ群:```881582471```，```658365129(已满)```
 
 #### 宣传
 
