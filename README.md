@@ -2,6 +2,12 @@
 
 该仓库中主要是 Spring Boot 的入门学习教程以及一些常用的 Spring Boot 实战项目教程，包括 Spring Boot 使用的各种示例代码，同时也包括一些实战项目的项目源码和效果展示，实战项目包括基本的 web 开发以及目前大家普遍使用的前后端分离实践项目等，后续会根据大家的反馈继续增加一些实战项目源码，摆脱各种 hello world 入门案例的束缚，真正的掌握 Spring Boot 开发。
 
+### 项目演示网址
+
+- [前后端分离项目](http://lou.springboot.tech/login.html)
+
+### 项目导航
+
 [Spring Boot 前后端分离项目实践](https://github.com/ZHENFENG13/springboot-projects/tree/master/SpringBoot前后端分离项目实践) &nbsp;| &nbsp;[40 个实验带你玩转 Spring Boot](https://github.com/ZHENFENG13/springboot-projects/tree/master/40个实验带你玩转SpringBoot) &nbsp;| &nbsp;[Spring Boot + Mybatis + Thymeleaf 实现的开源博客系统](https://github.com/ZHENFENG13/My-Blog) 
 
 &nbsp;| &nbsp;[Github地址](https://github.com/ZHENFENG13/springboot-projects) &nbsp;| &nbsp;[码云地址](https://gitee.com/zhenfeng13/springboot-projects)
