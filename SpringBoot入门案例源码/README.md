@@ -14,3 +14,5 @@ Spring Boot 入门代码
 - 第06课：Spring Boot 之数据库连接操作
 - 第07课：Spring Boot 整合 MyBatis 操作数据库
 - 第08课：Spring Boot 处理文件上传及路径回显
+- Spring Boot 项目实践之 Ajax 技术使用教程
+- Spring Boot 项目实践之  RESTful API 设计与实现
