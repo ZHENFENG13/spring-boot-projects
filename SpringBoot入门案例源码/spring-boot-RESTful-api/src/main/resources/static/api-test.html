@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>lou.SpringBoot | api 请求测试</title>
+</head>
+<body class="hold-transition login-page">
+<div style="width:720px;margin:7% auto">
+    <div class="content">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-lg-6">
+                    <hr>
+                    <div class="card">
+                        <div class="card-header">
+                            <h5 class="m-0">详情查询接口测试</h5>
+                        </div>
+                        <div class="card-body">
+                            <input id="queryId" type="number" placeholder="请输入id字段">
+                            <h6 class="card-title">查询接口返回数据如下：</h6>
+                            <p class="card-text" id="result0"></p>
+                            <a href="#" class="btn btn-primary" onclick="requestQuery()">发送详情查询请求</a>
+                        </div>
+                    </div>
+                    <br>
+                    <hr>
+                    <div class="card">
+                        <div class="card-header">
+                            <h5 class="m-0">列表查询接口测试</h5>
+                        </div>
+                        <div class="card-body">
+                            <h6 class="card-title">查询接口返回数据如下：</h6>
+                            <p class="card-text" id="result1"></p>
+                            <a href="#" class="btn btn-primary" onclick="requestQueryList()">发送列表查询请求</a>
+                        </div>
+                    </div>
+                    <br>
+                    <hr>
+                    <div class="card">
+                        <div class="card-header">
+                            <h5 class="m-0">添加接口测试</h5>
+                        </div>
+                        <div class="card-body">
+                            <input id="addName" type="text" placeholder="请输入name字段">
+                            <input id="addPassword" type="text" placeholder="请输入password字段">
+                            <h6 class="card-title">添加接口返回数据如下：</h6>
+                            <p class="card-text" id="result2"></p>
+                            <a href="#" class="btn btn-primary" onclick="requestAdd()">发送添加请求</a>
+                        </div>
+                    </div>
+                    <br>
+                    <hr>
+                    <div class="card">
+                        <div class="card-header">
+                            <h5 class="m-0">修改接口测试</h5>
+                        </div>
+                        <div class="card-body">
+                            <input id="updateId" type="number" placeholder="请输入id字段">
+                            <input id="updateName" type="text" placeholder="请输入name字段">
+                            <input id="updatePassword" type="text" placeholder="请输入password字段">
+                            <h6 class="card-title">修改接口返回数据如下：</h6>
+                            <p class="card-text" id="result3"></p>
+                            <a href="#" class="btn btn-primary" onclick="requestUpdate()">发送修改请求</a>
+                        </div>
+                    </div>
+                    <br>
+                    <hr>
+                    <div class="card">
+                        <div class="card-header">
+                            <h5 class="m-0">删除接口测试</h5>
+                        </div>
+                        <div class="card-body">
+                            <input id="deleteId" type="number" placeholder="请输入id字段">
+                            <h6 class="card-title">删除接口返回数据如下：</h6>
+                            <p class="card-text" id="result4"></p>
+                            <a href="#" class="btn btn-primary" onclick="requestDelete()">发送删除请求</a>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- jQuery -->
+<script src="https://cdn.staticfile.org/jquery/1.12.0/jquery.min.js"></script>
+<script type="text/javascript">
+    function requestQuery() {
+        var id = $("#queryId").val();
+        if (typeof id == "undefined" || id == null || id == "" || id < 0) {
+            return false;
+        }
+        $.ajax({
+            type: "GET",//方法类型
+            dataType: "json",//预期服务器返回的数据类型
+            url: "/api/users/" + id,
+            contentType: "application/json; charset=utf-8",
+            success: function (result) {
+                $("#result0").html(JSON.stringify(result));
+            },
+            error: function () {
+                $("#result0").html("接口异常，请联系管理员！");
+            }
+        });
+    }
+
+    function requestQueryList() {
+        $.ajax({
+            type: "GET",//方法类型
+            dataType: "json",//预期服务器返回的数据类型
+            url: "/api/users",
+            contentType: "application/json; charset=utf-8",
+            success: function (result) {
+                $("#result1").html(JSON.stringify(result));
+            },
+            error: function () {
+                $("#result1").html("接口异常，请联系管理员！");
+            }
+        });
+    }
+
+    function requestAdd() {
+        var name = $("#addName").val();
+        var password = $("#addPassword").val();
+        var data = {"name": name, "password": password}
+        $.ajax({
+            type: "POST",//方法类型
+            dataType: "json",//预期服务器返回的数据类型
+            url: "/api/users",
+            contentType: "application/json; charset=utf-8",
+            data: JSON.stringify(data),
+            success: function (result) {
+                $("#result2").html(JSON.stringify(result));
+            },
+            error: function () {
+                $("#result2").html("接口异常，请联系管理员！");
+            }
+        });
+    }
+
+    function requestUpdate() {
+        var id = $("#updateId").val();
+        var name = $("#updateName").val();
+        var password = $("#updatePassword").val();
+        var data = {"id": id, "name": name, "password": password}
+        $.ajax({
+            type: "PUT",//方法类型
+            dataType: "json",//预期服务器返回的数据类型
+            url: "/api/users",
+            contentType: "application/json; charset=utf-8",
+            data: JSON.stringify(data),
+            success: function (result) {
+                $("#result3").html(JSON.stringify(result));
+            },
+            error: function () {
+                $("#result3").html("接口异常，请联系管理员！");
+            }
+        });
+    }
+
+    function requestDelete() {
+        var id = $("#deleteId").val();
+        if (typeof id == "undefined" || id == null || id == "" || id < 0) {
+            return false;
+        }
+        $.ajax({
+            type: "DELETE",//方法类型
+            dataType: "json",//预期服务器返回的数据类型
+            url: "/api/users/" + id,
+            contentType: "application/json; charset=utf-8",
+            success: function (result) {
+                $("#result4").html(JSON.stringify(result));
+            },
+            error: function () {
+                $("#result4").html("接口异常，请联系管理员！");
+            }
+        });
+    }
+</script>
+</body>
+</html>
