@@ -33,7 +33,7 @@
 - [spring-boot-schedule](https://github.com/ZHENFENG13/springboot-projects/tree/master/)：Spring Boot 项目开发之实现定时任务案例
 - [spring-boot-error-page](https://github.com/ZHENFENG13/springboot-projects/tree/master/)：Spring Boot 自定义错误页面案例
 - [spring-boot-swagger](https://github.com/ZHENFENG13/springboot-projects/tree/master/)：Spring Boot 集成 Swagger 生成接口文档案例
-- [spring-boot-file-upload](https://github.com/ZHENFENG13/springboot-projects/tree/master/)：Spring Boot 处理文件上传及路径回显
+- [spring-boot-file-upload](https://github.com/ZHENFENG13/springboot-projects/tree/master/SpringBoot入门案例源码/spring-boot-file-upload)：Spring Boot 处理文件上传及路径回显
 - [spring-boot-RESTful-api](https://github.com/ZHENFENG13/springboot-projects/tree/master/) ：Spring Boot 项目实践之 RESTful API 设计与实现
 - [spring-boot-web-jsp](https://github.com/ZHENFENG13/springboot-projects/tree/master/) ：Spring Boot 整合 JSP 开发 web 项目
 - [spring-boot-web-thymeleaf](https://github.com/ZHENFENG13/springboot-projects/tree/) ：Spring Boot 整合 Thymeleaf 案例
