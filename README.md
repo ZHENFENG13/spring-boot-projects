@@ -27,7 +27,7 @@
 - [spring-boot-message-converter](https://github.com/ZHENFENG13/springboot-projects/tree/master/)：Spring Boot 基础开发之消息转换器案例
 - [spring-boot-jdbc](https://github.com/ZHENFENG13/springboot-projects/tree/master/SpringBoot入门案例源码/spring-boot-jdbc)：Spring Boot 连接数据库以及在 Spring Boot 项目中操作数据库
 - [spring-boot-druid](https://github.com/ZHENFENG13/springboot-projects/tree/master/)：Spring Boot 中使用自定义 Druid 数据源案例
-- [spring-boot-mybatis](https://github.com/ZHENFENG13/springboot-projects/tree/master/)：Spring Boot 整合 MyBatis 操作数据库案例
+- [spring-boot-mybatis](https://github.com/ZHENFENG13/springboot-projects/tree/master/SpringBoot入门案例源码/spring-boot-mybatis)：Spring Boot 整合 MyBatis 操作数据库案例
 - [spring-boot-transaction](https://github.com/ZHENFENG13/springboot-projects/tree/master/)：Spring Boot 中的事务处理案例
 - [spring-boot-redis](https://github.com/ZHENFENG13/springboot-projects/tree/master/)：Spring Boot 整合 Redis 操作缓存模块
 - [spring-boot-schedule](https://github.com/ZHENFENG13/springboot-projects/tree/master/)：Spring Boot 项目开发之实现定时任务案例
