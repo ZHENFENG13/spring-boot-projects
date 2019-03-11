@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.lou.springboot.dao.PictureDao">
+    <resultMap type="com.lou.springboot.entity.Picture" id="PictureResult">
+        <result property="id" column="id"/>
+        <result property="path" column="path"/>
+        <result property="remark" column="remark"/>
+        <result property="createTime" column="create_time"/>
+    </resultMap>
+
+    <select id="findPictures" parameterType="Map" resultMap="PictureResult">
+        select id,path,remark,create_time from tb_ssm_picture
+        where is_deleted=0
+        order by id desc
+        <if test="start!=null and limit!=null">
+            limit #{start},#{limit}
+        </if>
+    </select>
+
+    <select id="getTotalPictures" parameterType="Map" resultType="int">
+        select count(*) from tb_ssm_picture
+        where is_deleted=0
+    </select>
+
+    <insert id="insertPicture" parameterType="com.lou.springboot.entity.Picture">
+        insert into tb_ssm_picture(path,remark)
+        values(#{path},#{remark})
+    </insert>
+
+    <update id="updPicture" parameterType="com.lou.springboot.entity.Picture">
+        update tb_ssm_picture
+        set
+        path=#{path},remark=#{remark}
+        where id=#{id} and is_deleted=0
+    </update>
+
+    <update id="delPicture" parameterType="int">
+        update tb_ssm_picture
+        set is_deleted=1  where id=#{id}
+    </update>
+
+    <select id="findPictureById" parameterType="int" resultMap="PictureResult">
+        select id,path,remark,create_time
+        from tb_ssm_picture where id=#{id} and is_deleted=0
+    </select>
+
+    <update id="deleteBatch">
+        update tb_ssm_picture
+        set is_deleted=1 where id in
+        <foreach item="id" collection="array" open="(" separator="," close=")">
+            #{id}
+        </foreach>
+    </update>
+
+</mapper>
