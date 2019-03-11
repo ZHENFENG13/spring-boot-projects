@@ -1,6 +1,6 @@
 # Spring Boot 入门案例源码
 
-Spring Boot 入门代码
+Spring Boot 入门代码，可以直接下载到本地编辑和使用。
 
 ## 参考文章
 
