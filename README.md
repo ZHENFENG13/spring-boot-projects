@@ -46,7 +46,7 @@
 
 ## Spring Boot 实战项目源码
 
-- 前后端分离项目
+- [前后端分离项目](https://github.com/ZHENFENG13/springboot-projects/tree/master/SpringBoot前后端分离实战项目源码/spring-boot-project-front-end&back-end)
 - 咨询发布项目
 - 博客系统
 
