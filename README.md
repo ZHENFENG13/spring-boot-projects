@@ -23,7 +23,7 @@
 - [spring-boot-hello](https://github.com/ZHENFENG13/springboot-projects/tree/master/SpringBoot入门案例源码/spring-boot-helloworld)：Spring Boot 第一个案例代码
 - [spring-boot-logging](https://github.com/ZHENFENG13/springboot-projects/tree/master/)：Spring Boot 基础开发之日志输出案例
 - [spring-boot-test](https://github.com/ZHENFENG13/springboot-projects/tree/master/)：Spring Boot 基础开发之单元测试案例
-- [spring-boot-static-resources](https://github.com/ZHENFENG13/springboot-projects/tree/master/)：Spring Boot 基础开发之静态资源处理案例
+- [spring-boot-static-resources](https://github.com/ZHENFENG13/springboot-projects/tree/master/SpringBoot入门案例源码/spring-boot-static-resources)：Spring Boot 基础开发之静态资源处理案例
 - [spring-boot-message-converter](https://github.com/ZHENFENG13/springboot-projects/tree/master/)：Spring Boot 基础开发之消息转换器案例
 - [spring-boot-jdbc](https://github.com/ZHENFENG13/springboot-projects/tree/master/)：Spring Boot 连接数据库以及在 Spring Boot 项目中操作数据库
 - [spring-boot-druid](https://github.com/ZHENFENG13/springboot-projects/tree/master/)：Spring Boot 中使用自定义 Druid 数据源案例
