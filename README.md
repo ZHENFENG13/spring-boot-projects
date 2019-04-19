@@ -25,7 +25,7 @@
 - [spring-boot-test](https://github.com/ZHENFENG13/springboot-projects/tree/master/玩转SpringBoot系列案例源码/spring-boot-test)：Spring Boot 基础开发之单元测试案例
 - [spring-boot-static-resources](https://github.com/ZHENFENG13/springboot-projects/tree/master/SpringBoot入门案例源码/spring-boot-static-resources)：Spring Boot 基础开发之静态资源处理案例
 - [spring-boot-ajax](https://github.com/ZHENFENG13/springboot-projects/tree/master/SpringBoot入门案例源码/spring-boot-ajax)：Spring Boot 项目实践之 Ajax 技术使用教程
-- [spring-boot-message-converter](https://github.com/ZHENFENG13/springboot-projects/tree/master/)：Spring Boot 基础开发之消息转换器案例
+- [spring-boot-message-converter](https://github.com/ZHENFENG13/springboot-projects/tree/master/玩转SpringBoot系列案例源码/spring-boot-message-converter)：Spring Boot 基础开发之消息转换器案例
 - [spring-boot-jdbc](https://github.com/ZHENFENG13/springboot-projects/tree/master/SpringBoot入门案例源码/spring-boot-jdbc)：Spring Boot 连接数据库以及在 Spring Boot 项目中操作数据库
 - [spring-boot-druid](https://github.com/ZHENFENG13/springboot-projects/tree/master/)：Spring Boot 中使用自定义 Druid 数据源案例
 - [spring-boot-mybatis](https://github.com/ZHENFENG13/springboot-projects/tree/master/SpringBoot入门案例源码/spring-boot-mybatis)：Spring Boot 整合 MyBatis 操作数据库案例
