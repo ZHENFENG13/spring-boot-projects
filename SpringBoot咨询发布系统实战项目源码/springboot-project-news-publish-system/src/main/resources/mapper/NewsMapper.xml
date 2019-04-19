@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.site.springboot.core.dao.NewsMapper">
+    <resultMap id="BaseResultMap" type="com.site.springboot.core.entity.News">
+        <id column="news_id" jdbcType="BIGINT" property="newsId"/>
+        <result column="news_title" jdbcType="VARCHAR" property="newsTitle"/>
+        <result column="news_category_id" jdbcType="BIGINT" property="newsCategoryId"/>
+        <result column="news_cover_image" jdbcType="VARCHAR" property="newsCoverImage"/>
+        <result column="news_content" jdbcType="VARCHAR" property="newsContent"/>
+        <result column="news_status" jdbcType="TINYINT" property="newsStatus"/>
+        <result column="news_views" jdbcType="BIGINT" property="newsViews"/>
+        <result column="is_deleted" jdbcType="TINYINT" property="isDeleted"/>
+        <result column="create_time" jdbcType="TIMESTAMP" property="createTime"/>
+        <result column="update_time" jdbcType="TIMESTAMP" property="updateTime"/>
+    </resultMap>
+    <sql id="Base_Column_List">
+    news_id, news_title, news_category_id, news_cover_image, news_content, news_status, news_views,
+    is_deleted, create_time, update_time
+  </sql>
+    <select id="findNewsList" parameterType="Map" resultMap="BaseResultMap">
+        select
+        <include refid="Base_Column_List"/>
+        from tb_news
+        where is_deleted=0
+        order by news_id desc
+        <if test="start!=null and limit!=null">
+            limit #{start},#{limit}
+        </if>
+    </select>
+    <select id="getTotalNews" parameterType="Map" resultType="int">
+    select count(*)  from tb_news
+    where is_deleted=0
+    </select>
+    <select id="selectByPrimaryKey" parameterType="java.lang.Long" resultMap="BaseResultMap">
+        select
+        <include refid="Base_Column_List"/>
+        from tb_news
+        where news_id = #{newsId,jdbcType=BIGINT}  and is_deleted=0
+    </select>
+    <update id="deleteBatch">
+        update tb_news
+        set is_deleted=1 where news_id in
+        <foreach item="id" collection="array" open="(" separator="," close=")">
+            #{id}
+        </foreach>
+    </update>
+    <update id="deleteByPrimaryKey" parameterType="java.lang.Long">
+    update  tb_news set is_deleted=1
+    where news_id = #{newsId,jdbcType=BIGINT} and is_deleted=0
+  </update>
+    <insert id="insert" parameterType="com.site.springboot.core.entity.News">
+    insert into tb_news (news_id, news_title, news_category_id, 
+      news_cover_image, news_status, news_views, 
+      is_deleted, create_time, update_time
+      )
+    values (#{newsId,jdbcType=BIGINT}, #{newsTitle,jdbcType=VARCHAR}, #{newsCategoryId,jdbcType=BIGINT}, 
+      #{newsCoverImage,jdbcType=VARCHAR}, #{newsStatus,jdbcType=TINYINT}, #{newsViews,jdbcType=BIGINT}, 
+      #{isDeleted,jdbcType=TINYINT}, #{createTime,jdbcType=TIMESTAMP}, #{updateTime,jdbcType=TIMESTAMP}
+      )
+  </insert>
+    <insert id="insertSelective" parameterType="com.site.springboot.core.entity.News">
+        insert into tb_news
+        <trim prefix="(" suffix=")" suffixOverrides=",">
+            <if test="newsId != null">
+                news_id,
+            </if>
+            <if test="newsTitle != null">
+                news_title,
+            </if>
+            <if test="newsCategoryId != null">
+                news_category_id,
+            </if>
+            <if test="newsCoverImage != null">
+                news_cover_image,
+            </if>
+            <if test="newsContent != null">
+                news_content,
+            </if>
+            <if test="newsStatus != null">
+                news_status,
+            </if>
+            <if test="newsViews != null">
+                news_views,
+            </if>
+            <if test="isDeleted != null">
+                is_deleted,
+            </if>
+            <if test="createTime != null">
+                create_time,
+            </if>
+            <if test="updateTime != null">
+                update_time,
+            </if>
+        </trim>
+        <trim prefix="values (" suffix=")" suffixOverrides=",">
+            <if test="newsId != null">
+                #{newsId,jdbcType=BIGINT},
+            </if>
+            <if test="newsTitle != null">
+                #{newsTitle,jdbcType=VARCHAR},
+            </if>
+            <if test="newsCategoryId != null">
+                #{newsCategoryId,jdbcType=BIGINT},
+            </if>
+            <if test="newsCoverImage != null">
+                #{newsCoverImage,jdbcType=VARCHAR},
+            </if>
+            <if test="newsContent != null">
+                #{newsContent,jdbcType=VARCHAR},
+            </if>
+            <if test="newsStatus != null">
+                #{newsStatus,jdbcType=TINYINT},
+            </if>
+            <if test="newsViews != null">
+                #{newsViews,jdbcType=BIGINT},
+            </if>
+            <if test="isDeleted != null">
+                #{isDeleted,jdbcType=TINYINT},
+            </if>
+            <if test="createTime != null">
+                #{createTime,jdbcType=TIMESTAMP},
+            </if>
+            <if test="updateTime != null">
+                #{updateTime,jdbcType=TIMESTAMP},
+            </if>
+        </trim>
+    </insert>
+    <update id="updateByPrimaryKeySelective" parameterType="com.site.springboot.core.entity.News">
+        update tb_news
+        <set>
+            <if test="newsTitle != null">
+                news_title = #{newsTitle,jdbcType=VARCHAR},
+            </if>
+            <if test="newsCategoryId != null">
+                news_category_id = #{newsCategoryId,jdbcType=BIGINT},
+            </if>
+            <if test="newsCoverImage != null">
+                news_cover_image = #{newsCoverImage,jdbcType=VARCHAR},
+            </if>
+            <if test="newsContent != null">
+                news_content= #{newsContent,jdbcType=VARCHAR},
+            </if>
+            <if test="newsStatus != null">
+                news_status = #{newsStatus,jdbcType=TINYINT},
+            </if>
+            <if test="newsViews != null">
+                news_views = #{newsViews,jdbcType=BIGINT},
+            </if>
+            <if test="isDeleted != null">
+                is_deleted = #{isDeleted,jdbcType=TINYINT},
+            </if>
+            <if test="createTime != null">
+                create_time = #{createTime,jdbcType=TIMESTAMP},
+            </if>
+            <if test="updateTime != null">
+                update_time = #{updateTime,jdbcType=TIMESTAMP},
+            </if>
+        </set>
+        where news_id = #{newsId,jdbcType=BIGINT}
+    </update>
+    <update id="updateByPrimaryKey" parameterType="com.site.springboot.core.entity.News">
+    update tb_news
+    set news_title = #{newsTitle,jdbcType=VARCHAR},
+      news_category_id = #{newsCategoryId,jdbcType=BIGINT},
+      news_cover_image = #{newsCoverImage,jdbcType=VARCHAR},
+      news_status = #{newsStatus,jdbcType=TINYINT},
+      news_views = #{newsViews,jdbcType=BIGINT},
+      is_deleted = #{isDeleted,jdbcType=TINYINT},
+      create_time = #{createTime,jdbcType=TIMESTAMP},
+      update_time = #{updateTime,jdbcType=TIMESTAMP}
+    where news_id = #{newsId,jdbcType=BIGINT}
+  </update>
+</mapper>

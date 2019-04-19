@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<header th:replace="admin/header::header-fragment"></header>
+<body class="hold-transition sidebar-mini">
+<link th:href="@{/admin/plugins/select2/select2.css}" rel="stylesheet"/>
+<div class="wrapper">
+    <!-- 引入页面头header-fragment -->
+    <div th:replace="admin/header::header-nav"></div>
+    <!-- 引入工具栏sidebar-fragment -->
+    <div th:replace="admin/sidebar::sidebar-fragment(${path})"></div>
+    <!-- Content Wrapper. Contains page content -->
+    <div class="content-wrapper">
+        <!-- Content Header (Page header) -->
+        <div class="content-header">
+            <div class="container-fluid">
+            </div><!-- /.container-fluid -->
+        </div>
+        <!-- Main content -->
+        <div class="content">
+            <div class="container-fluid">
+                <div class="card card-primary card-outline">
+                    <div class="card-header">
+                        <h3 class="card-title">发布文章</h3>
+                    </div>
+                    <div class="card-body">
+                        <!-- 几个基础的输入框，名称、分类等输入框 -->
+                        <form id="form1" onsubmit="return false;">
+                            <div class="form-group" style="display:flex;">
+                                <input type="hidden" id="newsId" name="newsId"
+                                       th:value="${news!=null and news.newsId!=null }?${news.newsId}: 0">
+                                <input type="text" class="form-control col-sm-6" id="newsTitle" name="newsTitle"
+                                       placeholder="*请输入文章标题(必填)"
+                                       th:value="${news!=null and news.newsTitle!=null }?${news.newsTitle}: ''"
+                                       required="true">
+                                &nbsp;&nbsp;
+                                <select class="form-control select2" style="width: 100%;" id="newsCategoryId"
+                                        data-placeholder="请选择分类...">
+                                    <th:block th:if="${null == categories}">
+                                        <option value="0" selected="selected">默认分类</option>
+                                    </th:block>
+                                    <th:block th:unless="${null == categories}">
+                                        <th:block th:each="c : ${categories}">
+                                            <option th:value="${c.categoryId}" th:text="${c.categoryName}"
+                                                    th:selected="${null !=news and null !=news.newsCategoryId and news.newsCategoryId==c.categoryId} ?true:false">
+                                                >
+                                            </option>
+                                        </th:block>
+                                    </th:block>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <textarea id="editor" style="width: 100%; height: 750px;"
+                                          th:utext="${news!=null and news.newsContent !=null}?${news.newsContent}: ''"></textarea>
+                            </div>
+                            <div class="form-group">
+                                <!-- 按钮 -->
+                                &nbsp;<button class="btn btn-info float-right" style="margin-left: 5px;"
+                                              id="confirmButton">保存资讯
+                            </button>&nbsp;
+                                &nbsp;<button class="btn btn-secondary float-right" style="margin-left: 5px;"
+                                              id="cancelButton">返回资讯列表
+                            </button>&nbsp;
+                            </div>
+                        </form>
+                    </div>
+
+                </div>
+            </div><!-- /.container-fluid -->
+        </div>
+        <div class="content">
+            <!-- 模态框（Modal） -->
+            <div class="modal fade" id="articleModal" tabindex="-1" role="dialog" aria-labelledby="articleModalLabel">
+                <div class="modal-dialog" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span
+                                    aria-hidden="true">&times;</span></button>
+                            <h6 class="modal-title" id="articleModalLabel">信息完善</h6>
+                        </div>
+                        <div class="modal-body">
+                            <form onsubmit="return false;">
+                                <div class="form-group">
+                                    <div class="col-sm-4">
+                                        <th:block th:if="${null == news}">
+                                            <img id="newsCoverImage" src="/admin/dist/img/img-upload.png"
+                                                 style="height: 64px;width: 64px;">
+                                        </th:block>
+                                        <th:block th:unless="${null == news}">
+                                            <img id="newsCoverImage" th:src="${news.newsCoverImage}"
+                                                 style="width:160px ;height: 120px;display:block;">
+                                        </th:block>
+                                    </div>
+                                </div>
+                                <br>
+                                <div class="form-group">
+                                    <div class="col-sm-4">
+                                        <button class="btn btn-info" style="margin-bottom: 5px;" id="uploadCoverImage">
+                                            <i class="fa fa-picture-o"></i>&nbsp;上传封面
+                                        </button>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label class="control-label">文章状态:&nbsp;</label>
+                                    <input name="newsStatus" type="radio" id="publish"
+                                           checked=true
+                                           th:checked="${null==news||(null !=news and null !=news.newsStatus and news.newsStatus==1)} ?true:false"
+                                           value="1"/>&nbsp;发布&nbsp;
+                                    <input name="newsStatus" type="radio" id="draft" value="0"
+                                           th:checked="${null !=news and null !=news.newsStatus and news.newsStatus==0} ?true:false"/>&nbsp;草稿&nbsp;
+                                </div>
+                            </form>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
+                            <button type="button" class="btn btn-primary" id="saveButton">确认</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- /.modal -->
+        </div>
+    </div>
+    <!-- /.content-wrapper -->
+    <!-- 引入页脚footer-fragment -->
+    <div th:replace="admin/footer::footer-fragment"></div>
+</div>
+<!-- jQuery -->
+<script th:src="@{/admin/plugins/jquery/jquery.min.js}"></script>
+<!-- jQuery UI 1.11.4 -->
+<script th:src="@{/admin/plugins/jQueryUI/jquery-ui.min.js}"></script>
+<!-- Bootstrap 4 -->
+<script th:src="@{/admin/plugins/bootstrap/js/bootstrap.bundle.min.js}"></script>
+<!-- AdminLTE App -->
+<script th:src="@{/admin/dist/js/adminlte.min.js}"></script>
+<!-- Select2 -->
+<script th:src="@{/admin/plugins/select2/select2.full.min.js}"></script>
+<!-- kindeditor -->
+<script th:src="@{/admin/plugins/kindeditor-4.1.10/kindeditor-all.js}"></script>
+<script th:src="@{/admin/plugins/kindeditor-4.1.10/lang/zh_CN.js}"></script>
+<!-- sweetalert -->
+<script th:src="@{/admin/plugins/sweetalert/sweetalert.min.js}"></script>
+<!-- ajaxupload -->
+<script th:src="@{/admin/plugins/ajaxupload/ajaxupload.js}"></script>
+<script th:src="@{/admin/dist/js/public.js}"></script>
+<script th:src="@{/admin/dist/js/edit.js}"></script>
+</body>
+</html>
