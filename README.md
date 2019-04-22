@@ -37,7 +37,8 @@
 - [spring-boot-file-upload](https://github.com/ZHENFENG13/springboot-projects/tree/master/SpringBoot入门案例源码/spring-boot-file-upload)：Spring Boot 处理文件上传及路径回显
 - [spring-boot-RESTful-api](https://github.com/ZHENFENG13/springboot-projects/tree/master/SpringBoot入门案例源码/spring-boot-RESTful-api) ：Spring Boot 项目实践之 RESTful API 设计与实现
 - [spring-boot-web-jsp](https://github.com/ZHENFENG13/springboot-projects/tree/master/玩转SpringBoot系列案例源码/spring-boot-web-jsp) ：Spring Boot 整合 JSP 开发 web 项目
-- [spring-boot-web-thymeleaf](https://github.com/ZHENFENG13/springboot-projects/tree/) ：Spring Boot 整合 Thymeleaf 案例
+- [spring-boot-web-thymeleaf](https://github.com/ZHENFENG13/springboot-projects/tree/master/玩转SpringBoot系列案例源码/spring-boot-web-thymeleaf) ：Spring Boot 整合 Thymeleaf 案例
+- [spring-boot-web-thymeleaf-syntax](https://github.com/ZHENFENG13/springboot-projects/tree/master/玩转SpringBoot系列案例源码/spring-boot-web-thymeleaf-syntax) ：Thymeleaf 语法详解
 - [spring-boot-web-freemarker](https://github.com/ZHENFENG13/springboot-projects/tree/) ：Spring Boot 整合 FreeMarker 案例
 - [spring-boot-admin](https://github.com/ZHENFENG13/springboot-projects/tree/) ：Spring Boot Admin 整合使用案例
 
