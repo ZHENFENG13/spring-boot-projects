@@ -32,6 +32,7 @@
 - [spring-boot-transaction](https://github.com/ZHENFENG13/springboot-projects/tree/master/玩转SpringBoot系列案例源码/spring-boot-transaction)：Spring Boot 中的事务处理案例
 - [spring-boot-redis](https://github.com/ZHENFENG13/springboot-projects/tree/master/玩转SpringBoot系列案例源码/spring-boot-redis)：Spring Boot 整合 Redis 操作缓存模块
 - [spring-boot-schedule](https://github.com/ZHENFENG13/springboot-projects/tree/master/玩转SpringBoot系列案例源码/spring-boot-schedule)：Spring Boot 项目开发之实现定时任务案例
+- [spring-boot-quartz](https://github.com/ZHENFENG13/springboot-projects/tree/master/玩转SpringBoot系列案例源码/spring-boot-quartz)：Spring Boot 项目开发之Quartz定时任务案例
 - [spring-boot-error-page](https://github.com/ZHENFENG13/springboot-projects/tree/master/)：Spring Boot 自定义错误页面案例
 - [spring-boot-swagger](https://github.com/ZHENFENG13/springboot-projects/tree/master/)：Spring Boot 集成 Swagger 生成接口文档案例
 - [spring-boot-file-upload](https://github.com/ZHENFENG13/springboot-projects/tree/master/SpringBoot入门案例源码/spring-boot-file-upload)：Spring Boot 处理文件上传及路径回显
