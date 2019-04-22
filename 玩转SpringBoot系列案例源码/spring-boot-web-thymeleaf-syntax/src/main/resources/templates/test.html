@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title th:text="${title}">语法测试</title>
+</head>
+<body>
+<h3>#strings 工具类测试 </h3>
+<div th:if="${not #strings.isEmpty(testString)}" >
+    <p>testString初始值 : <span th:text="${testString}"/></p>
+    <p>toUpperCase : <span th:text="${#strings.toUpperCase(testString)}"/></p>
+    <p>toLowerCase : <span th:text="${#strings.toLowerCase(testString)}"/></p>
+    <p>equalsIgnoreCase : <span th:text="${#strings.equalsIgnoreCase(testString, '13')}"/></p>
+    <p>indexOf : <span th:text="${#strings.indexOf(testString, 'r')}"/></p>
+    <p>substring : <span th:text="${#strings.substring(testString, 5, 9)}"/></p>
+    <p>startsWith : <span th:text="${#strings.startsWith(testString, 'Spring')}"/></p>
+    <p>contains : <span th:text="${#strings.contains(testString, 'Boot')}"/></p>
+</div>
+<h3>#bools 工具类测试</h3>
+<!-- 如果 bool 的值为false的话，该div将不会显示-->
+<div th:if="${#bools.isTrue(bool)}">
+    <p th:text="${bool}"></p>
+</div>
+<h3>#arrays 工具类测试</h3>
+<div th:if="${not #arrays.isEmpty(testArray)}">
+    <p>length : <span th:text="${#arrays.length(testArray)}"/></p>
+    <p>contains : <span th:text="${#arrays.contains(testArray, 5)}"/></p>
+    <p>containsAll : <span th:text="${#arrays.containsAll(testArray, testArray)}"/></p>
+    <p>循环读取 : <span th:each="i:${testArray}" th:text="${i+' '}"/></p>
+</div>
+<h3>#lists 工具类测试</h3>
+<div th:unless="${#lists.isEmpty(testList)}">
+    <p>size : <span th:text="${#lists.size(testList)}"/></p>
+    <p>contains : <span th:text="${#lists.contains(testList, 0)}"/></p>
+    <p>sort : <span th:text="${#lists.sort(testList)}"/></p>
+    <p>循环读取 : <span th:each="i:${testList}" th:text="${i+' '}"/></p>
+</div>
+<h3>#maps 工具类测试</h3>
+<div th:if="${not #maps.isEmpty(testMap)}">
+    <p>size : <span th:text="${#maps.size(testMap)}"/></p>
+    <p>containsKey : <span th:text="${#maps.containsKey(testMap, 'platform')}"/></p>
+    <p>containsValue : <span th:text="${#maps.containsValue(testMap, '13')}"/></p>
+    <p>读取map中键为title的值 : <span th:if="${#maps.containsKey(testMap,'title')}" th:text="${testMap.get('title')}"/></p>
+</div>
+<h3>#dates 工具类测试</h3>
+<div>
+    <p>year : <span th:text="${#dates.year(testDate)}"/></p>
+    <p>month : <span th:text="${#dates.month(testDate)}"/></p>
+    <p>day : <span th:text="${#dates.day(testDate)}"/></p>
+    <p>hour : <span th:text="${#dates.hour(testDate)}"/></p>
+    <p>minute : <span th:text="${#dates.minute(testDate)}"/></p>
+    <p>second : <span th:text="${#dates.second(testDate)}"/></p>
+    <p>格式化: <span th:text="${#dates.format(testDate)}"/></p>
+    <p>yyyy-MM-dd HH:mm:ss 格式化: <span th:text="${#dates.format(testDate, 'yyyy-MM-dd HH:mm:ss')}"/></p>
+</div>
+</body>
+</html>
