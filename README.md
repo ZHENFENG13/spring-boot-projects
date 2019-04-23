@@ -41,7 +41,7 @@
 - [spring-boot-web-thymeleaf](https://github.com/ZHENFENG13/springboot-projects/tree/master/玩转SpringBoot系列案例源码/spring-boot-web-thymeleaf) ：Spring Boot 整合 Thymeleaf 案例
 - [spring-boot-web-thymeleaf-syntax](https://github.com/ZHENFENG13/springboot-projects/tree/master/玩转SpringBoot系列案例源码/spring-boot-web-thymeleaf-syntax) ：Thymeleaf 语法详解
 - [spring-boot-web-freemarker](https://github.com/ZHENFENG13/springboot-projects/tree/master/玩转SpringBoot系列案例源码/spring-boot-web-freemarker) ：Spring Boot 整合 FreeMarker 案例
-- [spring-boot-admin](https://github.com/ZHENFENG13/springboot-projects/tree/) ：Spring Boot Admin 整合使用案例
+- [spring-boot-admin](https://github.com/ZHENFENG13/springboot-projects/tree/master/玩转SpringBoot系列案例源码/spring-boot-admin) ：Spring Boot Admin 整合使用案例
 
 这些案例主要是为了让大家能够掌握 Spring Boot 的开发和使用，旨在让读者更加熟悉 Spring Boot 及企业开发中需要注意的事项并具有使用 Spring Boot 技术进行大部分企业项目功能开发的能力。
 
