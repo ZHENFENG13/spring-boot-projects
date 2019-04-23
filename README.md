@@ -100,7 +100,7 @@
 - [第18课：Spring Boot 集成 Swagger 生成接口文档](https://www.shiyanlou.com/courses/1274/labs/10309/document)
 - [第19课：Spring Boot 项目打包部署介绍](https://www.shiyanlou.com/courses/1274/labs/10310/document)
 - [第20课：Spring Boot Admin 介绍及整合使用](https://www.shiyanlou.com/courses/1274/labs/10311/document)
-- 第21课：Spring Boot 资讯管理信息系统开发实战(一)
+- [第21课：Spring Boot 资讯管理信息系统开发实战(一)](https://www.shiyanlou.com/courses/1274/labs/10312/document)
 - 第22课：Spring Boot 资讯管理信息系统开发实战(二)
 - 第23课：Spring Boot 资讯管理信息系统开发实战(三)
 - 第24课：Spring Boot 资讯管理信息系统开发实战(四)
