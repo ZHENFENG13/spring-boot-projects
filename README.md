@@ -91,7 +91,7 @@
 - [第09课：FreeMarker 模板引擎整合使用教程](https://www.shiyanlou.com/courses/1274/labs/10300/document)
 - [第10课：Spring Boot 处理文件上传及路径回显](https://www.shiyanlou.com/courses/1274/labs/10301/document)
 - [第11课：Spring Boot 自动配置数据源及操作数据库](https://www.shiyanlou.com/courses/1274/labs/10302/document)
-- 第12课：Spring Boot 整合 Druid 数据源
+- [第12课：Spring Boot 整合 Druid 数据源](https://www.shiyanlou.com/courses/1274/labs/10303/document)
 - 第13课：Spring Boot 整合 MyBatis 操作数据库
 - 第14课：Spring Boot 中的事务处理
 - 第15课：Spring Boot 整合 Redis 操作缓存模块
