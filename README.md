@@ -94,7 +94,7 @@
 - [第12课：Spring Boot 整合 Druid 数据源](https://www.shiyanlou.com/courses/1274/labs/10303/document)
 - [第13课：Spring Boot 整合 MyBatis 操作数据库](https://www.shiyanlou.com/courses/1274/labs/10304/document)
 - [第14课：Spring Boot 中的事务处理](https://www.shiyanlou.com/courses/1274/labs/10305/document)
-- 第15课：Spring Boot 整合 Redis 操作缓存模块
+- [第15课：Spring Boot 整合 Redis 操作缓存模块](https://www.shiyanlou.com/courses/1274/labs/10306/document)
 - 第16课：Spring Boot 项目开发之实现定时任务
 - 第17课：Spring Boot 自定义错误页面
 - 第18课：Spring Boot 集成 Swagger 生成接口文档
