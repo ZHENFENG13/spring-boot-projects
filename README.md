@@ -86,7 +86,7 @@
 - [第04课：Spring Boot 基础功能开发](https://www.shiyanlou.com/courses/1274/labs/10295/document)
 - [第05课：Spring Boot 项目开发之 web 项目开发讲解](https://www.shiyanlou.com/courses/1274/labs/10296/document)
 - [第06课：Spring Boot 整合 JSP 开发 web 项目](https://www.shiyanlou.com/courses/1274/labs/10297/document)
-- [第07课：模板引擎介绍及 Spring Boot 整合 Thymeleaf ](https://www.shiyanlou.com/courses/1274/labs/10298/document)
+- [第07课：模板引擎介绍及 Spring Boot 整合 Thymeleaf](https://www.shiyanlou.com/courses/1274/labs/10298/document)
 - 第08课：Thymeleaf 语法详解 
 - 第09课：FreeMarker 模板引擎整合使用教程
 - 第10课：Spring Boot 处理文件上传及路径回显
