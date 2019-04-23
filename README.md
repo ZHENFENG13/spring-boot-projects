@@ -97,7 +97,7 @@
 - [第15课：Spring Boot 整合 Redis 操作缓存模块](https://www.shiyanlou.com/courses/1274/labs/10306/document)
 - [第16课：Spring Boot 项目开发之实现定时任务](https://www.shiyanlou.com/courses/1274/labs/10307/document)
 - [第17课：Spring Boot 自定义错误页面](https://www.shiyanlou.com/courses/1274/labs/10308/document)
-- 第18课：Spring Boot 集成 Swagger 生成接口文档
+- [第18课：Spring Boot 集成 Swagger 生成接口文档](https://www.shiyanlou.com/courses/1274/labs/10309/document)
 - 第19课：Spring Boot 项目打包部署介绍
 - 第20课：Spring Boot Admin 介绍及整合使用
 - 第21课：Spring Boot 资讯管理信息系统开发实战(一)
