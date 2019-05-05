@@ -59,7 +59,7 @@
 
 ### 《Spring Boot 前后端分离项目实践》课程目录
 
-- [开篇词：SpringBoot入门及前后端分离项目实践导读](https://www.shiyanlou.com/courses/1244)
+- [**开篇词：SpringBoot入门及前后端分离项目实践导读**](https://www.shiyanlou.com/courses/1244)
 - [第02课：快速认识 Spring Boot 技术栈](https://www.shiyanlou.com/courses/1244/labs/9841/document)
 - [第03课：开发环境搭建](https://www.shiyanlou.com/courses/1244/labs/9842/document)
 - [第04课：快速构建 Spring Boot 应用](https://www.shiyanlou.com/courses/1244/labs/9843/document)
@@ -80,7 +80,7 @@
 
 ### 《40 个实验带你玩转 Spring Boot》课程目录
 
-- [开篇词：《40 个实验带你玩转 Spring Boot》导读](https://www.shiyanlou.com/courses/1274)
+- [**开篇词：《40 个实验带你玩转 Spring Boot》导读**](https://www.shiyanlou.com/courses/1274)
 - [第02课：Spring Boot 项目开发环境搭建](https://www.shiyanlou.com/courses/1274/labs/10293/document)
 - [第03课：快速构建 Spring Boot 应用](https://www.shiyanlou.com/courses/1274/labs/10294/document)
 - [第04课：Spring Boot 基础功能开发](https://www.shiyanlou.com/courses/1274/labs/10295/document)
