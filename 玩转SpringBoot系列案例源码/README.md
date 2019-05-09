@@ -2,6 +2,22 @@
 
 该系列是对 Spring Boot 入门系列代码的补充，Spring Boot 技术整合的更多案例，可以直接下载到本地编辑和使用。
 
+- [spring-boot-logging](https://github.com/ZHENFENG13/spring-boot-projects/tree/master/玩转SpringBoot系列案例源码/spring-boot-logging)：Spring Boot 基础开发之日志输出案例
+- [spring-boot-test](https://github.com/ZHENFENG13/spring-boot-projects/tree/master/玩转SpringBoot系列案例源码/spring-boot-test)：Spring Boot 基础开发之单元测试案例
+- [spring-boot-message-converter](https://github.com/ZHENFENG13/spring-boot-projects/tree/master/玩转SpringBoot系列案例源码/spring-boot-message-converter)：Spring Boot 基础开发之消息转换器案例
+- [spring-boot-druid](https://github.com/ZHENFENG13/spring-boot-projects/tree/master/玩转SpringBoot系列案例源码/spring-boot-druid)：Spring Boot 中使用自定义 Druid 数据源案例
+- [spring-boot-transaction](https://github.com/ZHENFENG13/spring-boot-projects/tree/master/玩转SpringBoot系列案例源码/spring-boot-transaction)：Spring Boot 中的事务处理案例
+- [spring-boot-redis](https://github.com/ZHENFENG13/spring-boot-projects/tree/master/玩转SpringBoot系列案例源码/spring-boot-redis)：Spring Boot 整合 Redis 操作缓存模块
+- [spring-boot-schedule](https://github.com/ZHENFENG13/spring-boot-projects/tree/master/玩转SpringBoot系列案例源码/spring-boot-schedule)：Spring Boot 项目开发之@Scheduled实现定时任务案例
+- [spring-boot-quartz](https://github.com/ZHENFENG13/spring-boot-projects/tree/master/玩转SpringBoot系列案例源码/spring-boot-quartz)：Spring Boot 项目开发之Quartz定时任务案例
+- [spring-boot-error-page](https://github.com/ZHENFENG13/spring-boot-projects/tree/master/玩转SpringBoot系列案例源码/spring-boot-error-page)：Spring Boot 自定义错误页面案例
+- [spring-boot-swagger](https://github.com/ZHENFENG13/spring-boot-projects/tree/master/玩转SpringBoot系列案例源码/spring-boot-swagger)：Spring Boot 集成 Swagger 生成接口文档案例
+- [spring-boot-web-jsp](https://github.com/ZHENFENG13/spring-boot-projects/tree/master/玩转SpringBoot系列案例源码/spring-boot-web-jsp) ：Spring Boot 整合 JSP 开发 web 项目
+- [spring-boot-web-thymeleaf](https://github.com/ZHENFENG13/spring-boot-projects/tree/master/玩转SpringBoot系列案例源码/spring-boot-web-thymeleaf) ：Spring Boot 整合 Thymeleaf 案例
+- [spring-boot-web-thymeleaf-syntax](https://github.com/ZHENFENG13/spring-boot-projects/tree/master/玩转SpringBoot系列案例源码/spring-boot-web-thymeleaf-syntax) ：Thymeleaf 语法详解
+- [spring-boot-web-freemarker](https://github.com/ZHENFENG13/spring-boot-projects/tree/master/玩转SpringBoot系列案例源码/spring-boot-web-freemarker) ：Spring Boot 整合 FreeMarker 案例
+- [spring-boot-admin](https://github.com/ZHENFENG13/spring-boot-projects/tree/master/玩转SpringBoot系列案例源码/spring-boot-admin) ：Spring Boot Admin 整合使用案例
+
 ## 课程地址
 
 - [**课程地址:https://www.shiyanlou.com/courses/1274**](https://www.shiyanlou.com/courses/1274)
