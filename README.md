@@ -4,7 +4,7 @@
 
 ## 项目导航
 
-[Spring Boot 前后端分离项目实践](https://github.com/ZHENFENG13/spring-boot-projects/tree/master/SpringBoot前后端分离项目实践) &nbsp;| &nbsp;[40 个实验带你玩转 Spring Boot](https://github.com/ZHENFENG13/spring-boot-projects/tree/master/40个实验带你玩转SpringBoot) &nbsp;| &nbsp;[Spring Boot + Mybatis + Thymeleaf 实现的开源博客系统](https://github.com/ZHENFENG13/My-Blog) 
+[Spring Boot 入门小案例](https://github.com/ZHENFENG13/spring-boot-projects/tree/master/SpringBoot入门案例源码) &nbsp;| &nbsp;[Spring Boot 整合案例系列2](https://github.com/ZHENFENG13/spring-boot-projects/tree/master/玩转SpringBoot系列案例源码) &nbsp;| &nbsp;[Spring Boot 前后端分离项目实践](https://github.com/ZHENFENG13/spring-boot-projects/tree/master/SpringBoot前后端分离项目实践) &nbsp;| &nbsp;[Spring Boot 咨询发布系统项目实践](https://github.com/ZHENFENG13/spring-boot-projects/tree/master/SpringBoot咨询发布系统实战项目源码) &nbsp;| &nbsp;[Spring Boot + Mybatis + Thymeleaf 实现的开源博客系统](https://github.com/ZHENFENG13/My-Blog) 
 
 &nbsp;| &nbsp;[Github地址](https://github.com/ZHENFENG13/spring-boot-projects) &nbsp;| &nbsp;[码云地址](https://gitee.com/zhenfeng13/spring-boot-projects)
 
