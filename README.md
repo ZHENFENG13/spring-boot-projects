@@ -4,9 +4,9 @@
 
 ## 项目导航
 
-[Spring Boot 前后端分离项目实践](https://github.com/ZHENFENG13/springboot-projects/tree/master/SpringBoot前后端分离项目实践) &nbsp;| &nbsp;[40 个实验带你玩转 Spring Boot](https://github.com/ZHENFENG13/springboot-projects/tree/master/40个实验带你玩转SpringBoot) &nbsp;| &nbsp;[Spring Boot + Mybatis + Thymeleaf 实现的开源博客系统](https://github.com/ZHENFENG13/My-Blog) 
+[Spring Boot 前后端分离项目实践](https://github.com/ZHENFENG13/spring-boot-projects/tree/master/SpringBoot前后端分离项目实践) &nbsp;| &nbsp;[40 个实验带你玩转 Spring Boot](https://github.com/ZHENFENG13/spring-boot-projects/tree/master/40个实验带你玩转SpringBoot) &nbsp;| &nbsp;[Spring Boot + Mybatis + Thymeleaf 实现的开源博客系统](https://github.com/ZHENFENG13/My-Blog) 
 
-&nbsp;| &nbsp;[Github地址](https://github.com/ZHENFENG13/springboot-projects) &nbsp;| &nbsp;[码云地址](https://gitee.com/zhenfeng13/springboot-projects)
+&nbsp;| &nbsp;[Github地址](https://github.com/ZHENFENG13/spring-boot-projects) &nbsp;| &nbsp;[码云地址](https://gitee.com/zhenfeng13/spring-boot-projects)
 
 **目前所有代码使用的 Spring Boot 版本都为 2.1.0-RELEASE，请知悉。**
 
@@ -22,8 +22,8 @@
 
 #### Spring Boot 实战项目源码
 
-- [前后端分离项目](https://github.com/ZHENFENG13/springboot-projects/tree/master/SpringBoot前后端分离实战项目源码/spring-boot-project-front-end&back-end)
-- [咨询发布项目](https://github.com/ZHENFENG13/springboot-projects/tree/master/SpringBoot咨询发布系统实战项目源码/springboot-project-news-publish-system)
+- [前后端分离项目](https://github.com/ZHENFENG13/spring-boot-projects/tree/master/SpringBoot前后端分离实战项目源码/spring-boot-project-front-end&back-end)
+- [咨询发布项目](https://github.com/ZHENFENG13/spring-boot-projects/tree/master/SpringBoot咨询发布系统实战项目源码/springboot-project-news-publish-system)
 - [博客系统](https://github.com/ZHENFENG13/My-Blog)
 
 ---
@@ -32,28 +32,28 @@
 
 **示例代码**
 
-- [spring-boot-hello](https://github.com/ZHENFENG13/springboot-projects/tree/master/SpringBoot入门案例源码/spring-boot-helloworld)：Spring Boot 第一个案例代码
-- [spring-boot-logging](https://github.com/ZHENFENG13/springboot-projects/tree/master/玩转SpringBoot系列案例源码/spring-boot-logging)：Spring Boot 基础开发之日志输出案例
-- [spring-boot-test](https://github.com/ZHENFENG13/springboot-projects/tree/master/玩转SpringBoot系列案例源码/spring-boot-test)：Spring Boot 基础开发之单元测试案例
-- [spring-boot-static-resources](https://github.com/ZHENFENG13/springboot-projects/tree/master/SpringBoot入门案例源码/spring-boot-static-resources)：Spring Boot 基础开发之静态资源处理案例
-- [spring-boot-ajax](https://github.com/ZHENFENG13/springboot-projects/tree/master/SpringBoot入门案例源码/spring-boot-ajax)：Spring Boot 项目实践之 Ajax 技术使用教程
-- [spring-boot-message-converter](https://github.com/ZHENFENG13/springboot-projects/tree/master/玩转SpringBoot系列案例源码/spring-boot-message-converter)：Spring Boot 基础开发之消息转换器案例
-- [spring-boot-jdbc](https://github.com/ZHENFENG13/springboot-projects/tree/master/SpringBoot入门案例源码/spring-boot-jdbc)：Spring Boot 连接数据库以及在 Spring Boot 项目中操作数据库
-- [spring-boot-druid](https://github.com/ZHENFENG13/springboot-projects/tree/master/玩转SpringBoot系列案例源码/spring-boot-druid)：Spring Boot 中使用自定义 Druid 数据源案例
-- [spring-boot-mybatis](https://github.com/ZHENFENG13/springboot-projects/tree/master/SpringBoot入门案例源码/spring-boot-mybatis)：Spring Boot 整合 MyBatis 操作数据库案例
-- [spring-boot-transaction](https://github.com/ZHENFENG13/springboot-projects/tree/master/玩转SpringBoot系列案例源码/spring-boot-transaction)：Spring Boot 中的事务处理案例
-- [spring-boot-redis](https://github.com/ZHENFENG13/springboot-projects/tree/master/玩转SpringBoot系列案例源码/spring-boot-redis)：Spring Boot 整合 Redis 操作缓存模块
-- [spring-boot-schedule](https://github.com/ZHENFENG13/springboot-projects/tree/master/玩转SpringBoot系列案例源码/spring-boot-schedule)：Spring Boot 项目开发之@Scheduled实现定时任务案例
-- [spring-boot-quartz](https://github.com/ZHENFENG13/springboot-projects/tree/master/玩转SpringBoot系列案例源码/spring-boot-quartz)：Spring Boot 项目开发之Quartz定时任务案例
-- [spring-boot-error-page](https://github.com/ZHENFENG13/springboot-projects/tree/master/玩转SpringBoot系列案例源码/spring-boot-error-page)：Spring Boot 自定义错误页面案例
-- [spring-boot-swagger](https://github.com/ZHENFENG13/springboot-projects/tree/master/玩转SpringBoot系列案例源码/spring-boot-swagger)：Spring Boot 集成 Swagger 生成接口文档案例
-- [spring-boot-file-upload](https://github.com/ZHENFENG13/springboot-projects/tree/master/SpringBoot入门案例源码/spring-boot-file-upload)：Spring Boot 处理文件上传及路径回显
-- [spring-boot-RESTful-api](https://github.com/ZHENFENG13/springboot-projects/tree/master/SpringBoot入门案例源码/spring-boot-RESTful-api) ：Spring Boot 项目实践之 RESTful API 设计与实现
-- [spring-boot-web-jsp](https://github.com/ZHENFENG13/springboot-projects/tree/master/玩转SpringBoot系列案例源码/spring-boot-web-jsp) ：Spring Boot 整合 JSP 开发 web 项目
-- [spring-boot-web-thymeleaf](https://github.com/ZHENFENG13/springboot-projects/tree/master/玩转SpringBoot系列案例源码/spring-boot-web-thymeleaf) ：Spring Boot 整合 Thymeleaf 案例
-- [spring-boot-web-thymeleaf-syntax](https://github.com/ZHENFENG13/springboot-projects/tree/master/玩转SpringBoot系列案例源码/spring-boot-web-thymeleaf-syntax) ：Thymeleaf 语法详解
-- [spring-boot-web-freemarker](https://github.com/ZHENFENG13/springboot-projects/tree/master/玩转SpringBoot系列案例源码/spring-boot-web-freemarker) ：Spring Boot 整合 FreeMarker 案例
-- [spring-boot-admin](https://github.com/ZHENFENG13/springboot-projects/tree/master/玩转SpringBoot系列案例源码/spring-boot-admin) ：Spring Boot Admin 整合使用案例
+- [spring-boot-hello](https://github.com/ZHENFENG13/spring-boot-projects/tree/master/SpringBoot入门案例源码/spring-boot-helloworld)：Spring Boot 第一个案例代码
+- [spring-boot-logging](https://github.com/ZHENFENG13/spring-boot-projects/tree/master/玩转SpringBoot系列案例源码/spring-boot-logging)：Spring Boot 基础开发之日志输出案例
+- [spring-boot-test](https://github.com/ZHENFENG13/spring-boot-projects/tree/master/玩转SpringBoot系列案例源码/spring-boot-test)：Spring Boot 基础开发之单元测试案例
+- [spring-boot-static-resources](https://github.com/ZHENFENG13/spring-boot-projects/tree/master/SpringBoot入门案例源码/spring-boot-static-resources)：Spring Boot 基础开发之静态资源处理案例
+- [spring-boot-ajax](https://github.com/ZHENFENG13/spring-boot-projects/tree/master/SpringBoot入门案例源码/spring-boot-ajax)：Spring Boot 项目实践之 Ajax 技术使用教程
+- [spring-boot-message-converter](https://github.com/ZHENFENG13/spring-boot-projects/tree/master/玩转SpringBoot系列案例源码/spring-boot-message-converter)：Spring Boot 基础开发之消息转换器案例
+- [spring-boot-jdbc](https://github.com/ZHENFENG13/spring-boot-projects/tree/master/SpringBoot入门案例源码/spring-boot-jdbc)：Spring Boot 连接数据库以及在 Spring Boot 项目中操作数据库
+- [spring-boot-druid](https://github.com/ZHENFENG13/spring-boot-projects/tree/master/玩转SpringBoot系列案例源码/spring-boot-druid)：Spring Boot 中使用自定义 Druid 数据源案例
+- [spring-boot-mybatis](https://github.com/ZHENFENG13/spring-boot-projects/tree/master/SpringBoot入门案例源码/spring-boot-mybatis)：Spring Boot 整合 MyBatis 操作数据库案例
+- [spring-boot-transaction](https://github.com/ZHENFENG13/spring-boot-projects/tree/master/玩转SpringBoot系列案例源码/spring-boot-transaction)：Spring Boot 中的事务处理案例
+- [spring-boot-redis](https://github.com/ZHENFENG13/spring-boot-projects/tree/master/玩转SpringBoot系列案例源码/spring-boot-redis)：Spring Boot 整合 Redis 操作缓存模块
+- [spring-boot-schedule](https://github.com/ZHENFENG13/spring-boot-projects/tree/master/玩转SpringBoot系列案例源码/spring-boot-schedule)：Spring Boot 项目开发之@Scheduled实现定时任务案例
+- [spring-boot-quartz](https://github.com/ZHENFENG13/spring-boot-projects/tree/master/玩转SpringBoot系列案例源码/spring-boot-quartz)：Spring Boot 项目开发之Quartz定时任务案例
+- [spring-boot-error-page](https://github.com/ZHENFENG13/spring-boot-projects/tree/master/玩转SpringBoot系列案例源码/spring-boot-error-page)：Spring Boot 自定义错误页面案例
+- [spring-boot-swagger](https://github.com/ZHENFENG13/spring-boot-projects/tree/master/玩转SpringBoot系列案例源码/spring-boot-swagger)：Spring Boot 集成 Swagger 生成接口文档案例
+- [spring-boot-file-upload](https://github.com/ZHENFENG13/spring-boot-projects/tree/master/SpringBoot入门案例源码/spring-boot-file-upload)：Spring Boot 处理文件上传及路径回显
+- [spring-boot-RESTful-api](https://github.com/ZHENFENG13/spring-boot-projects/tree/master/SpringBoot入门案例源码/spring-boot-RESTful-api) ：Spring Boot 项目实践之 RESTful API 设计与实现
+- [spring-boot-web-jsp](https://github.com/ZHENFENG13/spring-boot-projects/tree/master/玩转SpringBoot系列案例源码/spring-boot-web-jsp) ：Spring Boot 整合 JSP 开发 web 项目
+- [spring-boot-web-thymeleaf](https://github.com/ZHENFENG13/spring-boot-projects/tree/master/玩转SpringBoot系列案例源码/spring-boot-web-thymeleaf) ：Spring Boot 整合 Thymeleaf 案例
+- [spring-boot-web-thymeleaf-syntax](https://github.com/ZHENFENG13/spring-boot-projects/tree/master/玩转SpringBoot系列案例源码/spring-boot-web-thymeleaf-syntax) ：Thymeleaf 语法详解
+- [spring-boot-web-freemarker](https://github.com/ZHENFENG13/spring-boot-projects/tree/master/玩转SpringBoot系列案例源码/spring-boot-web-freemarker) ：Spring Boot 整合 FreeMarker 案例
+- [spring-boot-admin](https://github.com/ZHENFENG13/spring-boot-projects/tree/master/玩转SpringBoot系列案例源码/spring-boot-admin) ：Spring Boot Admin 整合使用案例
 
 这些案例主要是为了让大家能够掌握 Spring Boot 的开发和使用，旨在让读者更加熟悉 Spring Boot 及企业开发中需要注意的事项并具有使用 Spring Boot 技术进行大部分企业项目功能开发的能力。
 
@@ -113,7 +113,7 @@
 
 ## 交流
 
-> 大家有任何问题或者建议都可以在 [issues](https://github.com/ZHENFENG13/springboot-projects/issues) 中反馈给我，我会慢慢完善这个 Spring Boot 仓库。
+> 大家有任何问题或者建议都可以在 [issues](https://github.com/ZHENFENG13/spring-boot-projects/issues) 中反馈给我，我会慢慢完善这个 Spring Boot 仓库。
 
 - 我的邮箱：2449207463@qq.com
 - QQ技术交流群：796794009
