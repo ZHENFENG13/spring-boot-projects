@@ -57,7 +57,7 @@
 
 ## 课程目录
 
-- [**开篇词：《40 个实验带你玩转 Spring Boot》导读**](https://www.shiyanlou.com/courses/1274)
+- [**开篇词：《23 个实验带你轻松玩转 Spring Boot》导读**](https://www.shiyanlou.com/courses/1274)
 - [第02课：Spring Boot 项目开发环境搭建](https://www.shiyanlou.com/courses/1274/labs/10293/document)
 - [第03课：快速构建 Spring Boot 应用](https://www.shiyanlou.com/courses/1274/labs/10294/document)
 - [第04课：Spring Boot 基础功能开发](https://www.shiyanlou.com/courses/1274/labs/10295/document)
