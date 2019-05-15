@@ -1,2 +1,2 @@
-*.h linguist-language=java
-*.m linguist-language=java
+*.js linguist-language=java
+*.css linguist-language=java
