@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+    <groupId>com.projects.boot.spring</groupId>
+    <artifactId>spring-boot-projects</artifactId>
+    <packaging>pom</packaging>
+    <version>2.1.0</version>
+    <description>Spring Boot Projects</description>
+
+    <properties>
+        <java.version>1.8</java.version>
+    </properties>
+
+    <modules>
+        <module>SpringBoot前后端分离实战项目源码/spring-boot-project-front-end&amp;back-end</module>
+
+        <module>SpringBoot咨询发布系统实战项目源码/springboot-project-news-publish-system</module>
+
+        <module>SpringBoot入门案例源码/spring-boot-helloworld</module>
+        <module>SpringBoot入门案例源码/spring-boot-file-upload</module>
+        <module>SpringBoot入门案例源码/spring-boot-RESTful-api</module>
+        <module>SpringBoot入门案例源码/spring-boot-static-resources</module>
+        <module>SpringBoot入门案例源码/spring-boot-ajax</module>
+        <module>SpringBoot入门案例源码/spring-boot-jdbc</module>
+        <module>SpringBoot入门案例源码/spring-boot-mybatis</module>
+
+        <module>玩转SpringBoot系列案例源码/spring-boot-logging</module>
+        <module>玩转SpringBoot系列案例源码/spring-boot-test</module>
+        <module>玩转SpringBoot系列案例源码/spring-boot-message-converter</module>
+        <module>玩转SpringBoot系列案例源码/spring-boot-druid</module>
+        <module>玩转SpringBoot系列案例源码/spring-boot-transaction</module>
+        <module>玩转SpringBoot系列案例源码/spring-boot-redis</module>
+        <module>玩转SpringBoot系列案例源码/spring-boot-schedule</module>
+        <module>玩转SpringBoot系列案例源码/spring-boot-swagger</module>
+        <module>玩转SpringBoot系列案例源码/spring-boot-quartz</module>
+        <module>玩转SpringBoot系列案例源码/spring-boot-error-page</module>
+        <module>玩转SpringBoot系列案例源码/spring-boot-web-jsp</module>
+        <module>玩转SpringBoot系列案例源码/spring-boot-web-thymeleaf</module>
+        <module>玩转SpringBoot系列案例源码/spring-boot-web-thymeleaf-syntax</module>
+        <module>玩转SpringBoot系列案例源码/spring-boot-web-freemarker</module>
+        <module>玩转SpringBoot系列案例源码/spring-boot-admin/spring-boot-admin-demo</module>
+        <module>玩转SpringBoot系列案例源码/spring-boot-admin/spring-boot-demo</module>
+    </modules>
+
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <version>3.1</version>
+                <configuration>
+                    <source>1.8</source>
+                    <target>1.8</target>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
+
+</project>
