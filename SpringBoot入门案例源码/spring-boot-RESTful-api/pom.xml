@@ -9,9 +9,9 @@
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
 	<groupId>com.lou.springboot</groupId>
-	<artifactId>springboot-demo</artifactId>
+	<artifactId>spring-boot-RESTful-api</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>springboot-demo</name>
+	<name>spring-boot-RESTful-api</name>
 	<description>Spring Boot 项目实践之 RESTful API 设计与实现</description>
 
 	<properties>

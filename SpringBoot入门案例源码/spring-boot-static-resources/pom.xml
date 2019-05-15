@@ -9,9 +9,9 @@
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
 	<groupId>com.lou.springboot</groupId>
-	<artifactId>springboot-demo</artifactId>
+	<artifactId>spring-boot-static-resources</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>springboot-demo</name>
+	<name>spring-boot-static-resources</name>
 	<description>Spring Boot 基础开发之静态资源处理案例</description>
 
 	<properties>

@@ -9,9 +9,9 @@
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
 	<groupId>com.lou.springboot</groupId>
-	<artifactId>springboot-demo</artifactId>
+	<artifactId>spring-boot-mybatis</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>springboot-demo</name>
+	<name>spring-boot-mybatis</name>
 	<description>Spring Boot 整合 MyBatis 操作数据库</description>
 
 	<properties>

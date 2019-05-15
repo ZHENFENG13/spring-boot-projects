@@ -9,9 +9,9 @@
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
 	<groupId>com.lou.springboot</groupId>
-	<artifactId>springboot-demo</artifactId>
+	<artifactId>spring-boot-ajax</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>springboot-demo</name>
+	<name>spring-boot-ajax</name>
 	<description>Spring Boot 项目实践之 Ajax 技术使用教程</description>
 
 	<properties>

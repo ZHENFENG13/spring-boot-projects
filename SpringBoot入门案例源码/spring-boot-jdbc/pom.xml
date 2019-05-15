@@ -9,9 +9,9 @@
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
 	<groupId>com.lou.springboot</groupId>
-	<artifactId>springboot-demo</artifactId>
+	<artifactId>spring-boot-jdbc</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>springboot-demo</name>
+	<name>spring-boot-jdbc</name>
 	<description>Spring Boot 连接数据库以及在 Spring Boot 项目中操作数据库</description>
 
 	<properties>
