@@ -9,9 +9,9 @@
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
     <groupId>com.lou.springboot</groupId>
-    <artifactId>springboot-demo</artifactId>
+    <artifactId>spring-boot-error-page</artifactId>
     <version>0.0.1-SNAPSHOT</version>
-    <name>springboot-demo</name>
+    <name>spring-boot-error-page</name>
     <description>Spring Boot错误页面demo</description>
 
     <properties>

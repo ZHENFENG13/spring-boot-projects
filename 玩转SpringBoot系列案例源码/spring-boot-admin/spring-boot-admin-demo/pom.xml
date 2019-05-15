@@ -9,9 +9,9 @@
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
 	<groupId>com.lou.springboot</groupId>
-	<artifactId>springboot-admin</artifactId>
+	<artifactId>spring-boot-admin-server-demo</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>springboot-demo</name>
+	<name>spring-boot-admin-server-demo</name>
 	<description>Spring Boot Admin Server</description>
 
 	<properties>
