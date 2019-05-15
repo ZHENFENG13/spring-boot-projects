@@ -8,11 +8,10 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>com.site.springboot.core</groupId>
-    <artifactId>springboot-site</artifactId>
+    <artifactId>springboot-project-news-publish-system</artifactId>
     <version>0.0.1-SNAPSHOT</version>
     <packaging>jar</packaging>
-
-    <name>springboot-site</name>
+    <name>springboot-project-news-publish-system</name>
     <description>SpringBoot咨询发布系统实战项目</description>
 
     <parent>
