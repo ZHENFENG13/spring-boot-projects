@@ -14,9 +14,9 @@
 
 #### 项目演示
 
-- [Spring Boot 前后端分离项目预览](##)
-- [Spring Boot 咨询发布系统项目预览](##)
-- [Spring Boot 开源博客系统预览](##)
+- [Spring Boot 前后端分离项目预览](https://www.bilibili.com/video/av52551579)
+- [Spring Boot 咨询发布系统项目预览](https://www.bilibili.com/video/av52551450)
+- [Spring Boot 开源博客系统预览](https://www.bilibili.com/video/av52551095)
 
 ---
 
