@@ -18,7 +18,7 @@
 - [spring-boot-web-freemarker](https://github.com/ZHENFENG13/spring-boot-projects/tree/master/玩转SpringBoot系列案例源码/spring-boot-web-freemarker) ：Spring Boot 整合 FreeMarker 案例
 - [spring-boot-admin](https://github.com/ZHENFENG13/spring-boot-projects/tree/master/玩转SpringBoot系列案例源码/spring-boot-admin) ：Spring Boot Admin 整合使用案例
 
-## 课程地址
+## 课程地址(课程的减免优惠券联系十三进行领取)
 
 - [**课程地址:https://www.shiyanlou.com/courses/1274**](https://www.shiyanlou.com/courses/1274)
 
