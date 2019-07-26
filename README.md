@@ -61,7 +61,7 @@
 
 ## 参考文章
 
-### 《Spring Boot 前后端分离项目实践》课程目录(课程的减免优惠券联系十三进行领取)
+### 《Spring Boot 前后端分离项目实践》课程目录(支付减免优惠券码 y6tPSOK7 )
 
 - [**开篇词：SpringBoot入门及前后端分离项目实践导读**](https://www.shiyanlou.com/courses/1244)
 - [第02课：快速认识 Spring Boot 技术栈](https://www.shiyanlou.com/courses/1244)
@@ -82,7 +82,7 @@
 - [第17课：Spring Boot 项目实践之图片管理模块](https://www.shiyanlou.com/courses/1244)
 - [第18课：Spring Boot 项目实践之信息管理模块实现](https://www.shiyanlou.com/courses/1244)
 
-### 《23 个实验带你轻松玩转 Spring Boot》课程目录(课程的减免优惠券联系十三进行领取)
+### 《23 个实验带你轻松玩转 Spring Boot》课程目录(支付减免优惠券码 S0N2dSD2 )
 
 - [**开篇词：《23 个实验带你轻松玩转 Spring Boot》导读**](https://www.shiyanlou.com/courses/1274)
 - [第02课：Spring Boot 项目开发环境搭建](https://www.shiyanlou.com/courses/1274)
