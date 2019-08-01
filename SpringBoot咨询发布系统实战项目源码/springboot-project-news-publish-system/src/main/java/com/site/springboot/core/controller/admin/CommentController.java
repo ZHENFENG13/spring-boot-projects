@@ -33,7 +33,7 @@ public class CommentController {
 
     @GetMapping("/comments/list")
     @ResponseBody
-    public Result list(@RequestParam Map<String, Object> params) {
+    public Result getComments(@RequestParam Map<String, Object> params) {
         if (StringUtils.isEmpty(params.get("page")) || StringUtils.isEmpty(params.get("limit"))) {
             return ResultGenerator.genFailResult("参数异常！");
         }
