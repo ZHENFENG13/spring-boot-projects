@@ -21,7 +21,7 @@ import java.util.Map;
  */
 @RestController
 @RequestMapping("/users")
-public class AdminUserControler {
+public class AdminUserController {
 
     @Autowired
     private AdminUserService adminUserService;
@@ -99,7 +99,7 @@ public class AdminUserControler {
         if (adminUserService.updatePassword(user) > 0) {
             return ResultGenerator.genSuccessResult();
         } else {
-            return ResultGenerator.genFailResult("添加失败");
+            return ResultGenerator.genFailResult("修改失败");
         }
     }
 
