@@ -17,7 +17,7 @@ $(function () {
             {label: '图片备注', name: 'remark', index: 'remark', sortable: false, width: 105},
             {label: '添加时间', name: 'createTime', index: 'createTime', sortable: true, width: 80}
         ],
-        height: 385,
+        height: 585,
         rowNum: 10,
         rowList: [10, 30, 50],
         styleUI: 'Bootstrap',
