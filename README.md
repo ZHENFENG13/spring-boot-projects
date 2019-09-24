@@ -4,9 +4,7 @@
 
 ## 项目导航
 
-[Spring Boot 入门小案例](https://github.com/ZHENFENG13/spring-boot-projects/tree/master/SpringBoot入门案例源码) &nbsp;| &nbsp;[Spring Boot 整合案例系列2](https://github.com/ZHENFENG13/spring-boot-projects/tree/master/玩转SpringBoot系列案例源码) &nbsp;| &nbsp;[Spring Boot 前后端分离项目实践](https://github.com/ZHENFENG13/spring-boot-projects/tree/master/SpringBoot前后端分离实战项目源码) &nbsp;| &nbsp;[Spring Boot 咨询发布系统项目实践](https://github.com/ZHENFENG13/spring-boot-projects/tree/master/SpringBoot咨询发布系统实战项目源码) &nbsp;| &nbsp;[Spring Boot + Mybatis + Thymeleaf 实现的开源博客系统](https://github.com/ZHENFENG13/My-Blog) 
-
- &nbsp;| &nbsp;[Spring Boot + layui 实现的后台管理系统](https://github.com/ZHENFENG13/My-Blog-layui) &nbsp;| &nbsp;[Github地址](https://github.com/ZHENFENG13/spring-boot-projects) &nbsp;| &nbsp;[码云地址](https://gitee.com/zhenfeng13/spring-boot-projects)
+[Spring Boot 入门小案例](https://github.com/ZHENFENG13/spring-boot-projects/tree/master/SpringBoot入门案例源码)&nbsp;|&nbsp;[Spring Boot 整合案例系列2](https://github.com/ZHENFENG13/spring-boot-projects/tree/master/玩转SpringBoot系列案例源码)&nbsp;|&nbsp;[Spring Boot 前后端分离项目实践](https://github.com/ZHENFENG13/spring-boot-projects/tree/master/SpringBoot前后端分离实战项目源码)&nbsp;|&nbsp;[Spring Boot 咨询发布系统项目实践](https://github.com/ZHENFENG13/spring-boot-projects/tree/master/SpringBoot咨询发布系统实战项目源码) &nbsp;| &nbsp;[Spring Boot + Mybatis + Thymeleaf 实现的开源博客系统](https://github.com/ZHENFENG13/My-Blog)&nbsp;|&nbsp;[Spring Boot + layui 实现的后台管理系统](https://github.com/ZHENFENG13/My-Blog-layui) &nbsp;| &nbsp;[Github地址](https://github.com/ZHENFENG13/spring-boot-projects) &nbsp;| &nbsp;[码云 Gitee 地址](https://gitee.com/zhenfeng13/spring-boot-projects)
 
 **目前所有代码使用的 Spring Boot 版本都为 2.1.0-RELEASE，请知悉。**
 
