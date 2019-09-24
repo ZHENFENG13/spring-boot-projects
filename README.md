@@ -6,7 +6,7 @@
 
 [Spring Boot 入门小案例](https://github.com/ZHENFENG13/spring-boot-projects/tree/master/SpringBoot入门案例源码) &nbsp;| &nbsp;[Spring Boot 整合案例系列2](https://github.com/ZHENFENG13/spring-boot-projects/tree/master/玩转SpringBoot系列案例源码) &nbsp;| &nbsp;[Spring Boot 前后端分离项目实践](https://github.com/ZHENFENG13/spring-boot-projects/tree/master/SpringBoot前后端分离实战项目源码) &nbsp;| &nbsp;[Spring Boot 咨询发布系统项目实践](https://github.com/ZHENFENG13/spring-boot-projects/tree/master/SpringBoot咨询发布系统实战项目源码) &nbsp;| &nbsp;[Spring Boot + Mybatis + Thymeleaf 实现的开源博客系统](https://github.com/ZHENFENG13/My-Blog) 
 
-&nbsp;| &nbsp;[Github地址](https://github.com/ZHENFENG13/spring-boot-projects) &nbsp;| &nbsp;[码云地址](https://gitee.com/zhenfeng13/spring-boot-projects)
+ &nbsp;| &nbsp;[Spring Boot + layui 实现的后台管理系统](https://github.com/ZHENFENG13/My-Blog-layui) &nbsp;| &nbsp;[Github地址](https://github.com/ZHENFENG13/spring-boot-projects) &nbsp;| &nbsp;[码云地址](https://gitee.com/zhenfeng13/spring-boot-projects)
 
 **目前所有代码使用的 Spring Boot 版本都为 2.1.0-RELEASE，请知悉。**
 
@@ -25,6 +25,7 @@
 - [前后端分离项目](https://github.com/ZHENFENG13/spring-boot-projects/tree/master/SpringBoot前后端分离实战项目源码/spring-boot-project-front-end&back-end)
 - [咨询发布项目](https://github.com/ZHENFENG13/spring-boot-projects/tree/master/SpringBoot咨询发布系统实战项目源码/springboot-project-news-publish-system)
 - [博客系统](https://github.com/ZHENFENG13/My-Blog)
+- [Spring Boot + layui 实现的后台管理系统](https://github.com/ZHENFENG13/My-Blog-layui)
 
 ---
 
@@ -63,6 +64,8 @@
 
 ### 《SpringBoot + Mybatis + Thymeleaf 搭建美观实用的个人博客》(支付减免优惠券码 LSJdK3KT )
 
+[![lesson-03](https://newbee-mall.oss-cn-beijing.aliyuncs.com/poster/store/lesson-03.png)](https://www.shiyanlou.com/courses/1367)
+
 - [**第01课：Spring Boot 搭建简洁实用的个人博客系统导读**](https://www.shiyanlou.com/courses/1367)
 - [第02课：快速构建 Spring Boot 应用](https://www.shiyanlou.com/courses/1367)
 - [第03课：Spring Boot 项目开发之web项目开发讲解](https://www.shiyanlou.com/courses/1367)
@@ -94,6 +97,8 @@
 
 ### 《Spring Boot 前后端分离项目实践》课程目录(支付减免优惠券码 y6tPSOK7 )
 
+[![lesson-01](https://newbee-mall.oss-cn-beijing.aliyuncs.com/poster/store/lesson-01.png)](https://www.shiyanlou.com/courses/1244)
+
 - [**开篇词：SpringBoot入门及前后端分离项目实践导读**](https://www.shiyanlou.com/courses/1244)
 - [第02课：快速认识 Spring Boot 技术栈](https://www.shiyanlou.com/courses/1244)
 - [第03课：开发环境搭建](https://www.shiyanlou.com/courses/1244)
@@ -114,6 +119,8 @@
 - [第18课：Spring Boot 项目实践之信息管理模块实现](https://www.shiyanlou.com/courses/1244)
 
 ### 《23 个实验带你轻松玩转 Spring Boot》课程目录(支付减免优惠券码 S0N2dSD2 )
+
+[![lesson-02](https://newbee-mall.oss-cn-beijing.aliyuncs.com/poster/store/lesson-02.png)](https://www.shiyanlou.com/courses/1274)
 
 - [**开篇词：《23 个实验带你轻松玩转 Spring Boot》导读**](https://www.shiyanlou.com/courses/1274)
 - [第02课：Spring Boot 项目开发环境搭建](https://www.shiyanlou.com/courses/1274)
