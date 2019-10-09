@@ -15,6 +15,9 @@
 - [Spring Boot 前后端分离项目预览](https://www.bilibili.com/video/av52551579)
 - [Spring Boot 咨询发布系统项目预览](https://www.bilibili.com/video/av52551450)
 - [Spring Boot 开源博客系统预览](https://www.bilibili.com/video/av52551095)
+- [Spring Boot 商城项目总览](https://edu.csdn.net/course/play/26258/326466)
+- [Spring Boot 商城系统介绍](https://edu.csdn.net/course/play/26258/326467)
+- [Spring Boot 商城后台管理系统介绍](https://edu.csdn.net/course/play/26258/328801)
 
 ---
 

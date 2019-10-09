@@ -9,8 +9,6 @@ newbee-mall 项目是一套电商系统，包括 newbee-mall 商城系统及 new
 - [newbee-mall in GitHub](https://github.com/newbee-ltd/newbee-mall)
 - [newbee-mall in Gitee](https://gitee.com/newbee-ltd/newbee-mall)
 
-![newbee-mall-info](https://newbee-mall.oss-cn-beijing.aliyuncs.com/poster/store/newbee-mall-info-a.png)
-
 - newbee-mall 对新手开发者十分友好，无需复杂的操作步骤，**仅需 2 秒就可以启动这个完整的商城项目；**
 - newbee-mall **也是一个企业级别的 Spring Boot 大型项目，对于各个阶段的 Java 开发者都是极佳的选择；**
 - 你可以把它作为 Spring Boot 技术栈的综合实践项目，**newbee-mall 足够符合要求，且代码开源、功能完备、流程完整、页面交互美观；**
@@ -18,6 +16,12 @@ newbee-mall 项目是一套电商系统，包括 newbee-mall 商城系统及 new
 - 对于部分求职中的 Java 开发者，**你也可以将该项目放入求职简历中以丰富你的工作履历；** 
 
 ![newbee-mall-info](https://newbee-mall.oss-cn-beijing.aliyuncs.com/poster/store/newbee-mall-info-2.png)
+
+## 项目演示
+
+- [视频1：商城项目总览](https://edu.csdn.net/course/play/26258/326466)
+- [视频2：商城系统介绍](https://edu.csdn.net/course/play/26258/326467)
+- [视频3：商城后台管理系统介绍](https://edu.csdn.net/course/play/26258/328801)
 
 ## 联系作者
 
