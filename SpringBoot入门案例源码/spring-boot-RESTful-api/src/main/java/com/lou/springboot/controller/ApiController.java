@@ -3,7 +3,7 @@ package com.lou.springboot.controller;
 import com.lou.springboot.common.Result;
 import com.lou.springboot.common.ResultGenerator;
 import com.lou.springboot.dao.UserDao;
-import com.lou.springboot.entity.Topic;
+//import com.lou.springboot.entity.Topic;
 import com.lou.springboot.entity.User;
 import org.springframework.stereotype.Controller;
 import org.springframework.util.StringUtils;
