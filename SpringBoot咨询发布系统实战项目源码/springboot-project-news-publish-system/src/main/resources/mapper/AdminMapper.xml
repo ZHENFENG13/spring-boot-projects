@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.site.springboot.core.dao.AdminMapper">
+  <resultMap id="BaseResultMap" type="com.site.springboot.core.entity.Admin">
+    <id column="admin_id" jdbcType="BIGINT" property="adminId" />
+    <result column="login_name" jdbcType="VARCHAR" property="loginName" />
+    <result column="login_password" jdbcType="VARCHAR" property="loginPassword" />
+    <result column="admin_nick_name" jdbcType="VARCHAR" property="adminNickName" />
+    <result column="locked" jdbcType="TINYINT" property="locked" />
+  </resultMap>
+  <sql id="Base_Column_List">
+    admin_id, login_name, login_password, admin_nick_name, locked
+  </sql>
+  <select id="selectByPrimaryKey" parameterType="java.lang.Long" resultMap="BaseResultMap">
+    select 
+    <include refid="Base_Column_List" />
+    from tb_admin_user
+    where admin_id = #{adminId,jdbcType=TINYINT}
+  </select>
+  <select id="login" resultMap="BaseResultMap">
+    select
+    <include refid="Base_Column_List" />
+    from tb_admin_user
+    where login_name = #{userName,jdbcType=VARCHAR} AND login_password=#{password,jdbcType=VARCHAR} AND locked = 0
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Byte">
+    delete from tb_admin_user
+    where admin_id = #{adminId,jdbcType=TINYINT}
+  </delete>
+  <insert id="insert" parameterType="com.site.springboot.core.entity.Admin">
+    insert into tb_admin_user (admin_id, login_name, login_password, 
+      admin_nick_name, locked)
+    values (#{adminId,jdbcType=TINYINT}, #{loginName,jdbcType=VARCHAR}, #{loginPassword,jdbcType=VARCHAR}, 
+      #{adminNickName,jdbcType=VARCHAR}, #{locked,jdbcType=TINYINT})
+  </insert>
+  <insert id="insertSelective" parameterType="com.site.springboot.core.entity.Admin">
+    insert into tb_admin_user
+    <trim prefix="(" suffix=")" suffixOverrides=",">
+      <if test="adminId != null">
+        admin_id,
+      </if>
+      <if test="loginName != null">
+        login_name,
+      </if>
+      <if test="loginPassword != null">
+        login_password,
+      </if>
+      <if test="adminNickName != null">
+        admin_nick_name,
+      </if>
+      <if test="locked != null">
+        locked,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides=",">
+      <if test="adminId != null">
+        #{adminId,jdbcType=TINYINT},
+      </if>
+      <if test="loginName != null">
+        #{loginName,jdbcType=VARCHAR},
+      </if>
+      <if test="loginPassword != null">
+        #{loginPassword,jdbcType=VARCHAR},
+      </if>
+      <if test="adminNickName != null">
+        #{adminNickName,jdbcType=VARCHAR},
+      </if>
+      <if test="locked != null">
+        #{locked,jdbcType=TINYINT},
+      </if>
+    </trim>
+  </insert>
+  <update id="updateByPrimaryKeySelective" parameterType="com.site.springboot.core.entity.Admin">
+    update tb_admin_user
+    <set>
+      <if test="loginName != null">
+        login_name = #{loginName,jdbcType=VARCHAR},
+      </if>
+      <if test="loginPassword != null">
+        login_password = #{loginPassword,jdbcType=VARCHAR},
+      </if>
+      <if test="adminNickName != null">
+        admin_nick_name = #{adminNickName,jdbcType=VARCHAR},
+      </if>
+      <if test="locked != null">
+        locked = #{locked,jdbcType=TINYINT},
+      </if>
+    </set>
+    where admin_id = #{adminId,jdbcType=TINYINT}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="com.site.springboot.core.entity.Admin">
+    update tb_admin_user
+    set login_name = #{loginName,jdbcType=VARCHAR},
+      login_password = #{loginPassword,jdbcType=VARCHAR},
+      admin_nick_name = #{adminNickName,jdbcType=VARCHAR},
+      locked = #{locked,jdbcType=TINYINT}
+    where admin_id = #{adminId,jdbcType=TINYINT}
+  </update>
+</mapper>

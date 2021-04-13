@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="utf-8">
+    <title>详情页</title>
+    <meta name="viewport" content="width=device-width">
+    <!-- Bootstrap styles -->
+    <link rel="stylesheet" th:href="@{/index/css/bootstrap.min.css}">
+    <!-- Font-Awesome -->
+    <link rel="stylesheet" th:href="@{/index/css/font-awesome/css/font-awesome.min.css}">
+    <!-- Styles -->
+    <link rel="stylesheet" th:href="@{/index/css/style.css}" id="theme-styles">
+    <!-- sweetalert -->
+    <link rel="stylesheet" th:href="@{/admin/plugins/sweetalert/sweetalert.css}"/>
+    <!--[if lt IE 9]>
+    <script th:src="@{/index/js/respond.js}"></script>
+    <![endif]-->
+</head>
+<body>
+<header>
+    <div class="widewrapper masthead">
+        <div class="container">
+            <a th:href="@{/index}" id="logo">
+                <img th:src="@{/index/img/logo.png}" class="logo-img" alt="logo">
+            </a>
+            <div id="mobile-nav-toggle" class="pull-right">
+                <a href="#" data-toggle="collapse" data-target=".clean-nav .navbar-collapse">
+                    <i class="fa fa-bars"></i>
+                </a>
+            </div>
+            <nav class="pull-right clean-nav">
+                <div class="collapse navbar-collapse">
+                </div>
+            </nav>
+        </div>
+    </div>
+    <div class="widewrapper subheader">
+        <div class="container">
+            <div class="clean-breadcrumb">
+                详情展示
+            </div>
+        </div>
+    </div>
+</header>
+<div class="widewrapper main">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12 blog-main">
+                <article class="blog-post">
+                    <div class="body" id="blog-content">
+                        <h1 th:text="${newsDetail.newsTitle}"></h1>
+                        <div class="meta">
+                            <i class="fa fa-calendar"></i>
+                            <th:block th:text="${#dates.format(newsDetail.createTime, 'yyyy-MM-dd')}"></th:block>
+                            <span class="separator">&#x2F;</span>
+                            <i class="fa fa-street-view"></i>
+                            <th:block th:text="${newsDetail.newsViews}"></th:block>
+                            浏览
+                        </div>
+                        <th:block th:utext="${newsDetail.newsContent}"/>
+                    </div>
+                </article>
+                <aside class="blog-rights clearfix">
+                    <p> -- END -- </p>
+                </aside>
+                <aside class="create-comment" id="create-comment">
+                    <hr>
+                    <h2><i class="fa fa-pencil"></i> 添加评论</h2>
+                    <form action="#" method="get" onsubmit="return false;" accept-charset="utf-8">
+                        <input type="hidden" id="newsId" name="newsId" th:value="${newsDetail.newsId}"></input>
+                        <div class="row">
+                            <div class="col-md-6">
+                                <input type="text" name="commentator" id="commentator" placeholder="(*必填)怎么称呼你?"
+                                       class="form-control input-lg">
+                            </div>
+                            <div class="col-md-6">
+                                <div class="col-md-4">
+                                    <img alt="单击图片刷新！" class="pointer" style="margin-top: 15px; border-radius: 25px;"
+                                         th:src="@{/common/kaptcha}"
+                                         onclick="this.src='/common/kaptcha?d='+new Date()*1">
+                                </div>
+                                <div class="col-md-8">
+                                    <input type="text" class="form-control input-lg" name="verifyCode" id="verifyCode"
+                                           placeholder="(*必填)请输入验证码"
+                                           required="true">
+                                </div>
+                            </div>
+                        </div>
+                        <textarea rows="10" name="commentBody" id="commentBody" placeholder="(*必填)请输入你的留言"
+                                  class="form-control input-lg"></textarea>
+
+                        <div class="buttons clearfix">
+                            <button type="submit" id="commentSubmit" class="btn btn-xlarge btn-clean-one">提交</button>
+                        </div>
+                    </form>
+                </aside>
+            </div>
+        </div>
+    </div>
+</div>
+<script th:src="@{/index/js/jquery.min.js}"></script>
+<script th:src="@{/index/js/bootstrap.min.js}"></script>
+<script th:src="@{/index/js/modernizr.js}"></script>
+<script th:src="@{/index/plugins/comment/valid.js}"></script>
+<script th:src="@{/index/plugins/comment/comment.js}"></script>
+<!-- sweetalert -->
+<script th:src="@{/admin/plugins/sweetalert/sweetalert.min.js}"></script>
+</body>
+</html>

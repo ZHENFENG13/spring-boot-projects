@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+    <mapper namespace="com.lou.springboot.dao.UserDao">
+    <resultMap type="com.lou.springboot.entity.User" id="UserResult">
+        <result property="id" column="id"/>
+        <result property="name" column="name"/>
+        <result property="password" column="password"/>
+    </resultMap>
+
+    <select id="findAllUsers" resultMap="UserResult">
+        select id,name,password from tb_user
+        order by id desc
+    </select>
+
+
+    <insert id="insertUser" parameterType="com.lou.springboot.entity.User">
+        insert into tb_user(name,password)
+        values(#{name},#{password})
+    </insert>
+
+    <update id="updUser" parameterType="com.lou.springboot.entity.User">
+        update tb_user
+        set
+        name=#{name},password=#{password}
+        where id=#{id}
+    </update>
+
+    <delete id="delUser" parameterType="int">
+        delete from tb_user where id=#{id}
+    </delete>
+
+</mapper>

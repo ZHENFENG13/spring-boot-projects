@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.site.springboot.core.dao.NewsCommentMapper">
+  <resultMap id="BaseResultMap" type="com.site.springboot.core.entity.NewsComment">
+    <id column="comment_id" jdbcType="BIGINT" property="commentId" />
+    <result column="news_id" jdbcType="BIGINT" property="newsId" />
+    <result column="commentator" jdbcType="VARCHAR" property="commentator" />
+    <result column="comment_body" jdbcType="VARCHAR" property="commentBody" />
+    <result column="comment_status" jdbcType="TINYINT" property="commentStatus" />
+    <result column="is_deleted" jdbcType="TINYINT" property="isDeleted" />
+    <result column="create_time" jdbcType="TIMESTAMP" property="createTime" />
+  </resultMap>
+  <sql id="Base_Column_List">
+    comment_id, news_id, commentator, comment_body, comment_status, is_deleted,create_time
+  </sql>
+  <select id="findNewsCommentList" parameterType="Map" resultMap="BaseResultMap">
+    select
+    <include refid="Base_Column_List"/>
+    from tb_news_comment
+    where is_deleted=0
+    order by comment_id desc
+    <if test="start!=null and limit!=null">
+      limit #{start},#{limit}
+    </if>
+  </select>
+  <select id="getTotalNewsComments" parameterType="Map" resultType="int">
+    select count(*) from tb_news_comment
+    where is_deleted=0
+  </select>
+  <select id="selectByPrimaryKey" parameterType="java.lang.Long" resultMap="BaseResultMap">
+    select 
+    <include refid="Base_Column_List" />
+    from tb_news_comment
+    where comment_id = #{commentId,jdbcType=BIGINT}
+  </select>
+  <update id="checkDone">
+    update tb_news_comment
+    set comment_status=1 where comment_id in
+    <foreach item="id" collection="array" open="(" separator="," close=")">
+      #{id}
+    </foreach>
+    and comment_status = 0
+  </update>
+  <update id="deleteBatch">
+    update tb_news_comment
+    set is_deleted=1 where comment_id in
+    <foreach item="id" collection="array" open="(" separator="," close=")">
+      #{id}
+    </foreach>
+  </update>
+  <insert id="insert" parameterType="com.site.springboot.core.entity.NewsComment">
+    insert into tb_news_comment (comment_id, news_id, commentator, 
+      comment_body, comment_status, is_deleted
+      )
+    values (#{commentId,jdbcType=BIGINT}, #{newsId,jdbcType=BIGINT}, #{commentator,jdbcType=VARCHAR}, 
+      #{commentBody,jdbcType=VARCHAR}, #{commentStatus,jdbcType=TINYINT}, #{isDeleted,jdbcType=TINYINT}
+      )
+  </insert>
+  <insert id="insertSelective" parameterType="com.site.springboot.core.entity.NewsComment">
+    insert into tb_news_comment
+    <trim prefix="(" suffix=")" suffixOverrides=",">
+      <if test="commentId != null">
+        comment_id,
+      </if>
+      <if test="newsId != null">
+        news_id,
+      </if>
+      <if test="commentator != null">
+        commentator,
+      </if>
+      <if test="commentBody != null">
+        comment_body,
+      </if>
+      <if test="commentStatus != null">
+        comment_status,
+      </if>
+      <if test="isDeleted != null">
+        is_deleted,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides=",">
+      <if test="commentId != null">
+        #{commentId,jdbcType=BIGINT},
+      </if>
+      <if test="newsId != null">
+        #{newsId,jdbcType=BIGINT},
+      </if>
+      <if test="commentator != null">
+        #{commentator,jdbcType=VARCHAR},
+      </if>
+      <if test="commentBody != null">
+        #{commentBody,jdbcType=VARCHAR},
+      </if>
+      <if test="commentStatus != null">
+        #{commentStatus,jdbcType=TINYINT},
+      </if>
+      <if test="isDeleted != null">
+        #{isDeleted,jdbcType=TINYINT},
+      </if>
+    </trim>
+  </insert>
+  <update id="updateByPrimaryKeySelective" parameterType="com.site.springboot.core.entity.NewsComment">
+    update tb_news_comment
+    <set>
+      <if test="newsId != null">
+        news_id = #{newsId,jdbcType=BIGINT},
+      </if>
+      <if test="commentator != null">
+        commentator = #{commentator,jdbcType=VARCHAR},
+      </if>
+      <if test="commentBody != null">
+        comment_body = #{commentBody,jdbcType=VARCHAR},
+      </if>
+      <if test="commentStatus != null">
+        comment_status = #{commentStatus,jdbcType=TINYINT},
+      </if>
+      <if test="isDeleted != null">
+        is_deleted = #{isDeleted,jdbcType=TINYINT},
+      </if>
+    </set>
+    where comment_id = #{commentId,jdbcType=BIGINT}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="com.site.springboot.core.entity.NewsComment">
+    update tb_news_comment
+    set news_id = #{newsId,jdbcType=BIGINT},
+      commentator = #{commentator,jdbcType=VARCHAR},
+      comment_body = #{commentBody,jdbcType=VARCHAR},
+      comment_status = #{commentStatus,jdbcType=TINYINT},
+      is_deleted = #{isDeleted,jdbcType=TINYINT}
+    where comment_id = #{commentId,jdbcType=BIGINT}
+  </update>
+</mapper>

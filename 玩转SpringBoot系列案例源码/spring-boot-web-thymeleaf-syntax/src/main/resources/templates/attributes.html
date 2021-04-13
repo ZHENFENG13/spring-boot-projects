@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Thymeleaf setting-value-to-specific-attributes</title>
+    <meta charset="UTF-8">
+</head>
+<!-- background 标签-->
+<body th:background="${th_background}" background="#D0D0D0">
+<!-- text 标签-->
+<h1 th:text="${title}">html标签演示</h1>
+<div>
+    <h5>id、name、value标签:</h5>
+    <!-- id、name、value标签-->
+    <input id="input1" name="input1" value="1" th:id="${th_id}" th:name="${th_name}" th:value="${th_value}"/>
+</div>
+<br/>
+<div class="div1" th:class="${th_class}">
+    <h5>class、href标签:</h5>
+    <!-- class、href标签-->
+    <a th:href="${th_href}" href="https://gitbook.cn/">链接地址</a>
+</div>
+</body>
+</html>

@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.lou.springboot.dao.ArticleDao">
+    <resultMap type="com.lou.springboot.entity.Article" id="ArticleResult">
+        <result property="id" column="id"/>
+        <result property="articleTitle" column="article_title"/>
+        <result property="articleContent" column="article_content"/>
+        <result property="addName" column="add_name"/>
+        <result property="createTime" column="create_time" jdbcType="TIMESTAMP"/>
+        <result property="updateTime" column="update_time" jdbcType="TIMESTAMP"/>
+    </resultMap>
+    <select id="findArticles" parameterType="Map" resultMap="ArticleResult">
+        select id,article_title,add_name,create_time,update_time from tb_ssm_article
+        where is_deleted=0
+        <if test="keyword != null and keyword.trim() != ''">
+            and article_title LIKE CONCAT(CONCAT('%', #{keyword}), '%')
+        </if>
+        <if test="startTime != null and startTime.trim() != ''">
+            and create_time &gt; #{startTime}
+        </if>
+        <if test="endTime != null and endTime.trim() != ''">
+            and create_time &lt; #{endTime}
+        </if>
+        order by id desc
+        <if test="start!=null and limit!=null">
+            limit #{start},#{limit}
+        </if>
+    </select>
+
+    <select id="getTotalArticles" parameterType="Map" resultType="int">
+        select count(*) from tb_ssm_article
+        where is_deleted=0
+        <if test="keyword != null and keyword.trim() != ''">
+            and article_title LIKE CONCAT(CONCAT('%', #{keyword}), '%')
+        </if>
+        <if test="startTime != null and startTime.trim() != ''">
+            and create_time &gt; #{startTime}
+        </if>
+        <if test="endTime != null and endTime.trim() != ''">
+            and create_time &lt; #{endTime}
+        </if>
+    </select>
+
+    <insert id="insertArticle" useGeneratedKeys="true" keyProperty="id" parameterType="com.lou.springboot.entity.Article">
+		insert into
+		tb_ssm_article(article_title,article_content,add_name)
+		values(#{articleTitle},#{articleContent},#{addName})
+	</insert>
+
+    <update id="updArticle" parameterType="com.lou.springboot.entity.Article">
+		update tb_ssm_article
+		set
+		article_title=#{articleTitle},article_content=#{articleContent},
+		add_name=#{addName},update_time=#{updateTime}
+		where id=#{id}
+	</update>
+
+
+    <update id="delArticle" parameterType="int">
+		update tb_ssm_article
+		set is_deleted=1
+		where id=#{id}
+	</update>
+
+    <select id="getArticleById" parameterType="int" resultMap="ArticleResult">
+		select id,article_title,article_content,add_name,create_time,update_time
+		from tb_ssm_article where id=#{id} and is_deleted=0
+	</select>
+
+    <update id="deleteBatch">
+        update tb_ssm_article
+        set is_deleted=1 where id in
+        <foreach item="id" collection="array" open="(" separator="," close=")">
+            #{id}
+        </foreach>
+    </update>
+
+</mapper>

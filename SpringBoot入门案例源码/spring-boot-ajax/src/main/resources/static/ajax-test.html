@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>lou.SpringBoot | Ajax 请求测试</title>
+</head>
+<body class="hold-transition login-page">
+<div style="width:720px;margin:7% auto">
+    <div class="content">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-lg-6">
+                    <div class="card">
+                        <div class="card-header">
+                            <h5 class="m-0">接口测试1</h5>
+                        </div>
+                        <div class="card-body">
+                            <input type="text" id="info" class="form-control" placeholder="请输入info值">
+                            <h6 class="card-title">接口1返回数据如下：</h6>
+                            <p class="card-text" id="test1"></p>
+                            <a href="#" class="btn btn-primary" onclick="requestTest1()">发送请求1</a>
+                        </div>
+                    </div>
+                    <br>
+                    <div class="card card-primary card-outline">
+                        <div class="card-header">
+                            <h5 class="m-0">接口测试2</h5>
+                        </div>
+                        <div class="card-body">
+                            <h6 class="card-title">接口2返回数据如下：</h6>
+                            <p class="card-text" id="test2"></p>
+                            <a href="#" class="btn btn-primary" onclick="requestTest2()">发送请求2</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- jQuery -->
+<script src="https://cdn.staticfile.org/jquery/1.12.0/jquery.min.js"></script>
+<script type="text/javascript">
+    function requestTest1() {
+        var info = $("#info").val();
+        $.ajax({
+            type: "GET",//方法类型
+            dataType: "text",//预期服务器返回的数据类型
+            url: "api/test1?info=" + info,
+            contentType: "application/json; charset=utf-8",
+            success: function (result) {
+                $("#test1").html(JSON.stringify(result));
+            },
+            error: function () {
+                $("#test1").html("接口异常，请联系管理员！");
+            }
+        });
+    }
+
+    function requestTest2() {
+        $.ajax({
+            type: "GET",//方法类型
+            dataType: "json",//预期服务器返回的数据类型
+            url: "api/test2",
+            contentType: "application/json; charset=utf-8",
+            success: function (result) {
+                $("#test2").html(JSON.stringify(result));
+            },
+            error: function () {
+                $("#test2").html("接口异常，请联系管理员！");
+            }
+        });
+    }
+</script>
+</body>
+</html>
