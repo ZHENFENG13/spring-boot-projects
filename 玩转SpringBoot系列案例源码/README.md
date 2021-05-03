@@ -20,7 +20,7 @@
 
 ## 课程地址(课程的减免优惠券联系十三进行领取)
 
-- [**课程地址:https://www.shiyanlou.com/courses/1274**](https://www.shiyanlou.com/courses/1274)
+- [**课程地址:https://www.lanqiao.cn/courses/1274**](https://www.lanqiao.cn/courses/1274)
 
 ## 课程的五大特色
 

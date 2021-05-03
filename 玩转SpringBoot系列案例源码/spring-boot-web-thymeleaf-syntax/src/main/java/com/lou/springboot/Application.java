@@ -12,6 +12,7 @@ public class Application {
 
     public static void main(String[] args) {
         System.out.println("启动 Spring Boot...");
+        System.out.println("Thymeleaf语法讲解");
         SpringApplication.run(Application.class, args);
     }
 }

@@ -36,9 +36,9 @@ public class ThymeleafController {
 
     @GetMapping("/simple")
     public String simple(ModelMap map) {
-        map.put("thymeleafText", "shiyanlou");
-        map.put("number1", 2019);
-        map.put("number2", 3);
+        map.put("thymeleafText", "lanqiao");
+        map.put("number1", 2021);
+        map.put("number2", 2);
         return "simple";
     }
 
@@ -47,10 +47,10 @@ public class ThymeleafController {
         map.put("title", "Thymeleaf 语法测试");
         map.put("testString", "玩转 Spring Boot");
         map.put("bool", true);
-        map.put("testArray", new Integer[]{2018,2019,2020,2021});
+        map.put("testArray", new Integer[]{2020,2021,2022,2023,2024});
         map.put("testList", Arrays.asList("Spring","Spring Boot","Thymeleaf","MyBatis","Java"));
         Map testMap = new HashMap();
-        testMap.put("platform", "shiyanlou");
+        testMap.put("platform", "lanqiao");
         testMap.put("title", "玩转 Spring Boot");
         testMap.put("author", "十三");
         map.put("testMap", testMap);
