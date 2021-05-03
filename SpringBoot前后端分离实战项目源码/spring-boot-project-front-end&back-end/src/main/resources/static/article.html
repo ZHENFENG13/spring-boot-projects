@@ -7,16 +7,11 @@
     <!-- jqgrid ui -->
     <link href="plugins/jqgrid-5.3.0/ui.jqgrid-bootstrap4.css" rel="stylesheet"/>
     <link rel="stylesheet" href="plugins/bootstrap/css/bootstrap.css">
-    <!-- kindeditor -->
-    <link rel="stylesheet" href="plugins/kindeditor-4.1.10/themes/default/default.css"/>
     <link href="dist/css/main.css" rel="stylesheet"/>
     <!-- Tell the browser to be responsive to screen width -->
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- Font Awesome -->
     <link rel="stylesheet" href="plugins/font-awesome/css/font-awesome.min.css">
-    <!-- kindeditor -->
-    <script charset="utf-8" src="plugins/kindeditor-4.1.10/kindeditor-all.js"></script>
-    <script charset="utf-8" src="plugins/kindeditor-4.1.10/lang/zh_CN.js"></script>
     <!-- sweet alert -->
     <link rel="stylesheet" href="plugins/sweetalert/sweetalert.css">
     <!-- Theme style -->
@@ -218,8 +213,7 @@
                                 </div>
                                 <div class="form-group">
                                     <label class="control-label">内容:</label>
-                                    <textarea class="form-control" id="editor"
-                                              style="width:700px;height:450px;"></textarea>
+                                    <div id="wangEditor"></div>
                                 </div>
                             </form>
                         </div>
@@ -253,6 +247,7 @@
 <script src="plugins/jQueryUI/jquery-ui.min.js"></script>
 <!-- Bootstrap 4 -->
 <script src="plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/wangeditor@latest/dist/wangEditor.min.js"></script>
 <script src="plugins/jqgrid-5.3.0/grid.locale-cn.js"></script>
 <!-- sweet alert -->
 <script src="plugins/sweetalert/sweetalert.min.js"></script>
