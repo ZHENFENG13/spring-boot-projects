@@ -49,8 +49,7 @@
                                 </select>
                             </div>
                             <div class="form-group">
-                                <textarea id="editor" style="width: 100%; height: 750px;"
-                                          th:utext="${news!=null and news.newsContent !=null}?${news.newsContent}: ''"></textarea>
+                                <div id="wangEditor" th:utext="${news!=null and news.newsContent !=null}?${news.newsContent}: ''"></div>
                             </div>
                             <div class="form-group">
                                 <!-- 按钮 -->
@@ -134,9 +133,8 @@
 <script th:src="@{/admin/dist/js/adminlte.min.js}"></script>
 <!-- Select2 -->
 <script th:src="@{/admin/plugins/select2/select2.full.min.js}"></script>
-<!-- kindeditor -->
-<script th:src="@{/admin/plugins/kindeditor-4.1.10/kindeditor-all.js}"></script>
-<script th:src="@{/admin/plugins/kindeditor-4.1.10/lang/zh_CN.js}"></script>
+<!-- wangEditor -->
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/wangeditor@latest/dist/wangEditor.min.js"></script>
 <!-- sweetalert -->
 <script th:src="@{/admin/plugins/sweetalert/sweetalert.min.js}"></script>
 <!-- ajaxupload -->

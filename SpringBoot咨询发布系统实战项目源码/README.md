@@ -28,7 +28,7 @@
 
 ## 课程地址
 
-- [**课程地址:https://www.shiyanlou.com/courses/1274**](https://www.shiyanlou.com/courses/1274)
+- [**课程地址:https://www.lanqiao.cn/courses/1274**](https://www.lanqiao.cn/courses/1274)
 
 ## 课程的五大特色
 
@@ -57,30 +57,30 @@
 
 ## 课程目录
 
-- [**开篇词：《23 个实验带你轻松玩转 Spring Boot》导读**](https://www.shiyanlou.com/courses/1274)
-- [第02课：Spring Boot 项目开发环境搭建](https://www.shiyanlou.com/courses/1274/labs/10293/document)
-- [第03课：快速构建 Spring Boot 应用](https://www.shiyanlou.com/courses/1274/labs/10294/document)
-- [第04课：Spring Boot 基础功能开发](https://www.shiyanlou.com/courses/1274/labs/10295/document)
-- [第05课：Spring Boot 项目开发之 web 项目开发讲解](https://www.shiyanlou.com/courses/1274/labs/10296/document)
-- [第06课：Spring Boot 整合 JSP 开发 web 项目](https://www.shiyanlou.com/courses/1274/labs/10297/document)
-- [第07课：模板引擎介绍及 Spring Boot 整合 Thymeleaf](https://www.shiyanlou.com/courses/1274/labs/10298/document)
-- [第08课：Thymeleaf 语法详解](https://www.shiyanlou.com/courses/1274/labs/10299/document)
-- [第09课：FreeMarker 模板引擎整合使用教程](https://www.shiyanlou.com/courses/1274/labs/10300/document)
-- [第10课：Spring Boot 处理文件上传及路径回显](https://www.shiyanlou.com/courses/1274/labs/10301/document)
-- [第11课：Spring Boot 自动配置数据源及操作数据库](https://www.shiyanlou.com/courses/1274/labs/10302/document)
-- [第12课：Spring Boot 整合 Druid 数据源](https://www.shiyanlou.com/courses/1274/labs/10303/document)
-- [第13课：Spring Boot 整合 MyBatis 操作数据库](https://www.shiyanlou.com/courses/1274/labs/10304/document)
-- [第14课：Spring Boot 中的事务处理](https://www.shiyanlou.com/courses/1274/labs/10305/document)
-- [第15课：Spring Boot 整合 Redis 操作缓存模块](https://www.shiyanlou.com/courses/1274/labs/10306/document)
-- [第16课：Spring Boot 项目开发之实现定时任务](https://www.shiyanlou.com/courses/1274/labs/10307/document)
-- [第17课：Spring Boot 自定义错误页面](https://www.shiyanlou.com/courses/1274/labs/10308/document)
-- [第18课：Spring Boot 集成 Swagger 生成接口文档](https://www.shiyanlou.com/courses/1274/labs/10309/document)
-- [第19课：Spring Boot 项目打包部署介绍](https://www.shiyanlou.com/courses/1274/labs/10310/document)
-- [第20课：Spring Boot Admin 介绍及整合使用](https://www.shiyanlou.com/courses/1274/labs/10311/document)
-- [第21课：Spring Boot 资讯管理信息系统开发实战(一)](https://www.shiyanlou.com/courses/1274/labs/10312/document)
-- [第22课：Spring Boot 资讯管理信息系统开发实战(二)](https://www.shiyanlou.com/courses/1274/labs/10313/document)
-- [第23课：Spring Boot 资讯管理信息系统开发实战(三)](https://www.shiyanlou.com/courses/1274/labs/10314/document)
-- [第24课：Spring Boot 资讯管理信息系统开发实战(四)](https://www.shiyanlou.com/courses/1274/labs/10315/document)
+- [**开篇词：《23 个实验带你轻松玩转 Spring Boot》导读**](https://www.lanqiao.cn/courses/1274)
+- [第02课：Spring Boot 项目开发环境搭建](https://www.lanqiao.cn/courses/1274/labs/10293/document)
+- [第03课：快速构建 Spring Boot 应用](https://www.lanqiao.cn/courses/1274/labs/10294/document)
+- [第04课：Spring Boot 基础功能开发](https://www.lanqiao.cn/courses/1274/labs/10295/document)
+- [第05课：Spring Boot 项目开发之 web 项目开发讲解](https://www.lanqiao.cn/courses/1274/labs/10296/document)
+- [第06课：Spring Boot 整合 JSP 开发 web 项目](https://www.lanqiao.cn/courses/1274/labs/10297/document)
+- [第07课：模板引擎介绍及 Spring Boot 整合 Thymeleaf](https://www.lanqiao.cn/courses/1274/labs/10298/document)
+- [第08课：Thymeleaf 语法详解](https://www.lanqiao.cn/courses/1274/labs/10299/document)
+- [第09课：FreeMarker 模板引擎整合使用教程](https://www.lanqiao.cn/courses/1274/labs/10300/document)
+- [第10课：Spring Boot 处理文件上传及路径回显](https://www.lanqiao.cn/courses/1274/labs/10301/document)
+- [第11课：Spring Boot 自动配置数据源及操作数据库](https://www.lanqiao.cn/courses/1274/labs/10302/document)
+- [第12课：Spring Boot 整合 Druid 数据源](https://www.lanqiao.cn/courses/1274/labs/10303/document)
+- [第13课：Spring Boot 整合 MyBatis 操作数据库](https://www.lanqiao.cn/courses/1274/labs/10304/document)
+- [第14课：Spring Boot 中的事务处理](https://www.lanqiao.cn/courses/1274/labs/10305/document)
+- [第15课：Spring Boot 整合 Redis 操作缓存模块](https://www.lanqiao.cn/courses/1274/labs/10306/document)
+- [第16课：Spring Boot 项目开发之实现定时任务](https://www.lanqiao.cn/courses/1274/labs/10307/document)
+- [第17课：Spring Boot 自定义错误页面](https://www.lanqiao.cn/courses/1274/labs/10308/document)
+- [第18课：Spring Boot 集成 Swagger 生成接口文档](https://www.lanqiao.cn/courses/1274/labs/10309/document)
+- [第19课：Spring Boot 项目打包部署介绍](https://www.lanqiao.cn/courses/1274/labs/10310/document)
+- [第20课：Spring Boot Admin 介绍及整合使用](https://www.lanqiao.cn/courses/1274/labs/10311/document)
+- [第21课：Spring Boot 资讯管理信息系统开发实战(一)](https://www.lanqiao.cn/courses/1274/labs/10312/document)
+- [第22课：Spring Boot 资讯管理信息系统开发实战(二)](https://www.lanqiao.cn/courses/1274/labs/10313/document)
+- [第23课：Spring Boot 资讯管理信息系统开发实战(三)](https://www.lanqiao.cn/courses/1274/labs/10314/document)
+- [第24课：Spring Boot 资讯管理信息系统开发实战(四)](https://www.lanqiao.cn/courses/1274/labs/10315/document)
 ---
 
 ## 交流

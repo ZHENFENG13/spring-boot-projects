@@ -5041,7 +5041,7 @@ button.close, button.mailbox-attachment-close {
   right: 0;
   bottom: 0;
   left: 0;
-  z-index: 1050;
+  z-index: 10001;
   display: none;
   overflow: hidden;
   outline: 0;

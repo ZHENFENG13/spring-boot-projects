@@ -1,24 +1,52 @@
 //Initialize Select2 Elements
 $('.select2').select2();
-//KindEditor变量
-var editor;
+//wangEditor变量
+var editorD;
 
 $(function () {
     $('.alert-danger').css("display", "none");
 
-    //详情编辑器
-    editor = KindEditor.create('textarea[id="editor"]', {
-        items: ['source', '|', 'undo', 'redo', '|', 'preview', 'print', 'template', 'code', 'cut', 'copy', 'paste',
-            'plainpaste', 'wordpaste', '|', 'justifyleft', 'justifycenter', 'justifyright',
-            'justifyfull', 'insertorderedlist', 'insertunorderedlist', 'indent', 'outdent', 'subscript',
-            'superscript', 'clearhtml', 'quickformat', 'selectall', '|', 'fullscreen', '/',
-            'formatblock', 'fontname', 'fontsize', '|', 'forecolor', 'hilitecolor', 'bold',
-            'italic', 'underline', 'strikethrough', 'lineheight', 'removeformat', '|', 'multiimage',
-            'table', 'hr', 'emoticons', 'baidumap', 'pagebreak',
-            'anchor', 'link', 'unlink'],
-        uploadJson: '/admin/upload/file',
-        filePostName: 'file'
-    });
+    //富文本编辑器
+    const E = window.wangEditor;
+    editorD = new E('#wangEditor')
+    // 设置编辑区域高度为 750px
+    editorD.config.height = 750
+    //配置服务端图片上传地址
+    editorD.config.uploadImgServer = '/admin/upload/file'
+    editorD.config.uploadFileName = 'file'
+    //限制图片大小 2M
+    editorD.config.uploadImgMaxSize = 2 * 1024 * 1024
+    //限制一次最多能传几张图片 一次最多上传 1 个图片
+    editorD.config.uploadImgMaxLength = 1
+    //隐藏插入网络图片的功能
+    editorD.config.showLinkImg = false
+    editorD.config.uploadImgHooks = {
+        // 图片上传并返回了结果，图片插入已成功
+        success: function (xhr) {
+            console.log('success', xhr)
+        },
+        // 图片上传并返回了结果，但图片插入时出错了
+        fail: function (xhr, editor, resData) {
+            console.log('fail', resData)
+        },
+        // 上传图片出错，一般为 http 请求的错误
+        error: function (xhr, editor, resData) {
+            console.log('error', xhr, resData)
+        },
+        // 上传图片超时
+        timeout: function (xhr) {
+            console.log('timeout')
+        },
+        customInsert: function (insertImgFn, result) {
+            if (result != null && result.resultCode == 200) {
+                // insertImgFn 可把图片插入到编辑器，传入图片 src ，执行函数即可
+                insertImgFn(result.data)
+            } else {
+                alert("error");
+            }
+        }
+    }
+    editorD.create();
 
     new AjaxUpload('#uploadCoverImage', {
         action: '/admin/upload/file',
@@ -46,7 +74,7 @@ $(function () {
 $('#confirmButton').click(function () {
     var newsTitle = $('#newsTitle').val();
     var categoryId = $('#newsCategoryId').val();
-    var newsContent = editor.html();
+    var newsContent = editorD.txt.html();
     if (isNull(newsTitle)) {
         swal("请输入文章标题", {
             icon: "error",
@@ -84,7 +112,7 @@ $('#saveButton').click(function () {
     var newsId = $('#newsId').val();
     var newsTitle = $('#newsTitle').val();
     var newsCategoryId = $('#newsCategoryId').val();
-    var newsContent = editor.html();
+    var newsContent = editorD.txt.html();
     var newsCoverImage = $('#newsCoverImage')[0].src;
     var newsStatus = $("input[name='newsStatus']:checked").val();
     if (isNull(newsCoverImage) || newsCoverImage.indexOf('img-upload') != -1) {

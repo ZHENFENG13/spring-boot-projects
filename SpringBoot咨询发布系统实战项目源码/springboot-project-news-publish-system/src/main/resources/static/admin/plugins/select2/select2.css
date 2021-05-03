@@ -79,6 +79,7 @@
   border-bottom-right-radius: 0; }
 
 .select2-container--open .select2-dropdown--below {
+  z-index:10001;
   border-top: none;
   border-top-left-radius: 0;
   border-top-right-radius: 0; }
