@@ -38,7 +38,7 @@ public class MyBatisController {
 
     // 修改一条记录
     @GetMapping("/users/mybatis/update")
-    public Boolean insert(Integer id, String name, String password) {
+    public Boolean update(Integer id, String name, String password) {
         if (id == null || id < 1 || StringUtils.isEmpty(name) || StringUtils.isEmpty(password)) {
             return false;
         }
@@ -51,7 +51,7 @@ public class MyBatisController {
 
     // 删除一条记录
     @GetMapping("/users/mybatis/delete")
-    public Boolean insert(Integer id) {
+    public Boolean delete(Integer id) {
         if (id == null || id < 1) {
             return false;
         }
