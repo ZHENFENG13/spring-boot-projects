@@ -63,9 +63,9 @@
 
 这些案例主要是为了让大家能够掌握 Spring Boot 的开发和使用，旨在让读者更加熟悉 Spring Boot 及企业开发中需要注意的事项并具有使用 Spring Boot 技术进行大部分企业项目功能开发的能力。
 
-关注公众号：**程序员的小故事**，回复"勾搭"进群交流。
+关注公众号：**程序员十三**，回复"勾搭"进群交流。
 
-![wx-gzh](https://images.gitee.com/uploads/images/2019/1215/232410_90c9d45f_5249807.png)
+![wx-gzh](https://newbee-mall.oss-cn-beijing.aliyuncs.com/wx-gzh/%E7%A8%8B%E5%BA%8F%E5%91%98%E5%8D%81%E4%B8%89-%E5%85%AC%E4%BC%97%E5%8F%B7.png)
 
 ---
 
