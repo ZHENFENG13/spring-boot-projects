@@ -4,7 +4,7 @@
 
 ## 项目导航
 
-[Spring Boot 入门小案例](https://github.com/ZHENFENG13/spring-boot-projects/tree/master/SpringBoot入门案例源码)&nbsp;|&nbsp;[Spring Boot 入门小案例](https://github.com/ZHENFENG13/spring-boot-projects/tree/master/SpringBoot入门案例源码)&nbsp;|&nbsp;[Spring Boot 整合案例系列2](https://github.com/ZHENFENG13/spring-boot-projects/tree/master/玩转SpringBoot系列案例源码)&nbsp;|&nbsp;[Spring Boot 前后端分离项目实践](https://github.com/ZHENFENG13/spring-boot-projects/tree/master/SpringBoot前后端分离实战项目源码)&nbsp;|&nbsp;[Spring Boot 咨询发布系统项目实践](https://github.com/ZHENFENG13/spring-boot-projects/tree/master/SpringBoot咨询发布系统实战项目源码) &nbsp;| &nbsp;[Spring Boot + Mybatis + Thymeleaf 实现的开源博客系统](https://github.com/ZHENFENG13/My-Blog)&nbsp;|&nbsp;[Spring Boot + Mybatis + Thymeleaf 仿知乎专栏项目](https://github.com/ZHENFENG13/My-Column)&nbsp;|&nbsp;[Spring Boot + layui 实现的后台管理系统](https://github.com/ZHENFENG13/My-Blog-layui) &nbsp;| &nbsp;[Spring Boot 大型商城项目实践](https://github.com/newbee-ltd/newbee-mall)&nbsp;| &nbsp;[Spring Boot + Vue 前后端分离商城项目](https://github.com/newbee-ltd/newbee-mall-vue-app)&nbsp;| &nbsp;[Spring Boot + Vue3 前后端分离商城项目](https://github.com/newbee-ltd/newbee-mall-vue3-app)&nbsp;| &nbsp;[Github地址](https://github.com/ZHENFENG13/spring-boot-projects) &nbsp;| &nbsp;[码云 Gitee 地址](https://gitee.com/zhenfeng13/spring-boot-projects)
+[Spring Boot 入门小案例](https://github.com/ZHENFENG13/spring-boot-projects/tree/master/SpringBoot入门案例源码)&nbsp;|&nbsp;[Spring Boot 入门小案例](https://github.com/ZHENFENG13/spring-boot-projects/tree/master/SpringBoot入门案例源码)&nbsp;|&nbsp;[Spring Boot 整合案例系列2](https://github.com/ZHENFENG13/spring-boot-projects/tree/master/玩转SpringBoot系列案例源码)&nbsp;|&nbsp;[Spring Boot 前后端分离项目实践](https://github.com/ZHENFENG13/spring-boot-projects/tree/master/SpringBoot前后端分离实战项目源码)&nbsp;|&nbsp;[Spring Boot 咨询发布系统项目实践](https://github.com/ZHENFENG13/spring-boot-projects/tree/master/SpringBoot咨询发布系统实战项目源码) &nbsp;| &nbsp;[Spring Boot + Mybatis + Thymeleaf 实现的开源博客系统](https://github.com/ZHENFENG13/My-Blog)&nbsp;|&nbsp;[Spring Boot + Mybatis + Thymeleaf 实现的 BBS 论坛系统](https://github.com/ZHENFENG13/My-BBS)&nbsp;|&nbsp;[Spring Boot + Mybatis + Thymeleaf 仿知乎专栏项目](https://github.com/ZHENFENG13/My-Column)&nbsp;|&nbsp;[Spring Boot + layui 实现的后台管理系统](https://github.com/ZHENFENG13/My-Blog-layui) &nbsp;| &nbsp;[Spring Boot 大型商城项目实践](https://github.com/newbee-ltd/newbee-mall)&nbsp;| &nbsp;[Spring Boot + Vue 前后端分离商城项目](https://github.com/newbee-ltd/newbee-mall-vue-app)&nbsp;| &nbsp;[Spring Boot + Vue3 前后端分离商城项目](https://github.com/newbee-ltd/newbee-mall-vue3-app)&nbsp;| &nbsp;[Github地址](https://github.com/ZHENFENG13/spring-boot-projects) &nbsp;| &nbsp;[码云 Gitee 地址](https://gitee.com/zhenfeng13/spring-boot-projects)
 
 **目前代码中使用的 Spring Boot 版本为 2.3.7.RELEASE 及以上版本，请知悉。**
 
@@ -26,6 +26,7 @@
 - [前后端分离项目](https://github.com/ZHENFENG13/spring-boot-projects/tree/master/SpringBoot前后端分离实战项目源码/spring-boot-project-front-end&back-end)
 - [咨询发布项目](https://github.com/ZHENFENG13/spring-boot-projects/tree/master/SpringBoot咨询发布系统实战项目源码/springboot-project-news-publish-system)
 - [博客系统](https://github.com/ZHENFENG13/My-Blog)
+- [BBS 论坛系统](https://github.com/ZHENFENG13/My-BBS)
 - [仿知乎专栏项目](https://github.com/ZHENFENG13/My-Column)
 - [Spring Boot + layui 实现的后台管理系统](https://github.com/ZHENFENG13/My-Blog-layui)
 - [Spring Boot 大型商城项目](https://github.com/newbee-ltd/newbee-mall)
@@ -104,29 +105,30 @@
 - [第27课：Spring Boot 博客系统项目开发之评论功能实现](https://www.lanqiao.cn/courses/1367)
 - [第28课：Spring Boot 博客系统项目开发之项目打包部署](https://www.lanqiao.cn/courses/1367)
 
+### 《SpringBoot + Mybatis + Thymeleaf 开发 BBS 论坛项目》(支付减免优惠券码 jRPuZHPz )
 
-### 《SpringBoot + Mybatis + Thymeleaf 专栏项目开发实战》(支付减免优惠券码 nZiF4DN9 )
+[![lesson-11](https://newbee-mall.oss-cn-beijing.aliyuncs.com/poster/store/lesson-11.png)](https://www.shiyanlou.com/courses/4830)
 
-[![lesson-08](https://newbee-mall.oss-cn-beijing.aliyuncs.com/poster/store/lesson-08.png)](https://www.shiyanlou.com/courses/3228)
-
-- [**第01课：Spring Boot 项目开发环境**](https://www.shiyanlou.com/courses/3228)
-- [第02课：快速构建 Spring Boot 应用](https://www.shiyanlou.com/courses/3228)
-- [第03课：Spring Boot 项目开发之Web项目开发讲解](https://www.shiyanlou.com/courses/3228)
-- [第04课：Spring Boot 整合 Thymeleaf 模板引擎](https://www.shiyanlou.com/courses/3228)
-- [第05课：Thymeleaf 语法详解 语法详解](https://www.shiyanlou.com/courses/3228)
-- [第06课：Spring Boot 自动配置数据源及操作数据库](https://www.shiyanlou.com/courses/3228)
-- [第07课：Spring Boot 整合 MyBatis 操作数据库](https://www.shiyanlou.com/courses/3228)
-- [第08课：Spring Boot 项目开发之验证码功能](https://www.shiyanlou.com/courses/3228)
-- [第09课：项目开发之用户注册模块实现](https://www.shiyanlou.com/courses/3228)
-- [第10课：项目开发之用户登录模块实现](https://www.shiyanlou.com/courses/3228)
-- [第11课：项目开发之用户登录拦截器](https://www.shiyanlou.com/courses/3228)
-- [第12课：项目实战之处理文件上传及路径回显](https://www.shiyanlou.com/courses/3228)
-- [第13课：项目实战之个人中心页面制作](https://www.shiyanlou.com/courses/3228)
-- [第14课：项目实战之专栏模块开发](https://www.shiyanlou.com/courses/3228)
-- [第15课：富文本编辑器 wangEditor 整合](https://www.shiyanlou.com/courses/3228)
-- [第16课：项目实战之文章发布功能开发](https://www.shiyanlou.com/courses/3228)
-- [第17课：项目实战之文章列表及详情功能开发](https://www.shiyanlou.com/courses/3228)
-- [第18课：项目实战之文章修改功能开发](https://www.shiyanlou.com/courses/3228)
+- [**第01课：Spring Boot 技术栈详解**](https://www.shiyanlou.com/courses/4830)
+- [第02课：快速构建 Spring Boot 应用](https://www.shiyanlou.com/courses/4830)
+- [第03课：Spring Boot 项目开发之Web项目开发讲解](https://www.shiyanlou.com/courses/4830)
+- [第04课：Spring Boot 整合 Thymeleaf 模板引擎](https://www.shiyanlou.com/courses/4830)
+- [第05课：Thymeleaf 语法详解](https://www.shiyanlou.com/courses/4830)
+- [第06课：Spring Boot 自动配置数据源及操作数据库](https://www.shiyanlou.com/courses/4830)
+- [第07课：Spring Boot 整合 MyBatis 操作数据库](https://www.shiyanlou.com/courses/4830)
+- [第08课：分页功能的设计与实现](https://www.shiyanlou.com/courses/4830)
+- [第09课：BBS论坛项目开发之验证码功能](https://www.shiyanlou.com/courses/4830)
+- [第10课：BBS论坛项目开发之前端技术选型及源码目录详解](https://www.shiyanlou.com/courses/4830)
+- [第11课：BBS论坛项目开发之用户注册模块实现](https://www.shiyanlou.com/courses/4830)
+- [第12课：BBS论坛项目开发之用户登录模块实现](https://www.shiyanlou.com/courses/4830)
+- [第13课：BBS论坛项目开发之用户登录拦截器](https://www.shiyanlou.com/courses/4830)
+- [第14课：BBS论坛项目实战之处理文件上传及路径回显](https://www.shiyanlou.com/courses/4830)
+- [第15课：BBS论坛项目实战之个人中心页面制作](https://www.shiyanlou.com/courses/4830)
+- [第16课：富文本编辑器 wangEditor 整合](https://www.shiyanlou.com/courses/4830)
+- [第17课：BBS论坛项目实战之论坛首页开发](https://www.shiyanlou.com/courses/4830)
+- [第18课：BBS论坛项目实战之帖子发布功能开发](https://www.shiyanlou.com/courses/4830)
+- [第19课：BBS论坛项目实战之帖子详情和修改功能开发](https://www.shiyanlou.com/courses/4830)
+- [第20课：BBS论坛项目实战之评论功能开发](https://www.shiyanlou.com/courses/4830)
 
 ### 《Spring Boot 前后端分离项目实践》课程目录(支付减免优惠券码 y6tPSOK7 )
 

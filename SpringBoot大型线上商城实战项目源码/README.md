@@ -33,11 +33,9 @@ newbee-mall 项目是一套电商系统，包括 newbee-mall 商城系统及 new
 
 ![](https://newbee-mall.oss-cn-beijing.aliyuncs.com/poster/product/newbee-mall-plus-logo-mini.png?x-oss-process=image/resize,h_128,w_128)
 
-计划新增优惠券模块、商品秒杀模块、支付宝支付，优化了搜索功能，正在开发中。
+关注公众号：**程序员十三**，回复"勾搭"进群交流。
 
-关注公众号：**程序员的小故事**，回复"勾搭"进群交流。
-
-![wx-gzh](https://newbee-mall.oss-cn-beijing.aliyuncs.com/wx-gzh/%E6%89%AB%E7%A0%81%E5%85%B3%E6%B3%A8.png)
+![wx-gzh](https://newbee-mall.oss-cn-beijing.aliyuncs.com/wx-gzh/%E7%A8%8B%E5%BA%8F%E5%91%98%E5%8D%81%E4%B8%89-%E5%85%AC%E4%BC%97%E5%8F%B7.png)
 
 ## 项目演示
 
