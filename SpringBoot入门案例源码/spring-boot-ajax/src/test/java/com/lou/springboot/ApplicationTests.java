@@ -1,14 +1,15 @@
 package com.lou.springboot;
 
+import com.lou.springboot.controller.RequestTestController;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.context.junit4.SpringRunner;
 
-import javax.sql.DataSource;
-import java.sql.Connection;
-import java.sql.SQLException;
+import static org.apache.logging.log4j.util.Strings.EMPTY;
+import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertNotNull;
 
 /**
  * @author 13
@@ -19,18 +20,27 @@ import java.sql.SQLException;
 @RunWith(SpringRunner.class)
 @SpringBootTest
 public class ApplicationTests {
-    // 注入数据源对象
     @Autowired
-    private DataSource dataSource;
+    private RequestTestController requestTestController;
+
+    private static final String TEST_STRING = "abcdefg";
+    private static final String NEED_INFO_ALERT_STRING = "请输入info的值！";
 
     @Test
-    public void datasourceTest() throws SQLException {
-        // 获取数据源类型
-        System.out.println("默认数据源为：" + dataSource.getClass());
-        // 获取数据库连接对象
-        Connection connection = dataSource.getConnection();
-        // 判断连接对象是否为空
-        System.out.println(connection != null);
-        connection.close();
+    public void displayInfoTest() {
+        final String expected = "你输入的内容是:" + TEST_STRING;
+        final String test_data = requestTestController.test1(TEST_STRING);
+        assertEquals(expected, test_data);
+    }
+
+    @Test
+    public void displayInfoEmptyTest() {
+        final String test_data = requestTestController.test1(EMPTY);
+        assertEquals(NEED_INFO_ALERT_STRING, test_data);
+    }
+
+    @Test
+    public void test2ApiTest() {
+        assertNotNull(requestTestController.test2());
     }
 }
