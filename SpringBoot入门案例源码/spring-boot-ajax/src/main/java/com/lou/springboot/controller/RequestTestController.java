@@ -15,7 +15,7 @@ public class RequestTestController {
 
     @RequestMapping(value = "/test1", method = RequestMethod.GET)
     public String test1(String info) {
-        if (StringUtils.isEmpty(info) || StringUtils.isEmpty(info)) {
+        if (StringUtils.isEmpty(info)) {
             return "请输入info的值！";
         }
         return "你输入的内容是:" + info;
