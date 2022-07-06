@@ -4,13 +4,9 @@
 ![Version 1.0.0](https://img.shields.io/badge/version-1.0.0-yellow.svg)
 [![License](https://img.shields.io/badge/license-GPL3.0-blue.svg)](https://github.com/newbee-ltd/newbee-mall/blob/master/LICENSE)
 
-newbee-mall 项目是一套电商系统，包括 newbee-mall 商城系统及 newbee-mall-admin 商城后台管理系统，基于 Spring Boot 2.X 及相关技术栈开发。 前台商城系统包含首页门户、商品分类、新品上线、首页轮播、商品推荐、商品搜索、商品展示、购物车、订单结算、订单流程、个人订单管理、会员中心、帮助中心等模块。 后台管理系统包含数据面板、轮播图管理、商品管理、订单管理、会员管理、分类管理、设置等模块。
+newbee-mall是一套电商系统，包括基础版本(Spring Boot+Thymeleaf)、前后端分离版本(Spring Boot+Vue 3+Element-Plus+Vue-Router 4+Vuex 4+Vant 3) 、秒杀版本、Go语言版本、微服务版本(Spring Cloud Alibaba+Nacos+Sentinel+Seata+Spring Cloud Gateway+OpenFeign)。 前台商城系统包含首页门户、商品分类、新品上线、首页轮播、商品推荐、商品搜索、商品展示、购物车、订单结算、订单流程、个人订单管理、会员中心、帮助中心等模块。 后台管理系统包含数据面板、轮播图管理、商品管理、订单管理、会员管理、分类管理、设置等模块。
 
 新蜂商城线上预览地址：[http://mall.newbee.ltd](http://mall.newbee.ltd?from=github)，账号可自行注册。
-
-**坚持不易，如果觉得项目还不错的话可以给项目一个 Star 吧，也是对我一直更新代码的一种鼓励啦，谢谢各位的支持。**
-
-![newbee-mall-info](https://newbee-mall.oss-cn-beijing.aliyuncs.com/poster/store/newbee-mall-star.png)
 
 - newbee-mall 对新手开发者十分友好，无需复杂的操作步骤，**仅需 2 秒就可以启动这个完整的商城项目；**
 - newbee-mall **也是一个企业级别的 Spring Boot 大型项目，对于各个阶段的 Java 开发者都是极佳的选择；**
@@ -22,20 +18,20 @@ newbee-mall 项目是一套电商系统，包括 newbee-mall 商城系统及 new
 
 ![](https://raw.githubusercontent.com/newbee-ltd/newbee-mall-vue-app/master/static-files/newbee-mall.png)
 
-**新蜂商城前后端分离版本已开，包括四个仓库：**
+## newbee-mall （新蜂商城）系列项目概览
 
-- [新蜂商城后端接口 newbee-mall-api](https://github.com/newbee-ltd/newbee-mall-api)
-- [新蜂商城 Vue2 版本 newbee-mall-vue-app](https://github.com/newbee-ltd/newbee-mall-vue-app)
-- [新蜂商城 Vue3 版本 newbee-mall-vue3-app](https://github.com/newbee-ltd/newbee-mall-vue3-app)
-- [新蜂商城后台管理系统 Vue3 版本 vue3-admin](https://github.com/newbee-ltd/vue3-admin)
+![newbee-mall-course-2022](https://github.com/newbee-ltd/newbee-mall-cloud/raw/main/static-files/newbee-mall-course-2022.png)
 
-**新蜂商城升级版本 [newbee-mall-plus](https://github.com/newbee-ltd/newbee-mall-plus)：**
-
-![](https://newbee-mall.oss-cn-beijing.aliyuncs.com/poster/product/newbee-mall-plus-logo-mini.png?x-oss-process=image/resize,h_128,w_128)
-
-关注公众号：**程序员十三**，回复"勾搭"进群交流。
-
-![wx-gzh](https://newbee-mall.oss-cn-beijing.aliyuncs.com/wx-gzh/%E7%A8%8B%E5%BA%8F%E5%91%98%E5%8D%81%E4%B8%89-%E5%85%AC%E4%BC%97%E5%8F%B7.png)
+| 项目名称             | 仓库地址                                                     | 备注                                                         |
+| :------------------- | ------------------------------------------------------------ | ------------------------------------------------------------ |
+| newbee-mall          | [newbee-mall in GitHub](https://github.com/newbee-ltd/newbee-mall)<br>[newbee-mall in Gitee](https://gitee.com/newbee-ltd/newbee-mall) | 初始版本、Spring Boot、Thymeleaf、MyBatis、MySQL             |
+| newbee-mall-plus     | [newbee-mall-plus in GitHub](https://github.com/newbee-ltd/newbee-mall-plus)<br/>[newbee-mall-plus in Gitee](https://gitee.com/newbee-ltd/newbee-mall-plus) | 升级版本、优惠券、秒杀、支付、Spring Boot、Thymeleaf、MyBatis、MySQL、Redis |
+| newbee-mall-cloud    | [newbee-mall-cloud in GitHub](https://github.com/newbee-ltd/newbee-mall-cloud)<br/>[newbee-mall-cloud in Gitee](https://gitee.com/newbee-ltd/newbee-mall-cloud) | 微服务版本、分布式事务、Spring Cloud Alibaba、Nacos、Sentinel、OpenFeign、Seata |
+| newbee-mall-api      | [newbee-mall-api in GitHub](https://github.com/newbee-ltd/newbee-mall-api)<br/>[newbee-mall-api in Gitee](https://gitee.com/newbee-ltd/newbee-mall-api) | 前后端分离、Spring Boot、MyBatis、Swagger、MySQL             |
+| newbee-mall-api-go   | [newbee-mall-api-go in GitHub](https://github.com/newbee-ltd/newbee-mall-api-go)<br/>[newbee-mall-api-go in Gitee](https://gitee.com/newbee-ltd/newbee-mall-api-go) | 前后端分离、Go、Gin、MySQL                                   |
+| newbee-mall-vue-app  | [newbee-mall-vue-app in GitHub](https://github.com/newbee-ltd/newbee-mall-vue-app)<br/>[newbee-mall-vue-app in Gitee](https://gitee.com/newbee-ltd/newbee-mall-vue-app) | 前后端分离、Vue 2.x、Vant                                    |
+| newbee-mall-vue3-app | [newbee-mall-vue3-app in GitHub](https://github.com/newbee-ltd/newbee-mall-vue3-app)<br/>[newbee-mall-vue3-app in GitHub](https://gitee.com/newbee-ltd/newbee-mall-vue3-app) | 前后端分离、Vue 3.0、Vue-Router 4.0、Vuex 4.0、Vant 3.0      |
+| vue3-admin           | [vue3-admin in GitHub](https://github.com/newbee-ltd/vue3-admin)<br/>[vue3-admin in Gitee](https://gitee.com/newbee-ltd/vue3-admin) | 前后端分离、Vue 3.0、Element-Plus、Vue-Router 4.0、Vite      |
 
 ## 项目演示
 
@@ -45,46 +41,50 @@ newbee-mall 项目是一套电商系统，包括 newbee-mall 商城系统及 new
 
 ## 开发及部署文档
 
-- [**Spring Boot 大型线上商城项目实战教程**](https://juejin.im/book/5da2f9d4f265da5b81794d48?referrer=59199e22a22b9d0058279886)
-- [技术选型之 Spring Boot](https://juejin.im/book/5da2f9d4f265da5b81794d48?referrer=59199e22a22b9d0058279886)
-- [前期准备工作及基础环境搭建](https://juejin.im/book/5da2f9d4f265da5b81794d48?referrer=59199e22a22b9d0058279886)
-- [Spring Boot 项目初体验--项目搭建及启动](https://juejin.im/book/5da2f9d4f265da5b81794d48?referrer=59199e22a22b9d0058279886)
-- [Spring Boot 核心详解及源码分析](https://juejin.im/book/5da2f9d4f265da5b81794d48?referrer=59199e22a22b9d0058279886)
-- [Spring Boot 之 DispatchServlet 自动配置源码解读](https://juejin.im/book/5da2f9d4f265da5b81794d48?referrer=59199e22a22b9d0058279886)
-- [Spring Boot 之 Web 开发及 MVC 自动配置分析](https://juejin.im/book/5da2f9d4f265da5b81794d48?referrer=59199e22a22b9d0058279886)
-- [Thymeleaf 模板引擎技术介绍及整合](https://juejin.im/book/5da2f9d4f265da5b81794d48?referrer=59199e22a22b9d0058279886)
-- [Thymeleaf 语法详解及编码实践](https://juejin.im/book/5da2f9d4f265da5b81794d48?referrer=59199e22a22b9d0058279886)
-- [Spring Boot 实践之数据源自动配置及数据库操作](https://juejin.im/book/5da2f9d4f265da5b81794d48?referrer=59199e22a22b9d0058279886)
-- [Spring Boot 实践之整合 Mybatis 操作数据库](https://juejin.im/book/5da2f9d4f265da5b81794d48?referrer=59199e22a22b9d0058279886)
-- [项目初体验：启动和使用新蜂商城](https://juejin.im/book/5da2f9d4f265da5b81794d48?referrer=59199e22a22b9d0058279886)
-- [新蜂商城功能模块和流程设计详解](https://juejin.im/book/5da2f9d4f265da5b81794d48?referrer=59199e22a22b9d0058279886)
-- [前端页面设计及技术选型](https://juejin.im/book/5da2f9d4f265da5b81794d48?referrer=59199e22a22b9d0058279886)
-- [页面布局制作及跳转逻辑实现](https://juejin.im/book/5da2f9d4f265da5b81794d48?referrer=59199e22a22b9d0058279886)
-- [Spring Boot 整合 kaptcha 实现验证码功能](https://juejin.im/book/5da2f9d4f265da5b81794d48?referrer=59199e22a22b9d0058279886)
-- [新蜂商城后台管理系统登录功能实现](https://juejin.im/book/5da2f9d4f265da5b81794d48?referrer=59199e22a22b9d0058279886)
-- [登陆拦截器设置并完善身份验证](https://juejin.im/book/5da2f9d4f265da5b81794d48?referrer=59199e22a22b9d0058279886)
-- [通用分页功能设计与开发实践](https://juejin.im/book/5da2f9d4f265da5b81794d48?referrer=59199e22a22b9d0058279886)
-- [JqGrid 插件整合制作分页效果](https://juejin.im/book/5da2f9d4f265da5b81794d48?referrer=59199e22a22b9d0058279886)
-- [Spring Boot 实践之文件上传处理及路径回显](https://juejin.im/book/5da2f9d4f265da5b81794d48?referrer=59199e22a22b9d0058279886)
-- [新蜂商城轮播图管理模块开发](https://juejin.im/book/5da2f9d4f265da5b81794d48?referrer=59199e22a22b9d0058279886)
-- [新蜂商城分类管理模块开发-1](https://juejin.im/book/5da2f9d4f265da5b81794d48?referrer=59199e22a22b9d0058279886)
-- [新蜂商城分类管理模块开发-2](https://juejin.im/book/5da2f9d4f265da5b81794d48?referrer=59199e22a22b9d0058279886)
-- [富文本编辑器 KindEditor 介绍及整合详解](https://juejin.im/book/5da2f9d4f265da5b81794d48?referrer=59199e22a22b9d0058279886)
-- [新蜂商城商品类目三级联动功能实现](https://juejin.im/book/5da2f9d4f265da5b81794d48?referrer=59199e22a22b9d0058279886)
-- [新蜂商城商品编辑功能实现](https://juejin.im/book/5da2f9d4f265da5b81794d48?referrer=59199e22a22b9d0058279886)
-- [新蜂商城商品管理模块功能实现](https://juejin.im/book/5da2f9d4f265da5b81794d48?referrer=59199e22a22b9d0058279886)
-- [新蜂商城首页制作-1](https://juejin.im/book/5da2f9d4f265da5b81794d48?referrer=59199e22a22b9d0058279886)
-- [新蜂商城首页制作-2](https://juejin.im/book/5da2f9d4f265da5b81794d48?referrer=59199e22a22b9d0058279886)
-- [新蜂商城首页模块配置及功能完善](https://juejin.im/book/5da2f9d4f265da5b81794d48?referrer=59199e22a22b9d0058279886)
-- [新蜂商城会员的注册/登录功能实现](https://juejin.im/book/5da2f9d4f265da5b81794d48?referrer=59199e22a22b9d0058279886)
-- [新蜂商城搜索商品功能实现](https://juejin.im/book/5da2f9d4f265da5b81794d48?referrer=59199e22a22b9d0058279886)
-- [新蜂商城购物车功能实现](https://juejin.im/book/5da2f9d4f265da5b81794d48?referrer=59199e22a22b9d0058279886)
-- [Spring Boot中的事务处理](https://juejin.im/book/5da2f9d4f265da5b81794d48?referrer=59199e22a22b9d0058279886)
-- [新蜂商城订单确认页和订单生成功能实践](https://juejin.im/book/5da2f9d4f265da5b81794d48?referrer=59199e22a22b9d0058279886)
-- [新蜂商城个人订单列表和订单详情页制作](https://juejin.im/book/5da2f9d4f265da5b81794d48?referrer=59199e22a22b9d0058279886)
-- [新蜂商城订单流程功能完善](https://juejin.im/book/5da2f9d4f265da5b81794d48?referrer=59199e22a22b9d0058279886)
-- [新蜂商城错误页面制作](https://juejin.im/book/5da2f9d4f265da5b81794d48?referrer=59199e22a22b9d0058279886)
-- [小册总结](https://juejin.im/book/5da2f9d4f265da5b81794d48?referrer=59199e22a22b9d0058279886)
+
+- [**Spring Boot 大型线上商城项目实战教程**](https://juejin.cn/book/6844733814074245133?suid=1996368849416216&source=android)
+- [项目须知和课程约定](https://juejin.cn/book/6844733814074245133?suid=1996368849416216&source=android)
+- [2021年12月小册全新优化升级](https://juejin.cn/book/6844733814074245133?suid=1996368849416216&source=android)
+- [技术选型之 Spring Boot](https://juejin.cn/book/6844733814074245133?suid=1996368849416216&source=android)
+- [前期准备工作及基础环境搭建](https://juejin.cn/book/6844733814074245133?suid=1996368849416216&source=android)
+- [Spring Boot 项目初体验--项目搭建及启动](https://juejin.cn/book/6844733814074245133?suid=1996368849416216&source=android)
+- [Spring Boot 之 Web 开发讲解](https://juejin.cn/book/6844733814074245133?suid=1996368849416216&source=android)
+- [Thymeleaf 模板引擎技术介绍及整合](https://juejin.cn/book/6844733814074245133?suid=1996368849416216&source=android)
+- [Thymeleaf 语法详解及编码实践](https://juejin.cn/book/6844733814074245133?suid=1996368849416216&source=android)
+- [Spring Boot 实践之数据库操作](https://juejin.cn/book/6844733814074245133?suid=1996368849416216&source=android)
+- [Spring Boot 实践之整合 Mybatis 操作数据库](https://juejin.cn/book/6844733814074245133?suid=1996368849416216&source=android)
+- [项目初体验：启动和使用新蜂商城](https://juejin.cn/book/6844733814074245133?suid=1996368849416216&source=android)
+- [新蜂商城功能模块和流程设计详解](https://juejin.cn/book/6844733814074245133?suid=1996368849416216&source=android)
+- [前端页面设计及技术选型](https://juejin.cn/book/6844733814074245133?suid=1996368849416216&source=android)
+- [页面布局制作及跳转逻辑实现](https://juejin.cn/book/6844733814074245133?suid=1996368849416216&source=android)
+- [Spring Boot 实现验证码功能](https://juejin.cn/book/6844733814074245133?suid=1996368849416216&source=android)
+- [新蜂商城后台管理系统登录功能实现](https://juejin.cn/book/6844733814074245133?suid=1996368849416216&source=android)
+- [登陆拦截器设置并完善身份验证](https://juejin.cn/book/6844733814074245133?suid=1996368849416216&source=android)
+- [通用分页功能设计与开发实践](https://juejin.cn/book/6844733814074245133?suid=1996368849416216&source=android)
+- [jqGrid 插件整合制作分页效果](https://juejin.cn/book/6844733814074245133?suid=1996368849416216&source=android)
+- [Spring Boot 实践之文件上传处理-1](https://juejin.cn/book/6844733814074245133?suid=1996368849416216&source=android)
+- [Spring Boot 实践之文件上传处理-2](https://juejin.cn/book/6844733814074245133?suid=1996368849416216&source=android)
+- [新蜂商城轮播图管理模块开发](https://juejin.cn/book/6844733814074245133?suid=1996368849416216&source=android)
+- [新蜂商城分类管理模块开发-1](https://juejin.cn/book/6844733814074245133?suid=1996368849416216&source=android)
+- [新蜂商城分类管理模块开发-2](https://juejin.cn/book/6844733814074245133?suid=1996368849416216&source=android)
+- [新蜂商城商品类目三级联动功能实现](https://juejin.cn/book/6844733814074245133?suid=1996368849416216&source=android)
+- [富文本编辑器 wangEditor 介绍及整合详解](https://juejin.cn/book/6844733814074245133?suid=1996368849416216&source=android)
+- [新蜂商城商品编辑页面制作](https://juejin.cn/book/6844733814074245133?suid=1996368849416216&source=android)
+- [新蜂商城商品添加功能实现](https://juejin.cn/book/6844733814074245133?suid=1996368849416216&source=android)
+- [新蜂商城商品管理模块功能实现](https://juejin.cn/book/6844733814074245133?suid=1996368849416216&source=android)
+- [新蜂商城首页制作-1](https://juejin.cn/book/6844733814074245133?suid=1996368849416216&source=android)
+- [新蜂商城首页制作-2](https://juejin.cn/book/6844733814074245133?suid=1996368849416216&source=android)
+- [新蜂商城首页模块配置及功能完善](https://juejin.cn/book/6844733814074245133?suid=1996368849416216&source=android)
+- [新蜂商城会员的注册/登录功能实现](https://juejin.cn/book/6844733814074245133?suid=1996368849416216&source=android)
+- [新蜂商城搜索商品功能实现](https://juejin.cn/book/6844733814074245133?suid=1996368849416216&source=android)
+- [新蜂商城购物车功能实现](https://juejin.cn/book/6844733814074245133?suid=1996368849416216&source=android)
+- [新蜂商城订单确认页和订单生成功能实践](https://juejin.cn/book/6844733814074245133?suid=1996368849416216&source=android)
+- [新蜂商城个人订单列表和订单详情页制作](https://juejin.cn/book/6844733814074245133?suid=1996368849416216&source=android)
+- [新蜂商城订单流程功能完善](https://juejin.cn/book/6844733814074245133?suid=1996368849416216&source=android)
+- [课程总结及展望](https://juejin.cn/book/6844733814074245133?suid=1996368849416216&source=android)
+- [Spring Boot中的事务处理](https://juejin.cn/book/6844733814074245133?suid=1996368849416216&source=android)
+- [新蜂商城错误页面制作](https://juejin.cn/book/6844733814074245133?suid=1996368849416216&source=android)
+- [常见问题汇总讲解](https://juejin.cn/book/6844733814074245133?suid=1996368849416216&source=android)
 
 ## 联系作者
 
@@ -181,7 +181,8 @@ newbee-mall 项目是一套电商系统，包括 newbee-mall 商城系统及 new
 - [tonytomov](https://github.com/tonytomov/jqGrid)
 - [t4t5](https://github.com/t4t5/sweetalert)
 - [skytotwo](https://github.com/skytotwo/Alipay-WeChat-HTML)
-- [EasyCaptcha](https://github.com/whvcse/EasyCaptcha)
+- [hutool](https://github.com/dromara/hutool)
 - [wangeditor-team](https://github.com/wangeditor-team/wangEditor)
+- [VincentGarreau](https://github.com/VincentGarreau/particles.js)
 - [Vue](https://github.com/vuejs/vue)
 - [Vant](https://github.com/youzan/vant)
