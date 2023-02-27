@@ -1,52 +1,69 @@
 //Initialize Select2 Elements
 $('.select2').select2();
 //wangEditor变量
-var editorD;
+var editor;
 
 $(function () {
     $('.alert-danger').css("display", "none");
 
     //富文本编辑器
     const E = window.wangEditor;
-    editorD = new E('#wangEditor')
-    // 设置编辑区域高度为 750px
-    editorD.config.height = 750
-    //配置服务端图片上传地址
-    editorD.config.uploadImgServer = '/admin/upload/file'
-    editorD.config.uploadFileName = 'file'
-    //限制图片大小 2M
-    editorD.config.uploadImgMaxSize = 2 * 1024 * 1024
-    //限制一次最多能传几张图片 一次最多上传 1 个图片
-    editorD.config.uploadImgMaxLength = 1
-    //隐藏插入网络图片的功能
-    editorD.config.showLinkImg = false
-    editorD.config.uploadImgHooks = {
-        // 图片上传并返回了结果，图片插入已成功
-        success: function (xhr) {
-            console.log('success', xhr)
-        },
-        // 图片上传并返回了结果，但图片插入时出错了
-        fail: function (xhr, editor, resData) {
-            console.log('fail', resData)
-        },
-        // 上传图片出错，一般为 http 请求的错误
-        error: function (xhr, editor, resData) {
-            console.log('error', xhr, resData)
-        },
-        // 上传图片超时
-        timeout: function (xhr) {
-            console.log('timeout')
-        },
-        customInsert: function (insertImgFn, result) {
+
+    const editorConfig = { MENU_CONF: {} }
+    editorConfig.MENU_CONF['uploadImage'] = {
+          //配置服务端图片上传地址
+          server: '/admin/upload/file',
+          // 超时时间5s
+          timeout: 5 * 1000,
+          fieldName: 'file',
+          // 选择文件时的类型限制，默认为 ['image/*']
+          allowedFileTypes: ['image/*'],
+          // 限制图片大小 4M
+          maxFileSize: 4 * 1024 * 1024,
+          base64LimitSize: 5 * 1024,
+
+          onBeforeUpload(file) {
+            console.log('onBeforeUpload', file)
+
+            return file // will upload this file
+            // return false // prevent upload
+          },
+          onProgress(progress) {
+            console.log('onProgress', progress)
+          },
+          onSuccess(file, res) {
+            console.log('onSuccess', file, res)
+          },
+          onFailed(file, res) {
+            alert(res.message)
+            console.log('onFailed', file, res)
+          },
+          onError(file, err, res) {
+            alert(err.message)
+            console.error('onError', file, err, res)
+          },
+          customInsert: function (result,insertFn) {
             if (result != null && result.resultCode == 200) {
-                // insertImgFn 可把图片插入到编辑器，传入图片 src ，执行函数即可
-                insertImgFn(result.data)
+                // insertFn 可把图片插入到编辑器，传入图片 src ，执行函数即可
+                insertFn(result.data,'',result.data)
+            } else if (result != null && result.resultCode != 200) {
+                alert('error');
             } else {
-                alert("error");
+                alert('error');
             }
-        }
+          }
     }
-    editorD.create();
+
+    editor = E.createEditor({
+      selector: '#editor-text-area',
+      html: $(".editor-text").val(),
+      config: editorConfig
+    })
+
+    const toolbar = E.createToolbar({
+      editor,
+      selector: '#editor-toolbar',
+    })
 
     new AjaxUpload('#uploadCoverImage', {
         action: '/admin/upload/file',
@@ -74,7 +91,7 @@ $(function () {
 $('#confirmButton').click(function () {
     var newsTitle = $('#newsTitle').val();
     var categoryId = $('#newsCategoryId').val();
-    var newsContent = editorD.txt.html();
+    var newsContent = editor.getHtml();
     if (isNull(newsTitle)) {
         swal("请输入文章标题", {
             icon: "error",
@@ -112,7 +129,7 @@ $('#saveButton').click(function () {
     var newsId = $('#newsId').val();
     var newsTitle = $('#newsTitle').val();
     var newsCategoryId = $('#newsCategoryId').val();
-    var newsContent = editorD.txt.html();
+    var newsContent = editor.getHtml();
     var newsCoverImage = $('#newsCoverImage')[0].src;
     var newsStatus = $("input[name='newsStatus']:checked").val();
     if (isNull(newsCoverImage) || newsCoverImage.indexOf('img-upload') != -1) {

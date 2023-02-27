@@ -45,7 +45,7 @@ $(function () {
     });
 
     function imgFormatter(cellvalue) {
-        return "<a href='" + cellvalue + "'> <img src='" + cellvalue + "' height=\"120\" width=\"135\" alt='lou.springboot'/></a>";
+        return "<a href='" + cellvalue + "'> <img src='" + cellvalue + "' height=\"120\" width=\"135\" alt='Spring Boot 3'/></a>";
     }
 
     new AjaxUpload('#upload', {

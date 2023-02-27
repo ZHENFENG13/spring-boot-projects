@@ -1,18 +1,18 @@
 package com.site.springboot.core.controller.admin;
 
+import cn.hutool.captcha.ShearCaptcha;
 import com.site.springboot.core.entity.Admin;
 import com.site.springboot.core.service.*;
+import jakarta.annotation.Resource;
+import jakarta.servlet.http.HttpServletRequest;
+import jakarta.servlet.http.HttpSession;
 import org.springframework.stereotype.Controller;
 import org.springframework.util.StringUtils;
 import org.springframework.web.bind.annotation.*;
 
-import javax.annotation.Resource;
-import javax.servlet.http.HttpServletRequest;
-import javax.servlet.http.HttpSession;
-
 /**
  * @author 13
- * @qq交流群 796794009
+ * @qq交流群 784785001
  * @email 2449207463@qq.com
  * @link http://13blog.site
  */
@@ -39,16 +39,16 @@ public class AdminController {
                         @RequestParam("password") String password,
                         @RequestParam("verifyCode") String verifyCode,
                         HttpSession session) {
-        if (StringUtils.isEmpty(verifyCode)) {
+        if (!StringUtils.hasText(verifyCode)) {
             session.setAttribute("errorMsg", "验证码不能为空");
             return "admin/login";
         }
-        if (StringUtils.isEmpty(userName) || StringUtils.isEmpty(password)) {
+        if (!StringUtils.hasText(userName) || !StringUtils.hasText(password)) {
             session.setAttribute("errorMsg", "用户名或密码不能为空");
             return "admin/login";
         }
-        String kaptchaCode = session.getAttribute("verifyCode") + "";
-        if (StringUtils.isEmpty(kaptchaCode) || !verifyCode.equals(kaptchaCode)) {
+        ShearCaptcha shearCaptcha = (ShearCaptcha) session.getAttribute("verifyCode");
+        if (shearCaptcha == null || !shearCaptcha.verify(verifyCode)) {
             session.setAttribute("errorMsg", "验证码错误");
             return "admin/login";
         }
@@ -82,7 +82,7 @@ public class AdminController {
     @ResponseBody
     public String passwordUpdate(HttpServletRequest request, @RequestParam("originalPassword") String originalPassword,
                                  @RequestParam("newPassword") String newPassword) {
-        if (StringUtils.isEmpty(originalPassword) || StringUtils.isEmpty(newPassword)) {
+        if (!StringUtils.hasText(originalPassword) || !StringUtils.hasText(newPassword)) {
             return "参数不能为空";
         }
         Long loginUserId = (long) request.getSession().getAttribute("loginUserId");
@@ -101,7 +101,7 @@ public class AdminController {
     @ResponseBody
     public String nameUpdate(HttpServletRequest request, @RequestParam("loginUserName") String loginUserName,
                              @RequestParam("nickName") String nickName) {
-        if (StringUtils.isEmpty(loginUserName) || StringUtils.isEmpty(nickName)) {
+        if (!StringUtils.hasText(loginUserName) || !StringUtils.hasText(nickName)) {
             return "参数不能为空";
         }
         Long loginUserId = (long) request.getSession().getAttribute("loginUserId");

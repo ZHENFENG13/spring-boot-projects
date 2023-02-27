@@ -5,17 +5,19 @@
 	<parent>
 		<groupId>org.springframework.boot</groupId>
 		<artifactId>spring-boot-starter-parent</artifactId>
-		<version>2.3.7.RELEASE</version>
+		<version>3.0.0</version>
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
-	<groupId>com.lou.springboot</groupId>
-	<artifactId>spring-boot-druid</artifactId>
+	<groupId>cn.lanqiao</groupId>
+	<artifactId>springboot3-druid</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>spring-boot-druid</name>
+	<name>springboot3-druid</name>
 	<description>Spring Boot 整合 Druid</description>
 
 	<properties>
-		<java.version>1.8</java.version>
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+		<project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
+		<java.version>17</java.version>
 	</properties>
 
 	<dependencies>
@@ -33,7 +35,7 @@
 		<dependency>
 			<groupId>com.alibaba</groupId>
 			<artifactId>druid</artifactId>
-			<version>1.2.6</version>
+			<version>1.2.14</version>
 		</dependency>
 
 		<dependency>

@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 
-<mapper namespace="com.lou.springboot.dao.UserDao">
-    <resultMap type="com.lou.springboot.entity.User" id="UserResult">
+<mapper namespace="cn.lanqiao.springboot3.dao.UserDao">
+    <resultMap type="cn.lanqiao.springboot3.entity.User" id="UserResult">
         <result property="id" column="id"/>
         <result property="name" column="name"/>
         <result property="password" column="password"/>
@@ -18,12 +18,12 @@
         where id = #{id}
     </select>
 
-    <insert id="insertUser" parameterType="com.lou.springboot.entity.User">
+    <insert id="insertUser" parameterType="cn.lanqiao.springboot3.entity.User">
         insert into tb_user(name,password)
         values(#{name},#{password})
     </insert>
 
-    <update id="updUser" parameterType="com.lou.springboot.entity.User">
+    <update id="updUser" parameterType="cn.lanqiao.springboot3.entity.User">
         update tb_user
         set
         name=#{name},password=#{password}

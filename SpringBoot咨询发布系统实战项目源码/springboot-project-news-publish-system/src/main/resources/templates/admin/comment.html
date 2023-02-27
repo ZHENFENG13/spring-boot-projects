@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html xmlns:th="http://www.thymeleaf.org">
-<header th:replace="admin/header::header-fragment"></header>
+<header th:replace="~{admin/header::header-fragment}"></header>
 <body class="hold-transition sidebar-mini">
 <style>
     .ui-jqgrid tr.jqgrow td {
@@ -12,9 +12,9 @@
 </style>
 <div class="wrapper">
     <!-- 引入页面头header-fragment -->
-    <div th:replace="admin/header::header-nav"></div>
+    <div th:replace="~{admin/header::header-nav}"></div>
     <!-- 引入工具栏sidebar-fragment -->
-    <div th:replace="admin/sidebar::sidebar-fragment(${path})"></div>
+    <div th:replace="~{admin/sidebar::sidebar-fragment(${path})}"></div>
     <!-- Content Wrapper. Contains page content -->
     <div class="content-wrapper">
         <!-- Content Header (Page header) -->
@@ -50,7 +50,7 @@
     </div>
     <!-- /.content-wrapper -->
     <!-- 引入页脚footer-fragment -->
-    <div th:replace="admin/footer::footer-fragment"></div>
+    <div th:replace="~{admin/footer::footer-fragment}"></div>
 </div>
 <!-- jQuery -->
 <script th:src="@{/admin/plugins/jquery/jquery.min.js}"></script>
@@ -61,8 +61,8 @@
 <!-- AdminLTE App -->
 <script th:src="@{/admin/dist/js/adminlte.min.js}"></script>
 <!-- jquery App -->
-<script th:src="@{/admin/plugins/jqgrid-5.3.0/jquery.jqGrid.min.js}"></script>
-<script th:src="@{/admin/plugins/jqgrid-5.3.0/grid.locale-cn.js}"></script>
+<script th:src="@{/admin/plugins/jqgrid-5.7.0/jquery.jqGrid.min.js}"></script>
+<script th:src="@{/admin/plugins/jqgrid-5.7.0/grid.locale-cn.js}"></script>
 <!-- sweetalert -->
 <script th:src="@{/admin/plugins/sweetalert/sweetalert.min.js}"></script>
 <script th:src="@{/admin/dist/js/public.js}"></script>

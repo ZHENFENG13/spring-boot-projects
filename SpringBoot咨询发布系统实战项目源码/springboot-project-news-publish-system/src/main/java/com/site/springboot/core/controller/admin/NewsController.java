@@ -6,17 +6,18 @@ import com.site.springboot.core.service.NewsService;
 import com.site.springboot.core.util.PageQueryUtil;
 import com.site.springboot.core.util.Result;
 import com.site.springboot.core.util.ResultGenerator;
+import jakarta.servlet.http.HttpServletRequest;
 import org.springframework.stereotype.Controller;
+import org.springframework.util.ObjectUtils;
 import org.springframework.util.StringUtils;
 import org.springframework.web.bind.annotation.*;
 
-import javax.annotation.Resource;
-import javax.servlet.http.HttpServletRequest;
+import jakarta.annotation.Resource;
 import java.util.Map;
 
 /**
  * @author 13
- * @qq交流群 796794009
+ * @qq交流群 784785001
  * @email 2449207463@qq.com
  * @link http://13blog.site
  */
@@ -45,7 +46,7 @@ public class NewsController {
     @GetMapping("/news/list")
     @ResponseBody
     public Result list(@RequestParam Map<String, Object> params) {
-        if (StringUtils.isEmpty(params.get("page")) || StringUtils.isEmpty(params.get("limit"))) {
+        if (ObjectUtils.isEmpty(params.get("page")) || ObjectUtils.isEmpty(params.get("limit"))) {
             return ResultGenerator.genFailResult("参数异常！");
         }
         PageQueryUtil pageUtil = new PageQueryUtil(params);
@@ -59,19 +60,19 @@ public class NewsController {
                        @RequestParam("newsContent") String newsContent,
                        @RequestParam("newsCoverImage") String newsCoverImage,
                        @RequestParam("newsStatus") Byte newsStatus) {
-        if (StringUtils.isEmpty(newsTitle)) {
+        if (!StringUtils.hasText(newsTitle)) {
             return ResultGenerator.genFailResult("请输入文章标题");
         }
         if (newsTitle.trim().length() > 150) {
             return ResultGenerator.genFailResult("标题过长");
         }
-        if (StringUtils.isEmpty(newsContent)) {
+        if (!StringUtils.hasText(newsContent)) {
             return ResultGenerator.genFailResult("请输入文章内容");
         }
         if (newsContent.trim().length() > 100000) {
             return ResultGenerator.genFailResult("文章内容过长");
         }
-        if (StringUtils.isEmpty(newsCoverImage)) {
+        if (!StringUtils.hasText(newsCoverImage)) {
             return ResultGenerator.genFailResult("封面图不能为空");
         }
         News news = new News();
@@ -108,19 +109,19 @@ public class NewsController {
                          @RequestParam("newsContent") String newsContent,
                          @RequestParam("newsCoverImage") String newsCoverImage,
                          @RequestParam("newsStatus") Byte newsStatus) {
-        if (StringUtils.isEmpty(newsTitle)) {
+        if (!StringUtils.hasText(newsTitle)) {
             return ResultGenerator.genFailResult("请输入文章标题");
         }
         if (newsTitle.trim().length() > 150) {
             return ResultGenerator.genFailResult("标题过长");
         }
-        if (StringUtils.isEmpty(newsContent)) {
+        if (!StringUtils.hasText(newsContent)) {
             return ResultGenerator.genFailResult("请输入文章内容");
         }
         if (newsContent.trim().length() > 100000) {
             return ResultGenerator.genFailResult("文章内容过长");
         }
-        if (StringUtils.isEmpty(newsCoverImage)) {
+        if (!StringUtils.hasText(newsCoverImage)) {
             return ResultGenerator.genFailResult("封面图不能为空");
         }
         News news = new News();

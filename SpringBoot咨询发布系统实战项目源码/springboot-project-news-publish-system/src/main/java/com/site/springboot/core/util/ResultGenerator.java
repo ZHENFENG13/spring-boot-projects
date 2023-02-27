@@ -6,7 +6,7 @@ import org.springframework.util.StringUtils;
  * 响应结果生成工具
  *
  * @author 13
- * @qq交流群 796794009
+ * @qq交流群 784785001
  * @email 2449207463@qq.com
  * @link http://13blog.site
  */
@@ -41,7 +41,7 @@ public class ResultGenerator {
     public static Result genFailResult(String message) {
         Result result = new Result();
         result.setResultCode(RESULT_CODE_SERVER_ERROR);
-        if (StringUtils.isEmpty(message)) {
+        if (!StringUtils.hasText(message)) {
             result.setMessage(DEFAULT_FAIL_MESSAGE);
         } else {
             result.setMessage(message);
