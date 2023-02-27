@@ -1,6 +1,6 @@
-CREATE DATABASE /*!32312 IF NOT EXISTS*/`lou_springboot` /*!40100 DEFAULT CHARACTER SET utf8 */;
+CREATE DATABASE /*!32312 IF NOT EXISTS*/`springboot3_db` /*!40100 DEFAULT CHARACTER SET utf8 */;
 
-USE `lou_springboot`;
+USE `springboot3_db`;
 
 DROP TABLE IF EXISTS `tb_user`;
 

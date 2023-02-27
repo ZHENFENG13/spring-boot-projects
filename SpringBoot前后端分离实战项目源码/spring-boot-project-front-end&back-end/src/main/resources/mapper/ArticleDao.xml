@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 
-<mapper namespace="com.lou.springboot.dao.ArticleDao">
-    <resultMap type="com.lou.springboot.entity.Article" id="ArticleResult">
+<mapper namespace="cn.lanqiao.springboot3.dao.ArticleDao">
+    <resultMap type="cn.lanqiao.springboot3.entity.Article" id="ArticleResult">
         <result property="id" column="id"/>
         <result property="articleTitle" column="article_title"/>
         <result property="articleContent" column="article_content"/>
@@ -42,13 +42,13 @@
         </if>
     </select>
 
-    <insert id="insertArticle" useGeneratedKeys="true" keyProperty="id" parameterType="com.lou.springboot.entity.Article">
+    <insert id="insertArticle" useGeneratedKeys="true" keyProperty="id" parameterType="cn.lanqiao.springboot3.entity.Article">
 		insert into
 		tb_ssm_article(article_title,article_content,add_name)
 		values(#{articleTitle},#{articleContent},#{addName})
 	</insert>
 
-    <update id="updArticle" parameterType="com.lou.springboot.entity.Article">
+    <update id="updArticle" parameterType="cn.lanqiao.springboot3.entity.Article">
 		update tb_ssm_article
 		set
 		article_title=#{articleTitle},article_content=#{articleContent},

@@ -5,17 +5,19 @@
 	<parent>
 		<groupId>org.springframework.boot</groupId>
 		<artifactId>spring-boot-starter-parent</artifactId>
-		<version>2.3.7.RELEASE</version>
+		<version>3.0.0</version>
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
-	<groupId>com.lou.springboot</groupId>
+	<groupId>cn.lanqiao</groupId>
 	<artifactId>spring-boot-project-front-end-back-end</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<name>spring-boot-project-front-end-back-end</name>
-	<description>Spring Boot前后端分离实战项目</description>
+	<description>Spring Boot 3前后端分离实战项目</description>
 
 	<properties>
-		<java.version>1.8</java.version>
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+		<project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
+		<java.version>17</java.version>
 	</properties>
 
 	<dependencies>
@@ -33,7 +35,7 @@
 		<dependency>
 			<groupId>org.mybatis.spring.boot</groupId>
 			<artifactId>mybatis-spring-boot-starter</artifactId>
-			<version>2.1.3</version>
+			<version>3.0.0</version>
 		</dependency>
 
 		<dependency>

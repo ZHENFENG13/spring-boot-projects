@@ -6,8 +6,6 @@
 
 newbee-mall是一套电商系统，包括基础版本(Spring Boot+Thymeleaf)、前后端分离版本(Spring Boot+Vue 3+Element-Plus+Vue-Router 4+Vuex 4+Vant 3) 、秒杀版本、Go语言版本、微服务版本(Spring Cloud Alibaba+Nacos+Sentinel+Seata+Spring Cloud Gateway+OpenFeign)。 前台商城系统包含首页门户、商品分类、新品上线、首页轮播、商品推荐、商品搜索、商品展示、购物车、订单结算、订单流程、个人订单管理、会员中心、帮助中心等模块。 后台管理系统包含数据面板、轮播图管理、商品管理、订单管理、会员管理、分类管理、设置等模块。
 
-新蜂商城线上预览地址：[http://mall.newbee.ltd](http://mall.newbee.ltd?from=github)，账号可自行注册。
-
 - newbee-mall 对新手开发者十分友好，无需复杂的操作步骤，**仅需 2 秒就可以启动这个完整的商城项目；**
 - newbee-mall **也是一个企业级别的 Spring Boot 大型项目，对于各个阶段的 Java 开发者都是极佳的选择；**
 - 你可以把它作为 Spring Boot 技术栈的综合实践项目，**newbee-mall 足够符合要求，且代码开源、功能完备、流程完整、页面交互美观；**
@@ -18,20 +16,12 @@ newbee-mall是一套电商系统，包括基础版本(Spring Boot+Thymeleaf)、�
 
 ![](https://raw.githubusercontent.com/newbee-ltd/newbee-mall-vue-app/master/static-files/newbee-mall.png)
 
-## newbee-mall （新蜂商城）系列项目概览
+## 源码地址
 
-![newbee-mall-course-2022](https://github.com/newbee-ltd/newbee-mall-cloud/raw/main/static-files/newbee-mall-course-2022.png)
+> newbee-mall 在 GitHub 和国内的码云都创建了代码仓库，如果有人访问 GitHub 比较慢的话，建议在 Gitee 上查看该项目，两个仓库会保持同步更新。
 
-| 项目名称             | 仓库地址                                                     | 备注                                                         |
-| :------------------- | ------------------------------------------------------------ | ------------------------------------------------------------ |
-| newbee-mall          | [newbee-mall in GitHub](https://github.com/newbee-ltd/newbee-mall)<br>[newbee-mall in Gitee](https://gitee.com/newbee-ltd/newbee-mall) | 初始版本、Spring Boot、Thymeleaf、MyBatis、MySQL             |
-| newbee-mall-plus     | [newbee-mall-plus in GitHub](https://github.com/newbee-ltd/newbee-mall-plus)<br/>[newbee-mall-plus in Gitee](https://gitee.com/newbee-ltd/newbee-mall-plus) | 升级版本、优惠券、秒杀、支付、Spring Boot、Thymeleaf、MyBatis、MySQL、Redis |
-| newbee-mall-cloud    | [newbee-mall-cloud in GitHub](https://github.com/newbee-ltd/newbee-mall-cloud)<br/>[newbee-mall-cloud in Gitee](https://gitee.com/newbee-ltd/newbee-mall-cloud) | 微服务版本、分布式事务、Spring Cloud Alibaba、Nacos、Sentinel、OpenFeign、Seata |
-| newbee-mall-api      | [newbee-mall-api in GitHub](https://github.com/newbee-ltd/newbee-mall-api)<br/>[newbee-mall-api in Gitee](https://gitee.com/newbee-ltd/newbee-mall-api) | 前后端分离、Spring Boot、MyBatis、Swagger、MySQL             |
-| newbee-mall-api-go   | [newbee-mall-api-go in GitHub](https://github.com/newbee-ltd/newbee-mall-api-go)<br/>[newbee-mall-api-go in Gitee](https://gitee.com/newbee-ltd/newbee-mall-api-go) | 前后端分离、Go、Gin、MySQL                                   |
-| newbee-mall-vue-app  | [newbee-mall-vue-app in GitHub](https://github.com/newbee-ltd/newbee-mall-vue-app)<br/>[newbee-mall-vue-app in Gitee](https://gitee.com/newbee-ltd/newbee-mall-vue-app) | 前后端分离、Vue 2.x、Vant                                    |
-| newbee-mall-vue3-app | [newbee-mall-vue3-app in GitHub](https://github.com/newbee-ltd/newbee-mall-vue3-app)<br/>[newbee-mall-vue3-app in GitHub](https://gitee.com/newbee-ltd/newbee-mall-vue3-app) | 前后端分离、Vue 3.0、Vue-Router 4.0、Vuex 4.0、Vant 3.0      |
-| vue3-admin           | [vue3-admin in GitHub](https://github.com/newbee-ltd/vue3-admin)<br/>[vue3-admin in Gitee](https://gitee.com/newbee-ltd/vue3-admin) | 前后端分离、Vue 3.0、Element-Plus、Vue-Router 4.0、Vite      |
+- [newbee-mall in GitHub](https://github.com/newbee-ltd/newbee-mall)
+- [newbee-mall in Gitee](https://gitee.com/newbee-ltd/newbee-mall)
 
 ## 项目演示
 
@@ -40,7 +30,6 @@ newbee-mall是一套电商系统，包括基础版本(Spring Boot+Thymeleaf)、�
 - [视频3：商城后台管理系统介绍](https://edu.csdn.net/course/play/26258/328801)
 
 ## 开发及部署文档
-
 
 - [**Spring Boot 大型线上商城项目实战教程**](https://juejin.cn/book/6844733814074245133?suid=1996368849416216&source=android)
 - [项目须知和课程约定](https://juejin.cn/book/6844733814074245133?suid=1996368849416216&source=android)
@@ -93,10 +82,6 @@ newbee-mall是一套电商系统，包括基础版本(Spring Boot+Thymeleaf)、�
 - 我的邮箱：2449207463@qq.com
 - QQ技术交流群：719099151
 
-> newbee-mall 在 GitHub 和国内的码云都创建了代码仓库，如果有人访问 GitHub 比较慢的话，建议在 Gitee 上查看该项目，两个仓库会保持同步更新。
-
-- [newbee-mall in GitHub](https://github.com/newbee-ltd/newbee-mall)
-- [newbee-mall in Gitee](https://gitee.com/newbee-ltd/newbee-mall)
 ![newbee-mall-info](https://newbee-mall.oss-cn-beijing.aliyuncs.com/poster/store/newbee-mall-info-3.png)
 
 ## 软件著作权

@@ -18,11 +18,11 @@
 
 - 列表页面(分页功能)
 
-![list](list.png)
+![list](list.gif)
 
 - 图片上传功能
 
-![picture](picture.png)
+![picture](picture.gif)
 
 - 富文本编辑器整合使用
 
@@ -40,7 +40,7 @@
 
 通过本课程你将学到以下内容：
 
-- Spring Boot 2 技术栈的使用和开发技巧；
+- Spring Boot 3 技术栈的使用和开发技巧；
 - MySQL 8 数据库的基本使用方法；
 - Maven 的配置及使用；
 - SpringBoot 基础 web 功能开发；
@@ -58,24 +58,24 @@
 
 ## 课程目录
 
-- [开篇词：SpringBoot入门及前后端分离项目实践导读](https://www.lanqiao.cn/courses/1244)
-- [第02课：快速认识 Spring Boot 技术栈](https://www.lanqiao.cn/courses/1244/labs/9841/document)
-- [第03课：开发环境搭建](https://www.lanqiao.cn/courses/1244/labs/9842/document)
-- [第04课：快速构建 Spring Boot 应用](https://www.lanqiao.cn/courses/1244/labs/9843/document)
-- [第05课：Spring Boot 之基础 web 功能开发](https://www.lanqiao.cn/courses/1244/labs/9844/document)
-- [第06课：Spring Boot 之数据库连接操作](https://www.lanqiao.cn/courses/1244/labs/9845/document)
-- [第07课：Spring Boot 整合 MyBatis 操作数据库](https://www.lanqiao.cn/courses/1244/labs/9846/document)
-- [第08课：Spring Boot 处理文件上传及路径回显](https://www.lanqiao.cn/courses/1244/labs/9847/document)
-- [第09课：Spring Boot 项目实践之前后端分离详解](https://www.lanqiao.cn/courses/1244/labs/9848/document)
-- [第10课：Spring Boot 项目实践之 Ajax 技术使用教程](https://www.lanqiao.cn/courses/1244/labs/9849/document)
-- [第11课：Spring Boot 项目实践之  RESTful API 设计与实现](https://www.lanqiao.cn/courses/1244/labs/9850/document)
-- [第12课：Spring Boot 项目实践之登录模块实现](https://www.lanqiao.cn/courses/1244/labs/9851/document)
-- [第13课：Spring Boot 项目实践之分页功能实现](https://www.lanqiao.cn/courses/1244/labs/9852/document)
-- [第14课：Spring Boot 项目实践之 jqgrid 分页整合](https://www.lanqiao.cn/courses/1244/labs/9853/document)
-- [第15课：Spring Boot 项目实践之用户编辑功能实现](https://www.lanqiao.cn/courses/1244/labs/9854/document)
-- [第16课：Spring Boot 项目实践之用户管理模块实现](https://www.lanqiao.cn/courses/1244/labs/9855/document)
-- [第17课：Spring Boot 项目实践之图片管理模块](https://www.lanqiao.cn/courses/1244/labs/9856/document)
-- [第18课：Spring Boot 项目实践之信息管理模块实现](https://www.lanqiao.cn/courses/1244/labs/9857/document)
+- [**开篇词：SpringBoot入门及前后端分离项目实践导读**](https://www.lanqiao.cn/courses/1244)
+- [第02课：快速认识 Spring Boot 技术栈](https://www.lanqiao.cn/courses/1244)
+- [第03课：开发环境搭建](https://www.lanqiao.cn/courses/1244)
+- [第04课：快速构建 Spring Boot 应用](https://www.lanqiao.cn/courses/1244)
+- [第05课：Spring Boot 之基础 web 功能开发](https://www.lanqiao.cn/courses)
+- [第06课：Spring Boot 之数据库连接操作](https://www.lanqiao.cn/courses/1244)
+- [第07课：Spring Boot 整合 MyBatis 操作数据库](https://www.lanqiao.cn/courses/1244)
+- [第08课：Spring Boot 处理文件上传及路径回显](https://www.lanqiao.cn/courses/1244)
+- [第09课：Spring Boot 项目实践之前后端分离详解](https://www.lanqiao.cn/courses/1244)
+- [第10课：Spring Boot 项目实践之 Ajax 技术使用教程](https://www.lanqiao.cn/courses/1244)
+- [第11课：Spring Boot 项目实践之  RESTful API 设计与实现](https://www.lanqiao.cn/courses/1244)
+- [第12课：Spring Boot 项目实践之登录模块实现](https://www.lanqiao.cn/courses/1244)
+- [第13课：Spring Boot 项目实践之分页功能实现](https://www.lanqiao.cn/courses/1244)
+- [第14课：Spring Boot 项目实践之 jqgrid 分页整合](https://www.lanqiao.cn/courses/1244)
+- [第15课：Spring Boot 项目实践之用户编辑功能实现](https://www.lanqiao.cn/courses/1244)
+- [第16课：Spring Boot 项目实践之用户管理模块实现](https://www.lanqiao.cn/courses/1244)
+- [第17课：Spring Boot 项目实践之图片管理模块](https://www.lanqiao.cn/courses/1244)
+- [第18课：Spring Boot 项目实践之信息管理模块实现](https://www.lanqiao.cn/courses/1244)
 
 ---
 
@@ -84,4 +84,4 @@
 > 大家有任何问题或者建议都可以在 [issues](https://github.com/ZHENFENG13/springboot-projects/issues) 中反馈给我，我会慢慢完善这个 Spring Boot 仓库。
 
 - 我的邮箱：2449207463@qq.com
-- QQ技术交流群：796794009
+- QQ技术交流群：784785001

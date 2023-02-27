@@ -3,6 +3,7 @@ package com.site.springboot.core.controller.admin;
 import com.site.springboot.core.config.Constants;
 import com.site.springboot.core.util.Result;
 import com.site.springboot.core.util.ResultGenerator;
+import jakarta.servlet.http.HttpServletRequest;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -10,7 +11,6 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.multipart.MultipartFile;
 
-import javax.servlet.http.HttpServletRequest;
 import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Path;
@@ -21,7 +21,7 @@ import java.util.Random;
 
 /**
  * @author 13
- * @qq交流群 796794009
+ * @qq交流群 784785001
  * @email 2449207463@qq.com
  * @link http://13blog.site
  */

@@ -1,13 +1,14 @@
 <!DOCTYPE html>
 <html xmlns:th="http://www.thymeleaf.org">
-<header th:replace="admin/header::header-fragment"></header>
+<header th:replace="~{admin/header::header-fragment}"></header>
 <body class="hold-transition sidebar-mini">
 <link th:href="@{/admin/plugins/select2/select2.css}" rel="stylesheet"/>
+<link th:href="@{/admin/plugins/wangeditor-5.1.23/style.css}" rel="stylesheet"/>
 <div class="wrapper">
     <!-- 引入页面头header-fragment -->
-    <div th:replace="admin/header::header-nav"></div>
+    <div th:replace="~{admin/header::header-nav}"></div>
     <!-- 引入工具栏sidebar-fragment -->
-    <div th:replace="admin/sidebar::sidebar-fragment(${path})"></div>
+    <div th:replace="~{admin/sidebar::sidebar-fragment(${path})}"></div>
     <!-- Content Wrapper. Contains page content -->
     <div class="content-wrapper">
         <!-- Content Header (Page header) -->
@@ -48,8 +49,10 @@
                                     </th:block>
                                 </select>
                             </div>
-                            <div class="form-group">
-                                <div id="wangEditor" th:utext="${news!=null and news.newsContent !=null}?${news.newsContent}: ''"></div>
+                            <div class="form-group" style="border: 1px solid #ccc;">
+                                <div id="editor-toolbar" class="editor-toolbar" style="border-bottom: 1px solid #ccc;"></div>
+                                <input type="hidden" class="editor-text" th:value="${news!=null and news.newsContent !=null}?${news.newsContent}: ''">
+                                <div id="editor-text-area" class="editor-text-area" style="height: 750px"></div>
                             </div>
                             <div class="form-group">
                                 <!-- 按钮 -->
@@ -121,7 +124,7 @@
     </div>
     <!-- /.content-wrapper -->
     <!-- 引入页脚footer-fragment -->
-    <div th:replace="admin/footer::footer-fragment"></div>
+    <div th:replace="~{admin/footer::footer-fragment}"></div>
 </div>
 <!-- jQuery -->
 <script th:src="@{/admin/plugins/jquery/jquery.min.js}"></script>
@@ -134,7 +137,7 @@
 <!-- Select2 -->
 <script th:src="@{/admin/plugins/select2/select2.full.min.js}"></script>
 <!-- wangEditor -->
-<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/wangeditor@latest/dist/wangEditor.min.js"></script>
+<script th:src="@{/admin/plugins/wangeditor-5.1.23/index.js}"></script>
 <!-- sweetalert -->
 <script th:src="@{/admin/plugins/sweetalert/sweetalert.min.js}"></script>
 <!-- ajaxupload -->

@@ -6,7 +6,7 @@ import com.site.springboot.core.service.AdminService;
 import com.site.springboot.core.util.MD5Util;
 import org.springframework.stereotype.Service;
 
-import javax.annotation.Resource;
+import jakarta.annotation.Resource;
 @Service
 public class AdminServiceImpl implements AdminService {
     @Resource
